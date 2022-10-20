@@ -24,7 +24,7 @@ export default function Home() {
         <div className={styles.grid}>
           <a href="https://github.com/0xKYC" target="_blank" rel="noopener noreferrer" className={styles.card}>
             <h2>GitHub &rarr;</h2>
-            <p>Find in-depth information about 0xKYC features and API (<i>currently private</i>).</p>
+            <p>Find in-depth information about 0xKYC features and API (<i>currently private</i>)</p>
           </a>
 
           <a href="" className={styles.card}>
@@ -64,6 +64,8 @@ export default function Home() {
           </span>
           {' '}
         </a>
+        <br />
+        <br />
       </footer>
     </div>
   )
