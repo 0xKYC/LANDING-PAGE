@@ -60,7 +60,7 @@ export default function Home() {
           rel="noopener noreferrer"
         > 
           <span className={styles.logo}>
-            <Image src="/logo-no-background.svg" alt="0xKYC Logo" width={288} height={128} />
+            <Image src="/logo-white.svg" alt="0xKYC Logo" width={288} height={128} />
           </span>
           {' '}
         </a>
