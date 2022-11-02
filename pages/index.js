@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>0xKYC ☀ Zero Knowledge Proofs</title>
+        <title>☀ 0xKYC 😎 Private Web3 ID</title>
         <meta name="description" content="Compliant zero-knowledge identity" />
         <link rel="icon" href="" />
       </Head>
@@ -17,14 +17,14 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get verified and see who else is verified ☀{' '}<br />
+          Get verified and see who else is verified!{' '}
           We provide Zero Knowledge Proofs to secure your privacy.
         </p>
 
         <div className={styles.grid}>
           <a href="https://github.com/0xKYC" target="_blank" rel="noopener noreferrer" className={styles.card}>
             <h2>GitHub &rarr;</h2>
-            <p>Find in-depth information about 0xKYC features and API (<i>currently private</i>).</p>
+            <p>Find in-depth information about 0xKYC features and API (<i>currently private</i>)</p>
           </a>
 
           <a href="" className={styles.card}>
@@ -60,7 +60,7 @@ export default function Home() {
           rel="noopener noreferrer"
         > 
           <span className={styles.logo}>
-            <Image src="/logo-white.svg" alt="0xKYC Logo" width={288} height={128} />
+            <Image src="/logo-no-background.svg" alt="0xKYC Logo" width={256} height={256} />
           </span>
           {' '}
         </a>
