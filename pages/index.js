@@ -52,19 +52,20 @@ export default function Home() {
 */ }
         </div>
       </main>
-
+{ /*
       <footer className={styles.footer}>
         <a
           href="https://0xkyc.pl/"
           target="_blank"
           rel="noopener noreferrer"
-        > 
+        >
           <span className={styles.logo}>
-            <Image src="/logo-no-background.svg" alt="0xKYC Logo" width={256} height={256} />
-          </span>
+            <Image src="/0xKYC-logo-white-font-trimmy.png" alt="0xKYC Logo" width={388} height={117.6}/>
+          </span> 
           {' '}
         </a>
       </footer>
-    </div>
+*/ }
+    </div>    
   )
 }
