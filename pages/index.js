@@ -17,8 +17,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get verified and see who else is verified!{' '}
-          We provide Zero Knowledge Proofs to secure your privacy.
+          We provide Zero Knowledge Proofs to secure your privacy.{' '}
         </p>
 
         <div className={styles.grid}>
