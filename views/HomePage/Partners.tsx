@@ -8,9 +8,9 @@ import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
   { name: 'OKX_logo-new.png', alt: 'OKX' },
-  { name: 'lomads-white-new.png', alt: 'OKX' },
-  { name: 'ov-new.png', alt: 'OKX' },
-  { name: 'new-order.jpg', alt: 'New Order DAO', width: 300 },
+  { name: 'lomads-white-new-removebg-preview.png', alt: 'OKX' },
+  { name: 'ov-new-removebg-preview.png', alt: 'OKX' },
+  { name: 'new-order-new-removebg-preview.png', alt: 'New Order DAO', width: 300 },
   { name: 'cryptum-logo-new.png', alt: 'Cryptum' },
   { name: 'identdefi-new.png', alt: 'IdentDefi' },
 ];
