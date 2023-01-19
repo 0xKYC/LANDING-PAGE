@@ -30,25 +30,25 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <meta name="keywords" content="Compliant Zero Knowledge KYC" />
+        <meta name="keywords" content="Private, Zero Knowledge ID" />
         <meta
           name="description"
-          content="Compliant Zero Knowledge KYC solution that creates a KYC check to verify if a user is OFAC sanctioned without showing their name on-chain"
+          content="0xKYC is a Zero Knowledge solution to create a verified record on-chain without showing user's name and surname"
         />
         <meta name="image" property="og:image" content="https://0xkyc.id/product-launch.svg" />
-        <meta name="title" property="og:title" content="Compliant Zero Knowledge KYC" />
+        <meta name="title" property="og:title" content="Private, Zero Knowledge ID" />
         <meta name="type" property="og:type" content="website" />
         <meta name="url" property="og:url" content="https://0xkyc.id" />
         <meta
           property="og:description"
-          content="Compliant Zero Knowledge KYC solution that creates a KYC check to verify if a user is OFAC sanctioned without showing their name on-chain"
+          content="0xKYC is a Zero Knowledge solution to create a verified record on-chain without showing user's name and surname"
         />
 
         <meta property="og:locale" content="en_EN" />
         <meta property="og:site_name" content="0xKYC" />
 
         <meta property="twitter:title" content="0xKYC" />
-        <meta property="twitter:description" content="Compliant Zero Knowledge KYC" />
+        <meta property="twitter:description" content="Private, Zero Knowledge ID" />
         <meta property="twitter:site" content="https://0xkyc.id" />
         <meta property="twitter:image" content="https://0xkyc.id/product-launch.svg" />
 
