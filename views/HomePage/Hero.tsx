@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>We have the best solution on the market</CustomOverTitle>
+        <CustomOverTitle>Who are we</CustomOverTitle>
         <Heading>Are you ready for Zero Knowledge Identity?</Heading>
         <Description>
           At 0xKYC, we&apos;re dedicated to providing the best possible solution for our clients, such as DeFi protocols and DAOs, to verify
