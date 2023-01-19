@@ -1,17 +1,17 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
-import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
+
 import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
 import { NavItems, SingleNavItem } from 'types';
 import { media } from 'utils/media';
-import Button from './Button';
+import Button, { DisabledBtn } from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
-import Logo from './Logo';
 
 const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
 
@@ -69,7 +69,7 @@ export default function Navbar({ items }: NavbarProps) {
       <Content>
         <NextLink href="/" passHref>
           <LogoWrapper>
-            <Logo />
+            <Image src="/new-logo.png" alt="logo" width={180} height={50} />
           </LogoWrapper>
         </NextLink>
         <NavItemList>
@@ -89,20 +89,15 @@ export default function Navbar({ items }: NavbarProps) {
 }
 
 function NavItem({ href, title, outlined }: SingleNavItem) {
-  const { setIsModalOpened } = useNewsletterModalContext();
-
-  function showNewsletterModal() {
-    setIsModalOpened(true);
-  }
-
   if (outlined) {
-    return <CustomButton onClick={showNewsletterModal}>{title}</CustomButton>;
+    return <DisabledBtn>{title}</DisabledBtn>;
+    // return <CustomButton>{title}</CustomButton>;
   }
 
   return (
     <NavItemWrapper outlined={outlined}>
       <NextLink href={href} passHref>
-        <a>{title}</a>
+        {title}
       </NextLink>
     </NavItemWrapper>
   );

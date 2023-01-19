@@ -10,26 +10,26 @@ import { media } from 'utils/media';
 
 const TABS = [
   {
-    title: 'Find relevant media contacts - multiline title',
+    title: 'Connect with any wallet',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
-    imageUrl: '/demo-illustration-3.png',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
+    imageUrl: '/demo-illustration.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
-    title: 'Another amazing feature',
+    title: 'Verify yourself',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
-    imageUrl: '/demo-illustration-4.png',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
+    imageUrl: '/demo-illustration2.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
-    title: 'And yet... another truly fascinating feature',
+    title: 'You have the Soulbound Token! ',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
-    imageUrl: '/demo-illustration-5.png',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
+    imageUrl: '/demo-illustration3.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
   },
@@ -62,7 +62,7 @@ export default function FeaturesGallery() {
         </TabTitleContainer>
         <Collapse isOpen={isActive} duration={300}>
           <TabContent>
-            <div dangerouslySetInnerHTML={{ __html: singleTab.description }}></div>
+            <p>{singleTab.description}</p>
           </TabContent>
         </Collapse>
       </Tab>
@@ -77,12 +77,15 @@ export default function FeaturesGallery() {
     <FeaturesGalleryWrapper>
       <Content>
         <OverTitle>features</OverTitle>
-        <SectionTitle>What are you signing in for?</SectionTitle>
+        <SectionTitle>How it actually works?</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>
         {imagesMarkup}
       </GalleryWrapper>
+      <a href="https://www.youtube.com/" rel="noreferrer" target="_blank" style={{ fontSize: '2rem', marginTop: '5rem' }}>
+        Click here to watch demo of the app
+      </a>
     </FeaturesGalleryWrapper>
   );
 }
@@ -188,7 +191,6 @@ const TabContent = styled.div`
   margin-top: 0.5rem;
   font-size: 1.5rem;
   padding-left: calc(5rem + 1.5rem);
-
   ${media('<=tablet')} {
     padding-left: calc(4rem + 1.25rem);
   }

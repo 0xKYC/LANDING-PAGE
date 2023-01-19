@@ -4,11 +4,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
 import { AppProps } from 'next/dist/shared/lib/router/router';
-import dynamic from 'next/dynamic';
+
 import Head from 'next/head';
 import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
-import { TinaEditProvider } from 'tinacms/dist/edit-state';
 
 import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
@@ -20,13 +19,10 @@ import { NewsletterModalContextProvider, useNewsletterModalContext } from 'conte
 import { NavItems } from 'types';
 
 const navItems: NavItems = [
-  { title: 'Awesome SaaS Features', href: '/features' },
-  { title: 'Pricing', href: '/pricing' },
-  { title: 'Contact', href: '/contact' },
-  { title: 'Sign up', href: '/sign-up', outlined: true },
+  // { title: 'About', href: '/features' },
+  // { title: 'Contact', href: '/contact' },
+  { title: 'App (Coming soon)', href: '/app', outlined: true },
 ];
-
-const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -34,7 +30,30 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="keywords" content="Compliant Zero Knowledge KYC" />
+        <meta
+          name="description"
+          content="Compliant Zero Knowledge KYC solution that creates a KYC check to verify if a user is OFAC sanctioned without showing their name on-chain"
+        />
+        <meta name="image" property="og:image" content="https://0xkyc.id/product-launch.svg" />
+        <meta name="title" property="og:title" content="Compliant Zero Knowledge KYC" />
+        <meta name="type" property="og:type" content="website" />
+        <meta name="url" property="og:url" content="https://0xkyc.id" />
+        <meta
+          property="og:description"
+          content="Compliant Zero Knowledge KYC solution that creates a KYC check to verify if a user is OFAC sanctioned without showing their name on-chain"
+        />
+
+        <meta property="og:locale" content="en_EN" />
+        <meta property="og:site_name" content="0xKYC" />
+
+        <meta property="twitter:title" content="0xKYC" />
+        <meta property="twitter:description" content="Compliant Zero Knowledge KYC" />
+        <meta property="twitter:site" content="https://0xkyc.id" />
+        <meta property="twitter:image" content="https://0xkyc.id/product-launch.svg" />
+
+        <meta name="robots" content="index, follow" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         {/* <link rel="alternate" type="application/rss+xml" href={EnvVars.URL + 'rss'} title="RSS 2.0" /> */}
         {/* <script
           dangerouslySetInnerHTML={{
@@ -51,23 +70,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Providers>
         <Modals />
         <Navbar items={navItems} />
-        <TinaEditProvider
-          editMode={
-            <TinaCMS
-              query={pageProps.query}
-              variables={pageProps.variables}
-              data={pageProps.data}
-              isLocalClient={!process.env.NEXT_PUBLIC_TINA_CLIENT_ID}
-              branch={process.env.NEXT_PUBLIC_EDIT_BRANCH}
-              clientId={process.env.NEXT_PUBLIC_TINA_CLIENT_ID}
-              {...pageProps}
-            >
-              {(livePageProps: any) => <Component {...livePageProps} />}
-            </TinaCMS>
-          }
-        >
-          <Component {...pageProps} />
-        </TinaEditProvider>
+
+        <Component {...pageProps} />
+
         <WaveCta />
         <Footer />
       </Providers>

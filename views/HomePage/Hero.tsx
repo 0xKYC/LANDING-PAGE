@@ -5,30 +5,28 @@ import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
-import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
+
 import { media } from 'utils/media';
 
 export default function Hero() {
-  const { setIsModalOpened } = useNewsletterModalContext();
-
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        <CustomOverTitle>We have the best solution on the market</CustomOverTitle>
+        <Heading>Are you ready for Zero Knowledge Identity?</Heading>
         <Description>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
           repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
         </Description>
         <CustomButtonGroup>
-          <Button onClick={() => setIsModalOpened(true)}>
-            Subscribe to the newsletter <span>&rarr;</span>
+          <Button href="https://www.youtube.com/watch?v=nRVhCr7Hz6c" rel="noreferrer" target="_blank">
+            Watch our video <span>&rarr;</span>
           </Button>
-          <NextLink href="#whitepaper" passHref>
+          {/* <NextLink href="#whitepaper" passHref>
             <Button transparent>
               Features <span>&rarr;</span>
             </Button>
-          </NextLink>
+          </NextLink> */}
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>

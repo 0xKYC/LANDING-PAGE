@@ -1,10 +1,12 @@
+import Image from 'next/image';
 import NextLink from 'next/link';
-import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
+import { LinkedinIcon, TwitterIcon } from 'react-share';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
+import Link from 'next/link';
 
-type SingleFooterListItem = { title: string; href: string };
+type SingleFooterListItem = { title: string; href: string; link?: boolean };
 type FooterListItems = SingleFooterListItem[];
 type SingleFooterList = { title: string; items: FooterListItems };
 type FooterItems = SingleFooterList[];
@@ -14,68 +16,83 @@ const footerItems: FooterItems = [
     title: 'Company',
     items: [
       { title: 'Privacy Policy', href: '/privacy-policy' },
-      { title: 'Cookies Policy', href: '/cookies-policy' },
+      // { title: 'Cookies Policy', href: '/cookies-policy' },
     ],
   },
-  {
-    title: 'Product',
-    items: [
-      { title: 'Features', href: '/features' },
-      { title: 'Something', href: '/something' },
-      { title: 'Something else', href: '/something-else' },
-      { title: 'And something else', href: '/and-something-else' },
-    ],
-  },
+
   {
     title: 'Knowledge',
     items: [
-      { title: 'Blog', href: '/blog' },
+      { title: 'Documentation', href: 'https://0xkyc.notion.site/0xKYC-Public-Documentation-f7db271a06e840f7862a929fb9f42299', link: true },
       { title: 'Contact', href: '/contact' },
-      { title: 'FAQ', href: '/faq' },
-      { title: 'Help Center', href: '/help-center' },
-    ],
-  },
-  {
-    title: 'Something',
-    items: [
-      { title: 'Features2', href: '/features2' },
-      { title: 'Something2', href: '/something2' },
-      { title: 'Something else2', href: '/something-else2' },
-      { title: 'And something else2', href: '/and-something-else2' },
     ],
   },
 ];
+const Box = styled('div')`
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+`;
 
+const LogoWrapper = styled.a`
+  display: flex;
+  text-decoration: none;
+  color: rgb(var(--logoColor));
+`;
+
+const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-right: 3.5rem;
+
+  ${media('<=tablet')} {
+    display: none;
+  }
+`;
 export default function Footer() {
   return (
     <FooterWrapper>
       <Container>
         <ListContainer>
-          {footerItems.map((singleItem) => (
+          {/* {footerItems.map((singleItem) => (
             <FooterList key={singleItem.title} {...singleItem} />
-          ))}
+          ))} */}
         </ListContainer>
         <BottomBar>
+          <Link href="/" passHref>
+            <LogoWrapper>
+              <Image src="/logo-white.png" alt="logo" width={180} height={50} />
+            </LogoWrapper>
+          </Link>
+
           <ShareBar>
-            <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
-              <a>
-                <TwitterIcon size={50} round={true} />
-              </a>
-            </NextLink>
+            <Flex>
+              <ListItem title="Privacy Policy" href="privacy-policy" />
+              <ListItem title="Contact" href="mailto:support@0xkyc.id" />
+              <ListItem
+                title="Documentation"
+                href="https://0xkyc.notion.site/0xKYC-Public-Documentation-f7db271a06e840f7862a929fb9f42299"
+                link={true}
+              />
+            </Flex>
+            <a href="https://twitter.com/0xKYCinc" rel="noreferrer" target="_blank">
+              <TwitterIcon size={50} round={true} />
+            </a>
 
-            <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
-              <a>
-                <FacebookIcon size={50} round={true} />
-              </a>
-            </NextLink>
+            <a href="https://github.com/0xKYC" rel="noreferrer" target="_blank">
+              <Box>
+                <Image src="/github.png" alt="github" width={52} height={52} />
+              </Box>
+            </a>
 
-            <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
-              <a>
-                <LinkedinIcon size={50} round={true} />
-              </a>
-            </NextLink>
+            <a href="https://www.linkedin.com/company/0xkyc/" rel="noreferrer" target="_blank">
+              <LinkedinIcon size={50} round={true} />
+            </a>
           </ShareBar>
-          <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
@@ -93,18 +110,24 @@ function FooterList({ title, items }: SingleFooterList) {
   );
 }
 
-function ListItem({ title, href }: SingleFooterListItem) {
+function ListItem({ title, href, link }: SingleFooterListItem) {
   return (
     <ListItemWrapper>
       <NextLink href={href} passHref>
-        <a>{title}</a>
+        {link ? (
+          <a href={href} rel="noreferrer" target="_blank">
+            {title}
+          </a>
+        ) : (
+          title
+        )}
       </NextLink>
     </ListItemWrapper>
   );
 }
 
 const FooterWrapper = styled.div`
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
   padding-bottom: 4rem;
   background: rgb(var(--secondary));
   color: rgb(var(--textSecondary));
@@ -114,7 +137,8 @@ const ListContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 150px;
 `;
 
 const ListHeader = styled.p`
@@ -145,7 +169,7 @@ const ListWrapper = styled.div`
 `;
 
 const ListItemWrapper = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 
   a {
     text-decoration: none;
@@ -154,6 +178,8 @@ const ListItemWrapper = styled.p`
 `;
 
 const ShareBar = styled.div`
+  display: flex;
+  margin-top: 1rem;
   & > *:not(:first-child) {
     margin-left: 1rem;
   }

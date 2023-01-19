@@ -7,13 +7,12 @@ import Container from 'components/Container';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  'logoipsum-logo-1.svg',
-  'logoipsum-logo-2.svg',
-  'logoipsum-logo-3.svg',
-  'logoipsum-logo-4.svg',
-  'logoipsum-logo-5.svg',
-  'logoipsum-logo-6.svg',
-  'logoipsum-logo-7.svg',
+  { name: 'OKX_logo-new.png', alt: 'OKX' },
+  { name: 'lomads-white-new.png', alt: 'OKX' },
+  { name: 'ov-new.png', alt: 'OKX' },
+  { name: 'new-order.jpg', alt: 'New Order DAO', width: 300 },
+  { name: 'cryptum-logo-new.png', alt: 'Cryptum' },
+  { name: 'identdefi-new.png', alt: 'IdentDefi' },
 ];
 
 export default function Partners() {
@@ -23,7 +22,7 @@ export default function Partners() {
       <Swiper
         modules={[Autoplay]}
         slidesPerView={6}
-        spaceBetween={30}
+        spaceBetween={50}
         loop={true}
         autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: false, stopOnLastSlide: false }}
         speed={3000}
@@ -35,8 +34,8 @@ export default function Partners() {
         className="swiper-wrapper"
       >
         {PARTNER_LOGOS.map((logo) => (
-          <SwiperSlide key={logo}>
-            <NextImage src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={128} height={128} />
+          <SwiperSlide key={logo.name}>
+            <NextImage src={'/partners/' + logo.name} alt={logo.alt} width={logo.width ? logo.width : 380} height={64} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -44,16 +43,12 @@ export default function Partners() {
   );
 }
 
-function normalizePartnerLogoName(logo: string) {
-  return logo.replace('.svg', '');
-}
-
 const Title = styled.h3`
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   letter-spacing: 0.02em;
   line-height: 0;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   opacity: 0.8;
 
