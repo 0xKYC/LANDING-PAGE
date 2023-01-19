@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "yarn next dev",
-    "build": "yarn tinacms server:start -c \"next build\"",
-    "start": "yarn tinacms server:start -c \"next start\"",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
