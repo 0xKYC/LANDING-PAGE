@@ -65,7 +65,7 @@ export default function Footer() {
         <BottomBar>
           <Link href="/" passHref>
             <LogoWrapper>
-              <Image src="/logo-white.png" alt="logo" width={180} height={50} />
+              <Image src="/logo-white.png" alt="logo" width={164} height={50} />
             </LogoWrapper>
           </Link>
 
