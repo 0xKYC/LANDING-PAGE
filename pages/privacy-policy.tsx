@@ -8,31 +8,15 @@ export default function ContactPage() {
       <PrivacyPolicyContainer>
         <RichText>
           <p>
-            Deserunt culpa consequat non nostrud esse cillum pariatur velit consequat. Est fugiat voluptate deserunt sint culpa sint.
-            Laboris irure veniam quis ea voluptate. Nulla ad proident ex excepteur. Sunt sint ex laborum dolor quis magna aliquip qui amet
-            nulla. Laboris proident aute exercitation irure esse id eu occaecat ad ipsum est. Dolor cillum Lorem occaecat enim veniam
-            ullamco cupidatat qui dolore exercitation Lorem eu quis magna. Esse cillum aliqua et laborum eu dolore consectetur. Exercitation
-            id non quis ex qui in dolore est est proident. Laborum nisi commodo fugiat nulla et magna veniam aliquip. Aliqua duis non
-            nostrud ea velit incididunt. Laboris nostrud incididunt laborum enim eu dolor. Culpa anim sit sit ea. Labore laborum et aute ex
-            est est excepteur labore voluptate deserunt. Amet ea laboris ea culpa dolor laborum consequat aliquip reprehenderit voluptate
-            non laboris ipsum. Quis excepteur pariatur est enim duis consectetur nulla cupidatat ipsum dolor nisi ipsum. Dolore dolor
-            nostrud aute dolore. Excepteur reprehenderit aliquip amet pariatur excepteur. Aliqua commodo nulla dolor ex nisi duis
-            reprehenderit sint aliqua in minim. Lorem amet quis non veniam ut reprehenderit aliquip mollit do ullamco pariatur.
+            At 0xKYC, Inc., we take the privacy of our website users seriously. This policy outlines the information we collect, how it is
+            used, and the steps we take to protect it. Information Collection: We collect personal information such as name, email address,
+            and phone number when you voluntarily provide it to us through forms on our website. Use of Information: We use the information
+            collected to contact you regarding updates about our services and to respond to any inquiries you may have. Sharing of
+            Information: We do not share or sell any personal information to any third parties. Security Measures: We take appropriate
+            measures to protect the personal information submitted to us, both during transmission and once we receive it. If you have any
+            questions or concerns about our Privacy Policy or the information we collect, please contact us. This Privacy Policy is
+            effective as of the date of posting and may be updated from time to time.
           </p>
-          <br />
-          <strong>
-            Reprehenderit aliquip minim commodo magna occaecat dolore labore mollit mollit do esse deserunt. Aliquip eu reprehenderit aute{' '}
-          </strong>
-          <ul>
-            <li>
-              Ipsum cillum amet aliqua laboris ut excepteur enim laborum veniam officia officia esse. Anim et voluptate qui quis cillum
-              labore ipsum incididunt consequat est ea exercitation et commodo. Consequat consequat amet officia sit non id occaecat
-              occaecat duis irure.
-            </li>
-            <li>Nostrud dolor pariatur dolore Lorem in aliqua sunt aliqua excepteur laboris exercitation proident officia.</li>
-            <li>Ut et voluptate consequat elit amet minim.</li>
-            <li>Reprehenderit et consequat ea minim est proident eu incididunt non laboris proident culpa consequat sint.</li>
-          </ul>
         </RichText>
       </PrivacyPolicyContainer>
     </Page>
