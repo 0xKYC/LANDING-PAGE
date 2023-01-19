@@ -15,8 +15,11 @@ export default function Hero() {
         <CustomOverTitle>We have the best solution on the market</CustomOverTitle>
         <Heading>Are you ready for Zero Knowledge Identity?</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+          At 0xKYC, we&apos;re dedicated to providing the best possible solution for our clients, such as DeFi protocols and DAOs, to verify
+          their users without compromising their personal information. Our process is simple: users scan their identification document and
+          we generate a unique, soulbound token that confirms they are not on any sanctions lists. This token is then stored within a Zero
+          Knowledge (ZK) Proof on the blockchain, making it completely permissionless. This innovative approach will change the way digital
+          identification and online identity verification is done.
         </Description>
         <CustomButtonGroup>
           <Button href="https://www.youtube.com/watch?v=nRVhCr7Hz6c" rel="noreferrer" target="_blank">
@@ -80,7 +83,7 @@ const ImageContainer = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   opacity: 0.8;
   line-height: 1.6;
 
