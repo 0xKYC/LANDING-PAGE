@@ -39,18 +39,7 @@ export default function Partners() {
     </PartnersWrapper>
   );
 }
-const Animate = styled.div`
-  overflow-x: hidden;
-  animation: move 10s linear infinite;
-  @keyframes move {
-    from {
-      transform: translateX(70%);
-    }
-    to {
-      transform: translateX(-90%);
-    }
-  }
-`;
+
 const Title = styled.h3`
   font-size: 1.4rem;
   letter-spacing: 0.02em;

@@ -11,7 +11,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 .swiper-slide {
-  width: 1400px !important;
+  width: 1800px !important;
 }
 .next-light-theme {
   --background: 251,251,253;
