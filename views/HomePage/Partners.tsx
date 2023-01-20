@@ -22,12 +22,8 @@ export default function Partners() {
         spaceBetween={40}
         loop={true}
         autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: false, stopOnLastSlide: false }}
-        speed={5000}
-        breakpoints={{
-          320: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          1025: { slidesPerView: 3 },
-        }}
+        speed={12000}
+        slidesPerView={1}
         className="swiper-wrapper"
       >
         {PARTNER_LOGOS.map((logo, idx) => (

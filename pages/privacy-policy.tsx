@@ -25,10 +25,10 @@ export default function ContactPage() {
               We take appropriate measures to protect the personal information submitted to us, both during transmission and once we receive
               it.
             </p>
-            <Text>
-              If you have any questions or concerns about our Privacy Policy or the information we collect, please contact us. This Privacy
-              Policy is effective as of the date of posting and may be updated from time to time.
-            </Text>
+            <Paragraph>
+              If you have any questions or concerns about our Privacy Policy or the information we collect, please contact us.
+            </Paragraph>
+            This Privacy Policy is effective as of the date of posting and may be updated from time to time.
           </p>
         </RichText>
       </PrivacyPolicyContainer>
@@ -42,5 +42,10 @@ const PrivacyPolicyContainer = styled.div`
   overflow-x: auto;
 `;
 const Text = styled.p`
+  margin-top: 1rem;
+  font-weight: bold;
+`;
+
+const Paragraph = styled.p`
   margin-top: 1rem;
 `;
