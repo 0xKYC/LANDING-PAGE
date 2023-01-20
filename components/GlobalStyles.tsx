@@ -10,7 +10,9 @@ import { createGlobalStyle } from 'styled-components';
 // }
 
 export const GlobalStyle = createGlobalStyle`
-
+.swiper-slide {
+  width: 1400px !important;
+}
 .next-light-theme {
   --background: 251,251,253;
   --secondBackground: 255,255,255;
