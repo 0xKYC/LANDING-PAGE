@@ -15,10 +15,6 @@ export default function Homepage() {
     <>
       <Head>
         <title>{EnvVars.SITE_NAME}</title>
-        <meta
-          name="description"
-          content="Compliant Zero Knowledge KYC solution that creates a KYC check to verify if a user is OFAC sanctioned without showing their name on-chain"
-        />
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>

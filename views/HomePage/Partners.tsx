@@ -7,12 +7,10 @@ import Container from 'components/Container';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  { name: 'OKX_logo-new.png', alt: 'OKX' },
-  { name: 'lomads-white-new-removebg-preview.png', alt: 'OKX' },
-  { name: 'ov-new-removebg-preview.png', alt: 'OKX' },
-  { name: 'new-order-new-removebg-preview.png', alt: 'New Order DAO', width: 300 },
-  { name: 'cryptum-logo-new.png', alt: 'Cryptum' },
-  { name: 'identdefi-new.png', alt: 'IdentDefi' },
+  { name: 'banner-partners.png', alt: 'partners' },
+  { name: 'banner-partners.png', alt: 'partners' },
+  { name: 'banner-partners.png', alt: 'partners' },
+  { name: 'banner-partners.png', alt: 'partners' },
 ];
 
 export default function Partners() {
@@ -21,21 +19,16 @@ export default function Partners() {
       <Title>official partners with</Title>
       <Swiper
         modules={[Autoplay]}
-        slidesPerView={6}
-        spaceBetween={50}
+        spaceBetween={40}
         loop={true}
         autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: false, stopOnLastSlide: false }}
-        speed={3000}
-        breakpoints={{
-          320: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          1025: { slidesPerView: 6 },
-        }}
+        speed={12000}
+        slidesPerView={1}
         className="swiper-wrapper"
       >
-        {PARTNER_LOGOS.map((logo) => (
-          <SwiperSlide key={logo.name}>
-            <NextImage src={'/partners/' + logo.name} alt={logo.alt} width={logo.width ? logo.width : 280} height={64} />
+        {PARTNER_LOGOS.map((logo, idx) => (
+          <SwiperSlide key={idx}>
+            <NextImage src={'/partners/' + logo.name} alt={logo.alt} width={3000} height={80} />
           </SwiperSlide>
         ))}
       </Swiper>
