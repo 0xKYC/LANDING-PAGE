@@ -28,7 +28,7 @@ export default function ContactPage() {
             <Paragraph>
               If you have any questions or concerns about our Privacy Policy or the information we collect, please contact us.
             </Paragraph>
-            This Privacy Policy is effective as of the date of posting and may be updated from time to time.
+            <Paragraph>This Privacy Policy is effective as of the date of posting and may be updated from time to time.</Paragraph>
           </p>
         </RichText>
       </PrivacyPolicyContainer>
