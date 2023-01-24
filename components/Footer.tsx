@@ -85,7 +85,7 @@ export default function Footer() {
 
             <a href="https://github.com/0xKYC" rel="noreferrer" target="_blank">
               <Box>
-                <Image src="/github.png" alt="github" width={52} height={52} />
+                <Image src="/gh-logo.png" alt="github" width={52} height={52} />
               </Box>
             </a>
 
