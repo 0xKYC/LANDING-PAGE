@@ -83,9 +83,6 @@ export default function FeaturesGallery() {
         <TabsContainer>{tabsMarkup}</TabsContainer>
         {imagesMarkup}
       </GalleryWrapper>
-      <a href="https://www.youtube.com/" rel="noreferrer" target="_blank" style={{ fontSize: '2rem', marginTop: '5rem' }}>
-        Click here to watch demo of the app
-      </a>
     </FeaturesGalleryWrapper>
   );
 }

@@ -20,21 +20,15 @@ export default function Homepage() {
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          {/* <BasicSection imageUrl="/demo-illustration-1.svg" title="Why are we so cool" overTitle="Unique indentity">
+          <BasicSection imageUrl="/demo-illustration-1.svg" title="Our approach" overTitle="">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
-              voluptate quo deleniti animi laboriosam.{' '}
-              <Link href="/help-center">Possimus ullam velit rem itaque consectetur, in distinctio?</Link> Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Soluta repellendus quia quos obcaecati nihil. Laudantium non accusantium, voluptate eum nesciunt
-              at suscipit quis est soluta?
+              Our process is simple: users scan their identification document and we generate a unique, soulbound token that confirms they
+              are not on any sanctions lists. This token is then stored within a Zero Knowledge (ZK) Proof on the blockchain, making it
+              completely permissionless. This innovative approach will change the way digital identification and online identity
+              verification is done.
             </p>
-          </BasicSection> */}
-          {/* <BasicSection
-            imageUrl="/demo-illustration-2.svg"
-            title="So easy, no bulky integrations."
-            overTitle="Intergration in 3 steps"
-            reversed
-          >
+          </BasicSection>
+          <BasicSection imageUrl="/demo-illustration-2.svg" title="So easy, no bulky integrations." overTitle="" reversed>
             <p>
               To implement 0xKYC all you need is a simple &quot;token gating&quot; system added to your app and you can ensure your{' '}
               <strong> users are not OFAC sanctioned and are unique!</strong> This is signalled with a 0xKYC soulbound token (SBT).
@@ -44,7 +38,7 @@ export default function Homepage() {
               <li>Call special method to check a wallet for soulbound</li>
               <li>Token gate the key functionality of your protocol</li>
             </ul>
-          </BasicSection> */}
+          </BasicSection>
         </WhiteBackgroundContainer>
         {/* <DarkerBackgroundContainer>
           <Cta />
@@ -58,7 +52,7 @@ export default function Homepage() {
 
 const HomepageWrapper = styled.div`
   & > :last-child {
-    margin-bottom: 15rem;
+    margin-bottom: 2rem;
   }
 `;
 

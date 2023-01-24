@@ -28,14 +28,6 @@ const footerItems: FooterItems = [
     ],
   },
 ];
-const Box = styled('div')`
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  border-radius: 50%;
-`;
 
 const LogoWrapper = styled.a`
   display: flex;
@@ -84,9 +76,7 @@ export default function Footer() {
             </a>
 
             <a href="https://github.com/0xKYC" rel="noreferrer" target="_blank">
-              <Box>
-                <Image src="/github.png" alt="github" width={52} height={52} />
-              </Box>
+              <Image src="/gh-new.png" alt="github" width={48} height={48} />
             </a>
 
             <a href="https://www.linkedin.com/company/0xkyc/" rel="noreferrer" target="_blank">
@@ -127,7 +117,7 @@ function ListItem({ title, href, link }: SingleFooterListItem) {
 }
 
 const FooterWrapper = styled.div`
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 4rem;
   background: rgb(var(--secondary));
   color: rgb(var(--textSecondary));
