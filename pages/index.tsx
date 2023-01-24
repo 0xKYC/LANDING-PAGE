@@ -20,7 +20,7 @@ export default function Homepage() {
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection imageUrl="/demo-illustration-1.svg" title="Our approach" overTitle="Unique indentity">
+          <BasicSection imageUrl="/demo-illustration-1.svg" title="Our approach" overTitle="">
             <p>
               Our process is simple: users scan their identification document and we generate a unique, soulbound token that confirms they
               are not on any sanctions lists. This token is then stored within a Zero Knowledge (ZK) Proof on the blockchain, making it
@@ -28,12 +28,7 @@ export default function Homepage() {
               verification is done.
             </p>
           </BasicSection>
-          <BasicSection
-            imageUrl="/demo-illustration-2.svg"
-            title="So easy, no bulky integrations."
-            overTitle="Intergration in 3 steps"
-            reversed
-          >
+          <BasicSection imageUrl="/demo-illustration-2.svg" title="So easy, no bulky integrations." overTitle="" reversed>
             <p>
               To implement 0xKYC all you need is a simple &quot;token gating&quot; system added to your app and you can ensure your{' '}
               <strong> users are not OFAC sanctioned and are unique!</strong> This is signalled with a 0xKYC soulbound token (SBT).
