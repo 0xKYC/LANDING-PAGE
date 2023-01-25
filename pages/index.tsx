@@ -14,29 +14,24 @@ export default function Homepage() {
   return (
     <>
       <Head>
-        <title>{EnvVars.SITE_NAME}</title>
+        <title>{EnvVars.SITE_NAME} | Compliant Zero Knowledge ID</title>
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection imageUrl="/demo-illustration-1.svg" title="Our approach" overTitle="">
+          <BasicSection imageUrl="/demo-illustration-1.svg" title="The future of digital identification is here" overTitle="">
             <p>
-              Our process is simple: users scan their identification document and we generate a unique, soulbound token that confirms they
-              are not on any sanctions lists. This token is then stored within a Zero Knowledge (ZK) Proof on the blockchain, making it
-              completely permissionless. This innovative approach will change the way digital identification and online identity
-              verification is done.
+              With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
+              they are not on any sanctions lists, all stored within a Zero Knowledge (ZK) Proof on the blockchain
             </p>
           </BasicSection>
-          <BasicSection imageUrl="/demo-illustration-2.svg" title="So easy, no bulky integrations." overTitle="" reversed>
-            <p>
-              To implement 0xKYC all you need is a simple &quot;token gating&quot; system added to your app and you can ensure your{' '}
-              <strong> users are not OFAC sanctioned and are unique!</strong> This is signalled with a 0xKYC soulbound token (SBT).
-            </p>
+          <BasicSection imageUrl="/demo-illustration-2.svg" title="Elevate your user verification game" overTitle="" reversed>
+            <p>No bulky integrations needed. With just a token gate, you can ensure your users are:</p>
             <ul>
-              <li>Define ABI of our contract</li>
-              <li>Call special method to check a wallet for soulbound</li>
-              <li>Token gate the key functionality of your protocol</li>
+              <li>over 18 years of age</li>
+              <li>not OFAC sanctioned</li>
+              <li>not on known fraud wallet lists</li>
             </ul>
           </BasicSection>
         </WhiteBackgroundContainer>
@@ -66,10 +61,6 @@ const DarkerBackgroundContainer = styled.div`
 
 const WhiteBackgroundContainer = styled.div`
   background: rgb(var(--secondBackground));
-
-  & > :last-child {
-    padding-bottom: 5rem;
-  }
 
   & > *:not(:first-child) {
     margin-top: 15rem;

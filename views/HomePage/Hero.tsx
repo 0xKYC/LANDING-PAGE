@@ -12,11 +12,11 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle></CustomOverTitle>
-        <Heading>Are you ready for Zero Knowledge Identity?</Heading>
+        <Heading>Unlock the power of privacy</Heading>
+
         <Description>
-          At 0xKYC, we&apos;re dedicated to providing the best possible solution for our clients, such as DeFi protocols and DAOs, to verify
-          their users without compromising their personal information.
+          Take control of your digital identity with 0xKYC. Our revolutionary solution allows DeFi protocols and DAOs to verify their users
+          without compromising personal information
         </Description>
         <CustomButtonGroup>
           <Button href="https://www.youtube.com/watch?v=nRVhCr7Hz6c" rel="noreferrer" target="_blank">
@@ -99,7 +99,6 @@ const Heading = styled.h1`
   line-height: 1.1;
   margin-bottom: 4rem;
   letter-spacing: -0.03em;
-
   ${media('<=tablet')} {
     font-size: 4.6rem;
     margin-bottom: 2rem;
