@@ -18,7 +18,7 @@ const PARTNER_LOGOS = [
 
 export default function Partners() {
   return (
-    <div>
+    <Wrapper>
       <Title>offical partners with</Title>
       <Splide
         aria-label="Partners"
@@ -46,7 +46,7 @@ export default function Partners() {
           </SplideSlide>
         ))}
       </Splide>
-    </div>
+    </Wrapper>
   );
 }
 
@@ -63,4 +63,9 @@ const Title = styled.p`
   ${media('<=desktop')} {
     line-height: 1.5;
   }
+`;
+
+const Wrapper = styled.div`
+  max-width: 1300px;
+  margin: 0 auto;
 `;
