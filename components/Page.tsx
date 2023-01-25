@@ -16,7 +16,7 @@ export default function Page({ title, description, children }: PropsWithChildren
     <>
       <Head>
         <title>
-          {title} | {EnvVars.SITE_NAME}
+          {EnvVars.SITE_NAME} | {title}
         </title>
         <meta name="description" content={description} />
       </Head>
