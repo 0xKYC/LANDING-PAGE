@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
       width: 1000px !important;
   }
 }
+
 .next-light-theme {
   --background: 251,251,253;
   --secondBackground: 255,255,255;

@@ -1,69 +1,66 @@
-import NextImage from 'next/image';
-import React from 'react';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+import '@splidejs/splide/dist/css/splide.min.css';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
 import styled from 'styled-components';
-import { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Container from 'components/Container';
+
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  { name: 'banner-partners.png', alt: 'partners' },
-  { name: 'banner-partners.png', alt: 'partners' },
-  { name: 'banner-partners.png', alt: 'partners' },
-  { name: 'banner-partners.png', alt: 'partners' },
+  { name: 'cryptum.png', alt: 'cryptum' },
+  { name: 'identdefi-new.png', alt: 'identdefi' },
+  { name: 'no-res.png', alt: 'new order' },
+  { name: 'OKX_logo-new.png', alt: 'okx' },
+  { name: 'ov.png', alt: 'outlier ventures' },
+  { name: 'lomads.png', alt: 'lomads' },
 ];
 
 export default function Partners() {
   return (
-    <PartnersWrapper>
-      <Title>official partners with</Title>
-      <Swiper
-        modules={[Autoplay]}
-        spaceBetween={40}
-        loop={true}
-        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: false, stopOnLastSlide: false }}
-        speed={12000}
-        slidesPerView={1}
-        className="swiper-wrapper"
+    <div>
+      <Title>offical partners with</Title>
+      <Splide
+        aria-label="Partners"
+        options={{
+          autoWidth: true,
+          type: 'loop',
+          gap: '35px',
+          drag: false,
+          arrows: false,
+          pagination: false,
+          perPage: 1,
+          perMove: 1,
+          autoScroll: {
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            rewind: false,
+            speed: 2,
+          },
+        }}
+        extensions={{ AutoScroll }}
       >
         {PARTNER_LOGOS.map((logo, idx) => (
-          <SwiperSlide key={idx}>
-            <NextImage src={'/partners/' + logo.name} alt={logo.alt} width={3000} height={80} />
-          </SwiperSlide>
+          <SplideSlide key={idx}>
+            <img src={'/fixed/' + logo.name} alt={logo.alt} height="32px" />
+          </SplideSlide>
         ))}
-      </Swiper>
-    </PartnersWrapper>
+      </Splide>
+    </div>
   );
 }
 
-const Title = styled.h3`
+const Title = styled.p`
   font-size: 1.4rem;
   letter-spacing: 0.02em;
   line-height: 0;
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   text-align: center;
   opacity: 0.8;
+  font-weight: bold;
 
   ${media('<=desktop')} {
     line-height: 1.5;
-  }
-`;
-
-const PartnersWrapper = styled(Container)`
-  .swiper-wrapper {
-    will-change: transform;
-    transition-timing-function: linear;
-    margin-top: 0.5rem;
-    user-select: none;
-  }
-
-  .swiper-slide {
-    opacity: 0.8;
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 `;
