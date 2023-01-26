@@ -10,11 +10,7 @@ import { createGlobalStyle } from 'styled-components';
 // }
 
 export const GlobalStyle = createGlobalStyle`
-.swiper-slide {
-  @media screen and (max-width:1024px) {
-      width: 1000px !important;
-  }
-}
+
 
 .next-light-theme {
   --background: 251,251,253;

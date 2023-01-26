@@ -181,7 +181,6 @@ const Copyright = styled.p`
 `;
 
 const BottomBar = styled.div`
-  margin-top: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
