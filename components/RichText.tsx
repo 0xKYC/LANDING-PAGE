@@ -5,7 +5,7 @@ const RichText = styled.div`
   font-size: 1.8rem;
   opacity: 0.8;
   line-height: 1.6;
-
+  max-width: 60rem;
   ol,
   ul {
     list-style: none;

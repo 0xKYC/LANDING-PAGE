@@ -11,14 +11,24 @@ export interface BasicSectionProps {
   title: string;
   overTitle: string;
   reversed?: boolean;
+  href?: string;
 }
 
-export default function BasicSection({ imageUrl, title, overTitle, reversed, children }: PropsWithChildren<BasicSectionProps>) {
+export default function BasicSection({ imageUrl, title, overTitle, reversed, children, href }: PropsWithChildren<BasicSectionProps>) {
   return (
     <BasicSectionWrapper reversed={reversed}>
-      <ImageContainer>
-        <NextImage src={imageUrl} alt={title} layout="fill" objectFit="cover" />
-      </ImageContainer>
+      {href ? (
+        <ImageContainer>
+          <a rel="noreferrer" target="_blank" href={href}>
+            <NextImage src={imageUrl} alt={title} layout="fill" objectFit="contain" />
+          </a>
+        </ImageContainer>
+      ) : (
+        <ImageContainer>
+          <NextImage src={imageUrl} alt={title} layout="fill" objectFit="contain" />
+        </ImageContainer>
+      )}
+
       <ContentContainer>
         {/* <CustomOverTitle>{overTitle}</CustomOverTitle> */}
         <Title>{title}</Title>

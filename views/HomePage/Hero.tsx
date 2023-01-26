@@ -15,12 +15,15 @@ export default function Hero() {
         <Heading>Unlock the power of privacy</Heading>
 
         <Description>
-          Take control of your digital identity with 0xKYC. Our revolutionary solution allows DeFi protocols and DAOs to verify their users
-          without compromising personal information
+          Our revolutionary solution allows DeFi protocols and DAOs to verify their users without compromising personal information
         </Description>
         <CustomButtonGroup>
-          <Button href="https://www.youtube.com/watch?v=nRVhCr7Hz6c" rel="noreferrer" target="_blank">
-            Watch our video <span>&rarr;</span>
+          <Button
+            href="https://0xkyc.notion.site/0xKYC-Public-Documentation-f7db271a06e840f7862a929fb9f42299"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Documentation<span>&rarr;</span>
           </Button>
           {/* <NextLink href="#whitepaper" passHref>
             <Button transparent>
@@ -30,7 +33,14 @@ export default function Hero() {
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <HeroIllustration />
+        <VideoFrame
+          height="100%"
+          width="100%"
+          src="https://www.youtube.com/embed/nRVhCr7Hz6c"
+          title="Demo app"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></VideoFrame>
       </ImageContainer>
     </HeroWrapper>
   );
@@ -50,10 +60,21 @@ const HeroWrapper = styled(Container)`
 const Contents = styled.div`
   flex: 1;
   max-width: 60rem;
-
+  margin-right: 5rem;
   ${media('<=desktop')} {
     max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 5rem;
   }
+`;
+const VideoFrame = styled.iframe`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `;
 
 const CustomButtonGroup = styled(ButtonGroup)`
@@ -61,22 +82,13 @@ const CustomButtonGroup = styled(ButtonGroup)`
 `;
 
 const ImageContainer = styled.div`
+  position: relative;
   display: flex;
   flex: 1;
   justify-content: flex-end;
   align-items: flex-start;
-
-  svg {
-    max-width: 45rem;
-  }
-
-  ${media('<=desktop')} {
-    margin-top: 2rem;
-    justify-content: center;
-    svg {
-      max-width: 80%;
-    }
-  }
+  width: 100%;
+  min-height: 320px;
 `;
 
 const Description = styled.p`

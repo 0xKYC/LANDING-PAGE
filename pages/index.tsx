@@ -20,13 +20,19 @@ export default function Homepage() {
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection imageUrl="/demo-illustration-1.svg" title="The future of digital identification is here" overTitle="">
+          <BasicSection imageUrl="/moon.png" title="The future of digital identification is here" overTitle="">
             <p>
               With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
               they are not on any sanctions lists, all stored within a Zero Knowledge (ZK) Proof on the blockchain
             </p>
           </BasicSection>
-          <BasicSection imageUrl="/demo-illustration-2.svg" title="Elevate your user verification game" overTitle="" reversed>
+          <BasicSection
+            imageUrl="/github.gif"
+            href="https://github.com/0xKYC"
+            title="Elevate your user verification game"
+            overTitle=""
+            reversed
+          >
             <p>No bulky integrations needed. With just a token gate, you can ensure your users are:</p>
             <ul>
               <li>over 18 years of age</li>
