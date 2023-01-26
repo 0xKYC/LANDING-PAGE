@@ -71,4 +71,9 @@ const WhiteBackgroundContainer = styled.div`
   & > *:not(:first-child) {
     margin-top: 15rem;
   }
+  @media screen and (max-width: 1240px) {
+    & > *:not(:first-child) {
+      margin-top: 12rem;
+    }
+  }
 `;
