@@ -24,7 +24,7 @@ const footerItems: FooterItems = [
     title: 'Knowledge',
     items: [
       { title: 'Documentation', href: 'https://0xkyc.notion.site/0xKYC-Public-Documentation-f7db271a06e840f7862a929fb9f42299', link: true },
-      { title: 'Contact', href: '/contact' },
+      { title: 'Contact', href: 'mailto:support@0xkyc.id', link: true },
     ],
   },
 ];
@@ -50,9 +50,9 @@ export default function Footer() {
     <FooterWrapper>
       <Container>
         <ListContainer>
-          {/* {footerItems.map((singleItem) => (
+          {footerItems.map((singleItem) => (
             <FooterList key={singleItem.title} {...singleItem} />
-          ))} */}
+          ))}
         </ListContainer>
         <BottomBar>
           <Link href="/" passHref>
@@ -63,7 +63,7 @@ export default function Footer() {
 
           <ShareBar>
             <Flex>
-              <ListItem title="Privacy Policy" href="privacy-policy" />
+              <ListItem title="Privacy Policy" href="/privacy-policy" />
               <ListItem title="Contact" href="mailto:support@0xkyc.id" />
               <ListItem
                 title="Documentation"
@@ -124,17 +124,19 @@ const FooterWrapper = styled.div`
 `;
 
 const ListContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 150px;
+  display: none;
+
+  ${media('<=tablet')} {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const ListHeader = styled.p`
   font-weight: bold;
   font-size: 2.25rem;
-  margin-bottom: 2.5rem;
 `;
 
 const ListWrapper = styled.div`
