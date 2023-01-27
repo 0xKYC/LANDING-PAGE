@@ -59,7 +59,7 @@ const HeroWrapper = styled(Container)`
 
 const Contents = styled.div`
   flex: 1;
-  max-width: 60rem;
+  max-width: 70rem;
   margin-right: 5rem;
   ${media('<=desktop')} {
     max-width: 100%;
@@ -106,7 +106,7 @@ const CustomOverTitle = styled(OverTitle)`
 `;
 
 const Heading = styled.h1`
-  font-size: 7.2rem;
+  font-size: 6.5rem;
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 4rem;
