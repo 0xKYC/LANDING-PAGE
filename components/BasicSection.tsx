@@ -38,7 +38,7 @@ export default function BasicSection({ imageUrl, title, overTitle, reversed, chi
   );
 }
 
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: 5.2rem;
   font-weight: bold;
   line-height: 1.1;
@@ -79,12 +79,12 @@ const ImageContainer = styled.div`
   }
 `;
 
-const ContentContainer = styled.div`
+export const ContentContainer = styled.div`
   flex: 1;
 `;
 
 type Props = Pick<BasicSectionProps, 'reversed'>;
-const BasicSectionWrapper = styled(Container)`
+export const BasicSectionWrapper = styled(Container)`
   display: flex;
   align-items: center;
   flex-direction: ${(p: Props) => (p.reversed ? 'row-reverse' : 'row')};
