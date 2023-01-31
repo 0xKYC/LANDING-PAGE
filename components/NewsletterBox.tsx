@@ -62,7 +62,7 @@ const NewsletterWrapper = styled.div`
   flex: 0.8;
   border-radius: 1rem;
   text-align: center;
-  background-color: #adb0be;
+  background-color: white;
   margin-right: 5rem;
   padding: 4rem 2rem;
   color: black;
@@ -125,7 +125,6 @@ const InfoText = styled.p`
 
 const LargeText = styled.p`
   font-size: 1.8rem;
-
   opacity: 0;
   animation: show linear forwards 1s 1s;
   @keyframes show {
@@ -142,6 +141,7 @@ const StyledInput = styled(Input)<InputProps>`
   padding: 1rem;
   width: 100%;
   height: 46px;
+  font-size: 1.3rem;
   border: 1px solid ${(props) => (props.invalid ? 'red' : 'rgb(45, 55, 72)')};
   &:focus {
     outline: none;
@@ -166,7 +166,7 @@ const StyledButton = styled.button`
   padding: 1rem 2.2rem;
   margin-right: 2.5rem;
   height: 46px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: rgb(var(--textSecondary));
   text-transform: uppercase;
   font-family: var(--font);
