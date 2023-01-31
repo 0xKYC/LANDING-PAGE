@@ -15,7 +15,7 @@ const CheckmarkWrapper = styled('div')`
   --checkmark-height: calc(var(--checkmark-width) / 2);
   --checkmark-left: calc(var(--checkmark-width) / 2);
   --checkmark-top: 50%;
-  --checkmark-color: white;
+  --checkmark-color: black;
   width: var(--check-size);
   height: var(--check-size);
   position: relative;

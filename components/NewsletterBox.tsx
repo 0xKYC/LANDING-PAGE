@@ -62,10 +62,10 @@ const NewsletterWrapper = styled.div`
   flex: 0.8;
   border-radius: 1rem;
   text-align: center;
-  background-color: #0077be;
+  background-color: #adb0be;
   margin-right: 5rem;
   padding: 4rem 2rem;
-
+  color: black;
   ${media('<=desktop')} {
     margin: 7rem 0 0 0;
     order: 1;
@@ -101,7 +101,8 @@ const SuccessBox = styled.div`
   }
 `;
 const ErrorMessage = styled.p`
-  color: #ffa07a;
+  /* color: #ffa07a; */
+  color: red;
   font-size: 1.2rem;
   margin-top: 0.5rem;
   margin-left: 0.3rem;
@@ -141,14 +142,14 @@ const StyledInput = styled(Input)<InputProps>`
   padding: 1rem;
   width: 100%;
   height: 46px;
-  border: 1px solid ${(props) => (props.invalid ? '#ffa07a' : 'rgb(45, 55, 72)')};
+  border: 1px solid ${(props) => (props.invalid ? 'red' : 'rgb(45, 55, 72)')};
   &:focus {
     outline: none;
     box-shadow: var(--shadow-lg);
-    border: 1px solid ${(props) => (props.invalid ? '#ffa07a' : 'rgb(45, 55, 72)')};
+    border: 1px solid ${(props) => (props.invalid ? 'red' : 'rgb(45, 55, 72)')};
   }
   ::placeholder {
-    color: #9f9d9d;
+    color: #8c92ac;
   }
 `;
 
