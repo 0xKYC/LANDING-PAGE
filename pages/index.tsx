@@ -9,6 +9,7 @@ import Features from 'views/HomePage/Features';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
 import Partners from 'views/HomePage/Partners';
+import Newsletter from 'views/HomePage/Newsletter';
 
 export default function Homepage() {
   return (
@@ -20,12 +21,18 @@ export default function Homepage() {
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-          <BasicSection imageUrl="/moon.png" title="The future of digital identification is here" overTitle="">
+          {/* <BasicSection imageUrl="/moon.png" title="The future of digital identification is here" overTitle="">
             <p>
               With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
               they are not on any sanctions lists, all stored within a Zero Knowledge (ZK) Proof on the blockchain
             </p>
-          </BasicSection>
+          </BasicSection> */}
+          <Newsletter title="The future of digital identification is here">
+            <p>
+              With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
+              they are not on any sanctions lists, all stored within a Zero Knowledge (ZK) Proof on the blockchain
+            </p>
+          </Newsletter>
           <BasicSection
             imageUrl="/github.gif"
             href="https://github.com/0xKYC"

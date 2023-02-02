@@ -1,8 +1,3 @@
-import 'swiper/css';
-import 'swiper/css/bundle';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-
 import { AppProps } from 'next/dist/shared/lib/router/router';
 
 import Head from 'next/head';
