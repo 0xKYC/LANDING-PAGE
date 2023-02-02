@@ -1,6 +1,4 @@
 import axios from 'axios';
-
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import { isCompanyEmail } from 'utils/email-validator/validateEmail';
@@ -17,7 +15,6 @@ interface FormValue {
 export const NewsletterBox = () => {
   const { register, handleSubmit, formState, setError } = useForm<FormValue>();
   const { errors, isSubmitSuccessful } = formState;
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const onSubmit = handleSubmit(async ({ email }) => {
     const isValid = isCompanyEmail(email);
@@ -26,23 +23,18 @@ export const NewsletterBox = () => {
     }
 
     try {
-      const res = await axios.post('/api/subscribeNewsletter', {
+      await axios.post('/api/subscribeNewsletter', {
         email,
       });
-      if (res.status === 200) {
-        setIsSuccess(true);
-      }
     } catch (err) {
       console.error(err);
       setError('email', { message: 'Error has occured. Try again' });
     }
   });
 
-  const isSent = isSuccess && isSubmitSuccessful;
-
   return (
     <NewsletterWrapper>
-      {isSent ? (
+      {isSubmitSuccessful ? (
         <SuccessBox>
           <Checkmark />
           <LargeText>Congratulations!</LargeText>
@@ -147,7 +139,7 @@ const InfoText = styled.p`
 `;
 
 const LargeText = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   opacity: 0;
   animation: show linear forwards 1s 1s;
   @keyframes show {
