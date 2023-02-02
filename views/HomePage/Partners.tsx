@@ -8,12 +8,13 @@ import styled from 'styled-components';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  { name: 'cryptum.png', alt: 'cryptum' },
-  { name: 'identdefi-new.png', alt: 'identdefi' },
-  { name: 'no-res.png', alt: 'new order' },
-  { name: 'OKX_logo-new.png', alt: 'okx' },
-  { name: 'ov.png', alt: 'outlier ventures' },
-  { name: 'lomads.png', alt: 'lomads' },
+  { name: 'cryptum.png', alt: 'cryptum', href: 'https://cryptum.io/' },
+  { name: 'identdefi-new.png', alt: 'identdefi', href: 'https://identdefi.xyz/' },
+  { name: 'no-res.png', alt: 'new order', href: 'https://neworder.network/' },
+  { name: 'OKX_logo-new.png', alt: 'okx', href: 'https://www.okx.com/' },
+  { name: 'ov.png', alt: 'outlier ventures', href: 'https://outlierventures.io/' },
+  { name: 'lomads.png', alt: 'lomads', href: 'https://www.lomads.xyz/' },
+  { name: 'codemonk.png', alt: 'codemonk', href: 'https://www.codemonk.ai/' },
 ];
 
 export default function Partners() {
@@ -42,7 +43,9 @@ export default function Partners() {
       >
         {PARTNER_LOGOS.map((logo, idx) => (
           <SplideSlide key={idx}>
-            <img src={'/fixed/' + logo.name} alt={logo.alt} height="32px" />
+            <a href={logo.href} target="_blank" rel="noreferrer" style={{ cursor: 'pointer' }}>
+              <img src={'/fixed/' + logo.name} alt={logo.alt} height="32px" />
+            </a>
           </SplideSlide>
         ))}
       </Splide>
