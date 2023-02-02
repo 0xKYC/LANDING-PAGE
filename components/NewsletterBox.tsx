@@ -1,5 +1,9 @@
+import axios from 'axios';
+
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from 'styled-components';
+import { isCompanyEmail } from 'utils/email-validator/validateEmail';
 import { media } from 'utils/media';
 import { Checkmark } from './Checkmark';
 import Input from './Input';
@@ -11,10 +15,31 @@ interface FormValue {
   email: string;
 }
 export const NewsletterBox = () => {
-  const { register, handleSubmit, formState } = useForm<FormValue>();
-  const { isSubmitted, errors, isSubmitSuccessful } = formState;
-  const onSubmit = handleSubmit((data) => console.log(data));
-  const isSent = isSubmitted && isSubmitSuccessful;
+  const { register, handleSubmit, formState, setError } = useForm<FormValue>();
+  const { errors, isSubmitSuccessful } = formState;
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const onSubmit = handleSubmit(async ({ email }) => {
+    const isValid = isCompanyEmail(email);
+    if (!isValid) {
+      return setError('email', { message: 'Invalid email address' });
+    }
+
+    try {
+      const res = await axios.post('/api/subscribeNewsletter', {
+        email,
+      });
+      if (res.status === 200) {
+        setIsSuccess(true);
+      }
+    } catch (err) {
+      console.error(err);
+      setError('email', { message: 'Error has occured. Try again' });
+    }
+  });
+
+  const isSent = isSuccess && isSubmitSuccessful;
+
   return (
     <NewsletterWrapper>
       {isSent ? (
@@ -25,10 +50,8 @@ export const NewsletterBox = () => {
         </SuccessBox>
       ) : (
         <>
-          <Text>Sign up for our newsletter</Text>
-          <InfoText>
-            We&apos;re launching soon on Ethereum, get in touch with us by signing up and keeping up to date with our developments
-          </InfoText>
+          <Text>Subscribe to our updates</Text>
+          <InfoText>Stay informed about our Ethereum launch by subscribing.</InfoText>
           <Flex>
             <FormWrapper>
               <InputWrapper>
