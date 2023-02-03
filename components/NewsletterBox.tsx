@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import { isCompanyEmail } from 'utils/email-validator/validateEmail';
 import { media } from 'utils/media';
@@ -16,7 +16,7 @@ export const NewsletterBox = () => {
   const { register, handleSubmit, formState, setError } = useForm<FormValue>();
   const { errors, isSubmitSuccessful } = formState;
 
-  const onSubmit = handleSubmit(async ({ email }) => {
+  const onSubmit: SubmitHandler<FormValue> = async ({ email }) => {
     const isValid = isCompanyEmail(email);
     if (!isValid) {
       return setError('email', { message: 'Invalid email address' });
@@ -30,7 +30,7 @@ export const NewsletterBox = () => {
       console.error(err);
       setError('email', { message: 'Error has occured. Try again' });
     }
-  });
+  };
 
   return (
     <NewsletterWrapper>
@@ -45,25 +45,22 @@ export const NewsletterBox = () => {
           <Text>Subscribe to our updates</Text>
           <InfoText>Stay informed about our Ethereum launch by subscribing.</InfoText>
           <Flex>
-            <FormWrapper>
-              <InputWrapper>
-                <StyledInput
-                  invalid={Boolean(errors.email)}
-                  placeholder="Email"
-                  {...register('email', {
-                    required: 'Email is required',
-                    pattern: {
-                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: 'Invalid email address',
-                    },
-                  })}
-                  title="Type your email here"
-                />
-                {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-              </InputWrapper>
-
-              <StyledButton onClick={onSubmit}>
-                Sign up <span>&rarr;</span>
+            <FormWrapper onSubmit={handleSubmit(onSubmit)}>
+              <StyledInput
+                invalid={Boolean(errors.email)}
+                placeholder="Email"
+                {...register('email', {
+                  required: 'Email is required',
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: 'Invalid email address',
+                  },
+                })}
+                title="Type your email here"
+              />
+              {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+              <StyledButton>
+                Sign up <Arrow>&rarr;</Arrow>
               </StyledButton>
             </FormWrapper>
           </Flex>
@@ -72,7 +69,11 @@ export const NewsletterBox = () => {
     </NewsletterWrapper>
   );
 };
-
+const Arrow = styled.span`
+  @media screen and (max-width: 1224px) {
+    display: none;
+  }
+`;
 const NewsletterWrapper = styled.div`
   flex: 0.8;
   border-radius: 1rem;
@@ -81,28 +82,25 @@ const NewsletterWrapper = styled.div`
   margin-right: 5rem;
   padding: 4rem 2rem;
   color: black;
+
   ${media('<=desktop')} {
     margin: 7rem 0 0 0;
     order: 1;
     max-width: 600px;
-    padding: 2rem 1rem;
   }
 `;
 
-const FormWrapper = styled.div`
-  width: 94%;
+const FormWrapper = styled.form`
+  width: 100%;
+  padding: 0 3rem;
   display: flex;
   margin-top: 1rem;
-  ${media('<=phone')} {
-    width: 100%;
+
+  ${media('<=desktop')} {
+    padding: 0;
   }
 `;
 
-const InputWrapper = styled.div`
-  width: 100%;
-  margin-right: 1rem;
-  margin-left: 2rem;
-`;
 const SuccessBox = styled.div`
   height: 100%;
   margin-top: 1rem;
@@ -134,7 +132,6 @@ const Flex = styled.div`
 const InfoText = styled.p`
   font-size: 1.3rem;
   opacity: 0.8;
-  margin: 0 3rem;
   margin-bottom: 3rem;
 `;
 
@@ -179,7 +176,7 @@ const StyledButton = styled.button`
   text-align: center;
   background: rgb(var(--primary));
   padding: 1rem 2.2rem;
-  margin-right: 2.5rem;
+  margin-left: 1.3rem;
   height: 46px;
   font-size: 1.3rem;
   color: rgb(var(--textSecondary));
