@@ -14,7 +14,7 @@ const PARTNER_LOGOS = [
   { name: 'OKX_logo-new.png', alt: 'okx', href: 'https://www.okx.com/' },
   { name: 'ov.png', alt: 'outlier ventures', href: 'https://outlierventures.io/' },
   { name: 'lomads.png', alt: 'lomads', href: 'https://www.lomads.xyz/' },
-  { name: 'codemonk-fixed.png', alt: 'codemonk', href: 'https://www.codemonk.ai/' },
+  { name: 'codemonk.png', alt: 'codemonk', href: 'https://www.codemonk.ai/' },
 ];
 
 export default function Partners() {
