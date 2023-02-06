@@ -23,9 +23,10 @@ export const NewsletterBox = () => {
     }
 
     try {
-      await axios.post('/api/subscribeNewsletter', {
+      const res = await axios.post('/api/subscribeNewsletter', {
         email,
       });
+      console.log(res);
     } catch (err) {
       console.error(err);
       setError('email', { message: 'Error has occured. Try again' });
