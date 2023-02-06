@@ -33,7 +33,7 @@ export default async function SubscribeNewsletter(req: NextApiRequest, res: Next
       { headers },
     );
 
-    res.status(200).send('success');
+    res.status(200).send(headers);
   } catch (error) {
     console.log('ERROR', error);
     res.status(400).send({ message: error });
