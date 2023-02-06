@@ -32,8 +32,8 @@ export default async function SubscribeNewsletter(req: NextApiRequest, res: Next
       },
       { headers },
     );
-    console.log(addToSegment);
-    res.status(200).send(headers);
+
+    res.status(200).send(addToSegment);
   } catch (error) {
     console.log('ERROR', error);
     res.status(400).send({ message: error });
