@@ -25,14 +25,14 @@ export default async function SubscribeNewsletter(req: NextApiRequest, res: Next
       email: req.body.email,
     });
 
-    await axios.post(
+    const addToSegment = await axios.post(
       'https://track.customer.io/api/v1/segments/12/add_customers',
       {
         ids: [id],
       },
       { headers },
     );
-
+    console.log(addToSegment);
     res.status(200).send(headers);
   } catch (error) {
     console.log('ERROR', error);
