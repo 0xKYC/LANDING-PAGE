@@ -46,7 +46,7 @@ const CheckmarkWrapper = styled('div')`
     border-radius: 50%;
     display: block;
     z-index: 1;
-    animation: circle linear forwards 1.3s;
+    animation: circle linear forwards 1s;
   }
   @keyframes circle {
     0% {
@@ -76,7 +76,7 @@ const CheckmarkIcon = styled('span')`
   border-bottom: var(--check-border-width) solid var(--checkmark-color);
   transform-origin: left top;
   transform: rotate(-45deg);
-  animation: checkmark linear both 1.7s;
+  animation: checkmark linear both 1.3s;
 
   @keyframes checkmark {
     0% {
