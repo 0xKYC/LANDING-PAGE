@@ -41,7 +41,10 @@ const Flex = styled.div`
   gap: 3rem;
   margin-right: 3.5rem;
 
-  ${media('<=tablet')} {
+  ${media('<=desktop')} {
+    display: none;
+  }
+  @media screen and (max-width: 1079px) {
     display: none;
   }
 `;
@@ -83,6 +86,7 @@ export default function Footer() {
               <LinkedinIcon size={50} round={true} />
             </a>
           </ShareBar>
+          <Copyright>&copy; 2023 0xKYC, Inc. All rights reserved.</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
@@ -124,13 +128,18 @@ const FooterWrapper = styled.div`
 `;
 
 const ListContainer = styled.div`
-  display: none;
+  /* display: none; */
+  display: flex;
+  justify-content: center;
 
   ${media('<=tablet')} {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+  }
+
+  @media screen and (min-width: 1080px) {
+    display: none;
   }
 `;
 
@@ -178,7 +187,7 @@ const ShareBar = styled.div`
 `;
 
 const Copyright = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-top: 0.5rem;
 `;
 
