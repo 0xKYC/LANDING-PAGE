@@ -12,16 +12,6 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
   const { title, url } = props;
   const videoHash = extractVideoHashFromUrl(url);
   const srcDoc = `<style>
-  * {
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-  }
-  
-  html,
-  body {
-    height: 100%
-  }
   
   img,
   span {
@@ -52,20 +42,17 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
   </a>`;
 
   return (
-    <VideoContainer>
-      <VideoFrame
-        className=""
-        width="100%"
-        height="100%"
-        src=""
-        srcDoc={srcDoc}
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title={title}
-        loading="lazy"
-      />
-    </VideoContainer>
+    <VideoFrame
+      width="100%"
+      height="100%"
+      src=""
+      srcDoc={srcDoc}
+      frameBorder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title={title}
+      loading="lazy"
+    />
   );
 }
 
@@ -74,21 +61,6 @@ function extractVideoHashFromUrl(url: string) {
   const searchParams = new URL(url).search;
   return new URLSearchParams(searchParams).getAll(videoHashQueryParamKey);
 }
-
-export const VideoContainer = styled.div`
-  display: flex;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-
-  &:before {
-    display: block;
-    content: '';
-    width: 100%;
-    padding-top: 56.25%;
-  }
-`;
 
 const VideoFrame = styled.iframe`
   position: absolute;

@@ -1,10 +1,12 @@
 import axios from 'axios';
+import { useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import styled from 'styled-components';
 import { isCompanyEmail } from 'utils/email-validator/validateEmail';
 import { media } from 'utils/media';
 import { Checkmark } from './Checkmark';
 import Input from './Input';
+import { Spinner } from './Spinner';
 
 interface InputProps {
   invalid: boolean;
@@ -13,6 +15,7 @@ interface FormValue {
   email: string;
 }
 export const NewsletterBox = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const { register, handleSubmit, formState, setError } = useForm<FormValue>();
   const { errors, isSubmitSuccessful } = formState;
 
@@ -23,22 +26,26 @@ export const NewsletterBox = () => {
     }
 
     try {
-      await axios.post('/api/subscribeNewsletter', {
+      setIsLoading(true);
+      const res = await axios.post('/api/subscribeNewsletter', {
         email,
       });
+      console.log(res);
+      setIsLoading(false);
     } catch (err) {
       console.error(err);
+      setIsLoading(false);
       setError('email', { message: 'Error has occured. Try again' });
     }
   };
 
   return (
     <NewsletterWrapper>
-      {isSubmitSuccessful ? (
+      {isSubmitSuccessful && !isLoading ? (
         <SuccessBox>
           <Checkmark />
           <LargeText>Congratulations!</LargeText>
-          <LargeText>Your subscription to our newsletter has been confirmed.</LargeText>
+          <SmallText>Your subscription to our newsletter has been confirmed.</SmallText>
         </SuccessBox>
       ) : (
         <>
@@ -59,8 +66,10 @@ export const NewsletterBox = () => {
                 title="Type your email here"
               />
               {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-              <StyledButton>
-                Sign up <Arrow>&rarr;</Arrow>
+              <StyledButton disabled={isLoading}>
+                {isLoading && <Spinner />}
+                {isLoading ? 'Loading' : 'Sign up'}
+                {!isLoading && <Arrow>&rarr;</Arrow>}
               </StyledButton>
             </FormWrapper>
           </Flex>
@@ -70,6 +79,7 @@ export const NewsletterBox = () => {
   );
 };
 const Arrow = styled.span`
+  margin-left: 5px;
   @media screen and (max-width: 1224px) {
     display: none;
   }
@@ -138,7 +148,7 @@ const InfoText = styled.p`
 const LargeText = styled.p`
   font-size: 1.5rem;
   opacity: 0;
-  animation: show linear forwards 1s 1s;
+  animation: show linear forwards 0.8s 0.8s;
   @keyframes show {
     0% {
       opacity: 0;
@@ -149,6 +159,20 @@ const LargeText = styled.p`
   }
 `;
 
+const SmallText = styled.p`
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: show linear forwards 0.8s 0.8s;
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
 const StyledInput = styled(Input)<InputProps>`
   padding: 1rem;
   width: 100%;
@@ -171,7 +195,10 @@ const Text = styled.p`
 `;
 
 const StyledButton = styled.button`
-  width: 40%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   text-align: center;
   background: rgb(var(--primary));

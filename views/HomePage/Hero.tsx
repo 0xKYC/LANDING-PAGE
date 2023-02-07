@@ -1,11 +1,9 @@
-import NextLink from 'next/link';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
-import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
-
+import YoutubeVideo from 'components/YoutubeVideo';
 import { media } from 'utils/media';
 
 export default function Hero() {
@@ -25,22 +23,10 @@ export default function Hero() {
           >
             Documentation<span>&rarr;</span>
           </Button>
-          {/* <NextLink href="#whitepaper" passHref>
-            <Button transparent>
-              Features <span>&rarr;</span>
-            </Button>
-          </NextLink> */}
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <VideoFrame
-          height="100%"
-          width="100%"
-          src="https://www.youtube.com/embed/nRVhCr7Hz6c"
-          title="Demo app"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></VideoFrame>
+        <YoutubeVideo url="https://www.youtube.com/watch?v=nRVhCr7Hz6c" title="Demo app" />
       </ImageContainer>
     </HeroWrapper>
   );
@@ -67,15 +53,6 @@ const Contents = styled.div`
     margin-bottom: 5rem;
   }
 `;
-const VideoFrame = styled.iframe`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`;
 
 const CustomButtonGroup = styled(ButtonGroup)`
   margin-top: 4rem;
@@ -99,10 +76,6 @@ const Description = styled.p`
   ${media('<=desktop')} {
     font-size: 1.5rem;
   }
-`;
-
-const CustomOverTitle = styled(OverTitle)`
-  margin-bottom: 2rem;
 `;
 
 const Heading = styled.h1`
