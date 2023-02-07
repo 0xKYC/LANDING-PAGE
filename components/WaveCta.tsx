@@ -22,6 +22,6 @@ const CtaWrapper = styled.div`
   margin-top: -1rem;
 
   ${media('<=tablet')} {
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
 `;
