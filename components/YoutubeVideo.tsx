@@ -35,7 +35,7 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
     width: 100%;
   }
   </style>
-  <a style="color: rgb(var(--primary))" href=https://www.youtube.com/embed/${videoHash}?autoplay=1>
+  <a style="color: rgb(var(--primary))" href=https://www.youtube.com/embed/${videoHash}?autoplay=1&mute=1>
     <img class="thumbnail" src="https://img.youtube.com/vi/${videoHash}/hqdefault.jpg" alt='${title || ''}'>
    
     <img class="play" src="${playIcon}" alt="Play the video">
@@ -45,7 +45,6 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
     <VideoFrame
       width="100%"
       height="100%"
-      src=""
       srcDoc={srcDoc}
       frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
