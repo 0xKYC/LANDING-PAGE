@@ -9,12 +9,13 @@ import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
   { name: 'cryptum.png', alt: 'cryptum', href: 'https://cryptum.io/' },
-  { name: 'identdefi-new.png', alt: 'identdefi', href: 'https://identdefi.xyz/' },
+  { name: 'blue.svg', alt: 'identdefi', href: 'https://www.blue.fi' },
   { name: 'no-res.png', alt: 'new order', href: 'https://neworder.network/' },
   { name: 'OKX_logo-new.png', alt: 'okx', href: 'https://www.okx.com/web3' },
   { name: 'ov.png', alt: 'outlier ventures', href: 'https://outlierventures.io/' },
   { name: 'lomads.png', alt: 'lomads', href: 'https://www.lomads.xyz/' },
   { name: 'codemonk.png', alt: 'codemonk', href: 'https://www.codemonk.ai/' },
+  { name: 'mthrbrd.webp', alt: 'motherboard', href: 'https://www.motherboard.fi' },
 ];
 
 export default function Partners() {
