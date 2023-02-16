@@ -53,19 +53,21 @@ export const NewsletterBox = () => {
           <InfoText>Stay informed about our Ethereum launch by subscribing.</InfoText>
           <Flex>
             <FormWrapper onSubmit={handleSubmit(onSubmit)}>
-              <StyledInput
-                invalid={Boolean(errors.email)}
-                placeholder="Email"
-                {...register('email', {
-                  required: 'Email is required',
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: 'Invalid email address',
-                  },
-                })}
-                title="Type your email here"
-              />
-              {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+              <Box>
+                <StyledInput
+                  invalid={Boolean(errors.email)}
+                  placeholder="Email"
+                  {...register('email', {
+                    required: 'Email is required',
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: 'Invalid email address',
+                    },
+                  })}
+                  title="Type your email here"
+                />
+                {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+              </Box>
               <StyledButton disabled={isLoading}>
                 {isLoading && <Spinner />}
                 {isLoading ? 'Loading' : 'Sign up'}
@@ -78,6 +80,11 @@ export const NewsletterBox = () => {
     </NewsletterWrapper>
   );
 };
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
 const Arrow = styled.span`
   margin-left: 5px;
   @media screen and (max-width: 1224px) {
