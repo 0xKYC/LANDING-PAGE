@@ -86,7 +86,7 @@ export default function Footer() {
               <LinkedinIcon size={50} round={true} />
             </a>
             <a href="https://www.crunchbase.com/organization/0xkyc" rel="noreferrer" target="_blank">
-              <Image src="/crunchbase.png" alt="github" width={48} height={48} />
+              <Image src="/crunchbase.png" alt="crunchbase" width={48} height={48} />
             </a>
           </ShareBar>
           <Copyright>&copy; 2023 0xKYC, Inc. All rights reserved.</Copyright>
