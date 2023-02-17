@@ -85,6 +85,9 @@ export default function Footer() {
             <a href="https://www.linkedin.com/company/0xkyc/" rel="noreferrer" target="_blank">
               <LinkedinIcon size={50} round={true} />
             </a>
+            <a href="https://www.crunchbase.com/organization/0xkyc" rel="noreferrer" target="_blank">
+              <Image src="/crunchbase.png" alt="github" width={48} height={48} />
+            </a>
           </ShareBar>
           <Copyright>&copy; 2023 0xKYC, Inc. All rights reserved.</Copyright>
         </BottomBar>
@@ -199,5 +202,8 @@ const BottomBar = styled.div`
 
   ${media('<=tablet')} {
     flex-direction: column;
+  }
+  @media screen and (max-width: 1100px) {
+    gap: 0.5rem;
   }
 `;
