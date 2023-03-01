@@ -26,6 +26,7 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
   .thumbnail {
     object-fit: cover;
   }
+
   
   .play {
     display: flex;
@@ -47,6 +48,7 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
       height="100%"
       srcDoc={srcDoc}
       frameBorder="0"
+      scrolling="no"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       title={title}
