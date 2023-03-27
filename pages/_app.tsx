@@ -4,6 +4,7 @@ import Head from 'next/head';
 // import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
 
+import CookieConsent from 'react-cookie-consent';
 import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
 import Navbar from 'components/Navbar';
@@ -70,6 +71,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <WaveCta />
         <Footer />
+        <CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
       </Providers>
     </>
   );
