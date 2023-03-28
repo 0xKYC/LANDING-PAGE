@@ -1,5 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/dist/shared/lib/router/router';
-
 import Head from 'next/head';
 // import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
@@ -73,6 +73,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Footer />
         <CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
       </Providers>
+      <Analytics />
     </>
   );
 }
