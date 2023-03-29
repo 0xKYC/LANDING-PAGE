@@ -26,7 +26,7 @@ export default function Hero() {
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <YoutubeVideo url="https://www.youtube.com/watch?v=nRVhCr7Hz6c" title="Demo app" />
+        <YoutubeVideo url="https://www.youtube.com/watch?v=OSgYUkuCjss&t=333s" title="Demo app" />
       </ImageContainer>
     </HeroWrapper>
   );
