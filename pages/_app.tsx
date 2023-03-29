@@ -7,17 +7,19 @@ import React, { PropsWithChildren } from 'react';
 import CookieConsent from 'react-cookie-consent';
 import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
+import Modal from 'components/Modal';
 import Navbar from 'components/Navbar';
 import NavigationDrawer from 'components/NavigationDrawer';
-import NewsletterModal from 'components/NewsletterModal';
+
 import WaveCta from 'components/WaveCta';
-import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context';
+
+import { ModalContextProvider, useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
 
 const navItems: NavItems = [
   // { title: 'About', href: '/features' },
   // { title: 'Contact', href: '/contact' },
-  { title: 'App (Coming soon)', href: '/app', outlined: true },
+  { title: 'App', href: '/app' },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -80,18 +82,18 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 function Providers<T>({ children }: PropsWithChildren<T>) {
   return (
-    <NewsletterModalContextProvider>
+    <ModalContextProvider>
       <NavigationDrawer items={navItems}>{children}</NavigationDrawer>
-    </NewsletterModalContextProvider>
+    </ModalContextProvider>
   );
 }
 
 function Modals() {
-  const { isModalOpened, setIsModalOpened } = useNewsletterModalContext();
+  const { isModalOpened, setIsModalOpened } = useModalContext();
   if (!isModalOpened) {
     return null;
   }
-  return <NewsletterModal onClose={() => setIsModalOpened(false)} />;
+  return <Modal onClose={() => setIsModalOpened(false)} />;
 }
 
 export default MyApp;

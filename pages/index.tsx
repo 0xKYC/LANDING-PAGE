@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection from 'components/BasicSection';
-import Link from 'components/Link';
+
 import { EnvVars } from 'env';
 
 import Cta from 'views/HomePage/Cta';
 import Features from 'views/HomePage/Features';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
-import Partners from 'views/HomePage/Partners';
 import Newsletter from 'views/HomePage/Newsletter';
+import Partners from 'views/HomePage/Partners';
 
 export default function Homepage() {
   return (
@@ -21,6 +21,7 @@ export default function Homepage() {
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
+
           {/* <BasicSection imageUrl="/moon.png" title="The future of digital identification is here" overTitle="">
             <p>
               With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms

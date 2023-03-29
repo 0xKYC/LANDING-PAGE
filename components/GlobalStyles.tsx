@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   --cardBackground: 255,255,255;
   --inputBackground: 255,255,255;
   --navbarBackground: 255,255,255;
-  --modalBackground: 251,251,253;
+  --modalBackground: 223, 223, 223;
   --errorColor: #ffa07a;
   --logoColor: #243A5A;
 }

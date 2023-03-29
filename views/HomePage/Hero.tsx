@@ -5,6 +5,7 @@ import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import YoutubeVideo from 'components/YoutubeVideo';
 import { media } from 'utils/media';
+import NewsletterModal from 'components/Modal';
 
 export default function Hero() {
   return (
