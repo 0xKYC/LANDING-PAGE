@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import BasicSection from 'components/BasicSection';
+import BasicSection, { BasicSectionWrapper, Title } from 'components/BasicSection';
 
 import { EnvVars } from 'env';
 
@@ -35,8 +35,8 @@ export default function Homepage() {
             </p>
           </Newsletter>
           <BasicSection
-            imageUrl="/github.gif"
-            href="https://github.com/0xKYC"
+            imageUrl="/verified.png"
+            href="https://mumbai.polygonscan.com/tx/0xdf3f3a07869a4d0925a992b5033da05d03ca9107aea4a4e38d01ef1e4bc5a802"
             title="Elevate your user verification game"
             overTitle=""
             reversed
@@ -49,11 +49,27 @@ export default function Homepage() {
             </ul>
           </BasicSection>
         </WhiteBackgroundContainer>
-        {/* <DarkerBackgroundContainer>
-          <Cta />
+        <DarkerBackgroundContainer>
+          {/* <Cta /> */}
+          {/* <BasicSectionWrapper> */}
+          <div style={{ textAlign: 'center', margin: '0 22rem', fontSize: '1.7rem', marginBottom: '5rem' }}>
+            <Title>Why you need 0xKYC</Title>
+            <div style={{ margin: '0 5rem' }}>
+              <p>
+                Integrating 0xKYC into your decentralized application (dApp) can provide a seamless, secure, and decentralized way for users
+                to complete KYC once and use that verification across multiple dApps.{' '}
+              </p>
+              <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
+                By reducing friction for users and complying with regulatory requirements, businesses can increase engagement and ultimately
+                boost their bottom line while maintaining user privacy and security.
+              </p>
+            </div>
+            <Features />
+          </div>
+
+          {/* </BasicSectionWrapper> */}
           <FeaturesGallery />
-          <Features />
-        </DarkerBackgroundContainer> */}
+        </DarkerBackgroundContainer>
       </HomepageWrapper>
     </>
   );
@@ -67,7 +83,7 @@ const HomepageWrapper = styled.div`
 
 const DarkerBackgroundContainer = styled.div`
   background: rgb(var(--background));
-
+  padding-top: 8rem;
   & > *:not(:first-child) {
     margin-top: 15rem;
   }
@@ -75,7 +91,7 @@ const DarkerBackgroundContainer = styled.div`
 
 const WhiteBackgroundContainer = styled.div`
   background: rgb(var(--secondBackground));
-
+  padding-bottom: 5rem;
   & > *:not(:first-child) {
     margin-top: 15rem;
   }

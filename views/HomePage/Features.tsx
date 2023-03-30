@@ -8,37 +8,19 @@ import { media } from 'utils/media';
 const FEATURES = [
   {
     imageUrl: '/grid-icons/asset-1.svg',
-    title: 'Lorem ipsum dolor sit amet.',
+    title: 'DAO',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
   },
   {
     imageUrl: '/grid-icons/asset-2.svg',
-    title: 'Lorem ipsum dolor sit amet.',
+    title: 'NFT',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
   },
   {
     imageUrl: '/grid-icons/asset-3.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-4.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-5.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-6.svg',
-    title: 'Lorem ipsum dolor sit amet.',
+    title: 'PROTECTION',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
   },
@@ -57,10 +39,10 @@ export default function Features() {
 }
 
 const CustomAutofitGrid = styled(AutofitGrid)`
-  --autofit-grid-item-size: 40rem;
+  --autofit-grid-item-size: 30rem;
 
   ${media('<=tablet')} {
-    --autofit-grid-item-size: 30rem;
+    --autofit-grid-item-size: 20rem;
   }
 
   ${media('<=phone')} {
