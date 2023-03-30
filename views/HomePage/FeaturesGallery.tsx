@@ -10,26 +10,26 @@ import { media } from 'utils/media';
 
 const TABS = [
   {
-    title: 'Connect with any wallet',
+    title: 'Frontend Token-gate',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
-    imageUrl: '/demo-illustration.png',
+    imageUrl: '/frontend.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
-    title: 'Verify yourself',
+    title: 'Smart Contract Implemetation',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
-    imageUrl: '/demo-illustration2.png',
+    imageUrl: '/solidity2.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
-    title: 'You have the Soulbound Token! ',
+    title: 'On chain verification',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
-    imageUrl: '/demo-illustration3.png',
+    imageUrl: '/on-chain.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
   },
@@ -76,29 +76,42 @@ export default function FeaturesGallery() {
   return (
     <FeaturesGalleryWrapper>
       <Content>
-        <OverTitle>features</OverTitle>
-        <SectionTitle>How it actually works?</SectionTitle>
+        {/* <OverTitle>features</OverTitle> */}
+        <SectionTitle>How to easily integrate it</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>
         {imagesMarkup}
       </GalleryWrapper>
+      <StyledText>
+        For more details visit our{' '}
+        <StyledLink rel="noreferrer" target="_blank" href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md">
+          technical documentation
+        </StyledLink>
+      </StyledText>
     </FeaturesGalleryWrapper>
   );
 }
 
+const StyledText = styled('p')`
+  font-size: 2rem;
+`;
+const StyledLink = styled('a')`
+  color: inherit;
+`;
 const FeaturesGalleryWrapper = styled(Container)`
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 5rem;
 `;
 
 const GalleryWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 4rem;
-
+  margin-bottom: 5rem;
   ${media('<=desktop')} {
     flex-direction: column;
   }

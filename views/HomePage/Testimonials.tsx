@@ -24,7 +24,6 @@ const TESTIMONIALS = [
 export default function Testimonials() {
   return (
     <div>
-      <Separator />
       <Title>What our clients say</Title>
       <TestimonialsWrapper>
         {TESTIMONIALS.map((singleTestimonial, idx) => (

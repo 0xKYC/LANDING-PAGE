@@ -38,7 +38,7 @@ export default function BasicSection({ imageUrl, title, overTitle, reversed, chi
   );
 }
 
-export const Title = styled.h2`
+export const Title = styled.h3`
   font-size: 5.2rem;
   font-weight: bold;
   line-height: 1.1;
@@ -57,13 +57,14 @@ const CustomOverTitle = styled(OverTitle)`
 
 const ImageContainer = styled.div`
   flex: 1;
-
+  width: 100%;
   position: relative;
   &:before {
     display: block;
     content: '';
     width: 100%;
     padding-top: calc((9 / 16) * 100%);
+    padding-bottom: 7rem;
   }
 
   & > div {
