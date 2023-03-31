@@ -5,10 +5,11 @@ import { useRouter } from 'next/router';
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
+import { useModalContext } from 'contexts/modal.context';
 import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
 import { NavItems, SingleNavItem } from 'types';
 import { media } from 'utils/media';
-import Button, { DisabledBtn } from './Button';
+import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
 import { HamburgerIcon } from './HamburgerIcon';
@@ -22,6 +23,7 @@ type NavbarContainerProps = { hidden: boolean; transparent: boolean };
 export default function Navbar({ items }: NavbarProps) {
   const router = useRouter();
   const { toggle } = Drawer.useDrawer();
+  const { setIsModalOpened } = useModalContext();
   const [scrollingDirection, setScrollingDirection] = useState<ScrollingDirections>('none');
 
   let lastScrollY = useRef(0);
@@ -73,9 +75,7 @@ export default function Navbar({ items }: NavbarProps) {
           </LogoWrapper>
         </NextLink>
         <NavItemList>
-          {items.map((singleItem) => (
-            <NavItem key={singleItem.href} {...singleItem} />
-          ))}
+          <CustomButton onClick={() => setIsModalOpened(true)}>App (coming soon)</CustomButton>
         </NavItemList>
         {/* Hide color switcher
         <ColorSwitcherContainer>
@@ -90,11 +90,6 @@ export default function Navbar({ items }: NavbarProps) {
 }
 
 function NavItem({ href, title, outlined }: SingleNavItem) {
-  if (outlined) {
-    return <DisabledBtn>{title}</DisabledBtn>;
-    // return <CustomButton>{title}</CustomButton>;
-  }
-
   return (
     <NavItemWrapper outlined={outlined}>
       <NextLink href={href} passHref>
@@ -105,7 +100,7 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
 }
 
 const CustomButton = styled(Button)`
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.4rem;
   line-height: 1.8;
 `;
 

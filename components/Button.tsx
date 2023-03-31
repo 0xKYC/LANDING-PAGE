@@ -34,6 +34,9 @@ const Button = styled.a<ButtonProps>`
 
 export default Button;
 
+export const SmallBtn = styled(Button)`
+  padding: 1rem 1.4rem;
+`;
 export const DisabledBtn = styled('button')`
   border: none;
   background: none;

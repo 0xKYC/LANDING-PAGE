@@ -55,6 +55,7 @@ export const NewsletterBox = () => {
             <FormWrapper onSubmit={handleSubmit(onSubmit)}>
               <Box>
                 <StyledInput
+                  autoComplete="email"
                   invalid={Boolean(errors.email)}
                   placeholder="Email"
                   {...register('email', {

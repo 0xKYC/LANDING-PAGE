@@ -1,13 +1,13 @@
-import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { PropsWithChildren, useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { SmallBtn } from 'components/Button';
+import { useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
-import { DisabledBtn } from './Button';
+
 import ClientOnly from './ClientOnly';
 import CloseIcon from './CloseIcon';
 import OriginalDrawer from './Drawer';
-
 type NavigationDrawerProps = PropsWithChildren<{ items: NavItems }>;
 
 export default function NavigationDrawer({ children, items }: NavigationDrawerProps) {
@@ -33,7 +33,7 @@ export default function NavigationDrawer({ children, items }: NavigationDrawerPr
 function NavItemsList({ items }: NavigationDrawerProps) {
   const { close } = OriginalDrawer.useDrawer();
   const router = useRouter();
-
+  const { setIsModalOpened } = useModalContext();
   useEffect(() => {
     function handleRouteChangeComplete() {
       close();
@@ -43,14 +43,18 @@ function NavItemsList({ items }: NavigationDrawerProps) {
     return () => router.events.off('routeChangeComplete', handleRouteChangeComplete);
   }, [close, router]);
 
+  const handleClick = () => {
+    close();
+    setIsModalOpened(true);
+  };
   return (
     <ul>
       {items.map((singleItem, idx) => {
         return (
           <NavItem key={idx}>
-            {/* <NextLink href={singleItem.href}>{singleItem.title}</NextLink> */}
-
-            <DisabledBtn>{singleItem.title}</DisabledBtn>
+            <SmallBtn style={{ fontSize: '2rem' }} onClick={handleClick}>
+              App (coming soon)
+            </SmallBtn>
           </NavItem>
         );
       })}
@@ -77,7 +81,7 @@ const Wrapper = styled.div`
 
   .my-drawer-container {
     position: relative;
-    height: 100%;
+    height: 80%;
     margin: auto;
     max-width: 70rem;
     padding: 0 1.2rem;
@@ -118,10 +122,10 @@ const NavItem = styled.li`
     font-size: 3rem;
     text-transform: uppercase;
     display: block;
-    color: currentColor;
+    color: white;
     text-decoration: none;
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     text-align: center;
   }
 `;
