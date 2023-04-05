@@ -10,6 +10,7 @@ import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
 import Newsletter from 'views/HomePage/Newsletter';
 import Partners from 'views/HomePage/Partners';
+import Testimonials from 'views/HomePage/Testimonials';
 
 export default function Homepage() {
   return (
@@ -49,6 +50,8 @@ export default function Homepage() {
             </ul>
           </BasicSection>
         </WhiteBackgroundContainer>
+
+        <Testimonials />
         {/* <DarkerBackgroundContainer>
           <Cta />
           <FeaturesGallery />
