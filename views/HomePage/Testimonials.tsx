@@ -24,6 +24,7 @@ export default function Testimonials() {
   return (
     <div>
       <Separator />
+      <Title>What our clients says</Title>
       <TestimonialsWrapper>
         {TESTIMONIALS.map((singleTestimonial, idx) => (
           <TestimonialCard key={idx}>
@@ -53,6 +54,22 @@ export default function Testimonials() {
 
 const TestimonialsWrapper = styled(Container)`
   position: relative;
+  text-align: center;
+`;
+
+const Title = styled.h3`
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 7rem;
+  padding: 0 1rem;
+  letter-spacing: -0.03em;
+
+  ${media('<=phone')} {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+  }
 `;
 
 const TestimonialCard = styled.div`
