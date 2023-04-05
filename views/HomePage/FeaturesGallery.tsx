@@ -77,7 +77,7 @@ export default function FeaturesGallery() {
     <FeaturesGalleryWrapper>
       <Content>
         {/* <OverTitle>features</OverTitle> */}
-        <SectionTitle>How to easily integrate it</SectionTitle>
+        <SectionTitle>How easily integrate it</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>
