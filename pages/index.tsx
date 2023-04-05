@@ -54,7 +54,7 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           {/* <Cta /> */}
           {/* <BasicSectionWrapper> */}
-          <div style={{ textAlign: 'center', margin: '0 22rem', fontSize: '1.7rem', marginBottom: '5rem' }}>
+          <Box>
             <Title>Why you need 0xKYC</Title>
             <div style={{ margin: '0 5rem' }}>
               <p>
@@ -67,7 +67,7 @@ export default function Homepage() {
               </p>
             </div>
             <Features />
-          </div>
+          </Box>
 
           {/* </BasicSectionWrapper> */}
           <FeaturesGallery />
@@ -77,6 +77,16 @@ export default function Homepage() {
   );
 }
 
+const Box = styled.div`
+  text-align: center;
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  margin-bottom: 5rem;
+
+  @media screen and (min-width: 1224px) {
+    margin: 0 20rem;
+  }
+`;
 const HomepageWrapper = styled.div`
   & > :last-child {
     margin-bottom: 2rem;
