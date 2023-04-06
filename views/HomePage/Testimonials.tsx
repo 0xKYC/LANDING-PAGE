@@ -22,7 +22,7 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <div>
+    <>
       <Separator />
       <Title>What our clients says</Title>
       <TestimonialsWrapper>
@@ -48,7 +48,7 @@ export default function Testimonials() {
         ))}
       </TestimonialsWrapper>
       <Separator />
-    </div>
+    </>
   );
 }
 
@@ -84,7 +84,7 @@ const TestimonialCard = styled.div`
 
 const Content = styled.blockquote`
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-style: italic;
   max-width: 65%;
 
