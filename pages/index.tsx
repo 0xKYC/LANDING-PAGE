@@ -11,6 +11,7 @@ import Hero from 'views/HomePage/Hero';
 import Newsletter from 'views/HomePage/Newsletter';
 import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
+import Container from 'components/Container';
 
 export default function Homepage() {
   return (
@@ -54,9 +55,10 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           {/* <Cta /> */}
           {/* <BasicSectionWrapper> */}
-          <Box>
-            <Title>Why you need 0xKYC</Title>
-            <div style={{ margin: '0 5rem' }}>
+          <Testimonials />
+          <Container style={{ textAlign: 'center' }}>
+            <Title style={{ textAlign: 'center' }}>Why you need 0xKYC</Title>
+            <Box>
               <p>
                 Integrating 0xKYC into your decentralized application (dApp) can provide a seamless, secure, and decentralized way for users
                 to complete KYC once and use that verification across multiple dApps.{' '}
@@ -65,10 +67,9 @@ export default function Homepage() {
                 By reducing friction for users and complying with regulatory requirements, businesses can increase engagement and ultimately
                 boost their bottom line while maintaining user privacy and security.
               </p>
-            </div>
+            </Box>
             <Features />
-          </Box>
-
+          </Container>
           {/* </BasicSectionWrapper> */}
           <FeaturesGallery />
         </DarkerBackgroundContainer>
@@ -78,13 +79,11 @@ export default function Homepage() {
 }
 
 const Box = styled.div`
-  text-align: center;
-  margin: 0 1rem;
-  font-size: 1.7rem;
-  margin-bottom: 5rem;
-
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.5rem;
   @media screen and (min-width: 1224px) {
-    margin: 0 20rem;
+    width: 70%;
   }
 `;
 const HomepageWrapper = styled.div`
@@ -95,9 +94,9 @@ const HomepageWrapper = styled.div`
 
 const DarkerBackgroundContainer = styled.div`
   background: rgb(var(--background));
-  padding-top: 8rem;
+  padding-top: 1rem;
   & > *:not(:first-child) {
-    margin-top: 15rem;
+    margin-top: 5rem;
   }
 `;
 

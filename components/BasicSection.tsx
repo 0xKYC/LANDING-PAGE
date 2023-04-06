@@ -44,7 +44,6 @@ export const Title = styled.h3`
   line-height: 1.1;
   margin-bottom: 4rem;
   letter-spacing: -0.03em;
-
   ${media('<=tablet')} {
     font-size: 4.6rem;
     margin-bottom: 2rem;

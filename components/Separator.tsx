@@ -5,7 +5,7 @@ const Separator = styled.div`
   margin: 7rem 0;
   border: 1px solid rgba(var(--secondary), 0.025);
   height: 0px;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   ${media('<=tablet')} {
     margin: 5rem 0;
   }

@@ -86,7 +86,7 @@ export default function FeaturesGallery() {
       <StyledText>
         For more details visit our{' '}
         <StyledLink rel="noreferrer" target="_blank" href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md">
-          technical documentation
+          Technical Documentation
         </StyledLink>
       </StyledText>
     </FeaturesGalleryWrapper>
@@ -105,6 +105,7 @@ const FeaturesGalleryWrapper = styled(Container)`
   flex-direction: column;
   justify-content: center;
   padding-bottom: 5rem;
+  padding-top: 8rem;
 `;
 
 const GalleryWrapper = styled.div`
