@@ -54,7 +54,7 @@ export default function Partners() {
   );
 }
 
-const Title = styled.p`
+const Title = styled.h3`
   font-size: 1.4rem;
   letter-spacing: 0.02em;
   line-height: 0;

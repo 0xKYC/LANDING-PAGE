@@ -38,7 +38,7 @@ export default function BasicSection({ imageUrl, title, overTitle, reversed, chi
   );
 }
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   font-size: 5.2rem;
   font-weight: bold;
   line-height: 1.1;
