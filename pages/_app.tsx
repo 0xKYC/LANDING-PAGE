@@ -19,7 +19,7 @@ import { NavItems } from 'types';
 const navItems: NavItems = [
   // { title: 'About', href: '/features' },
   // { title: 'Contact', href: '/contact' },
-  { title: 'App', href: '/app' },
+  { title: 'App (coming soon)', href: '' },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {

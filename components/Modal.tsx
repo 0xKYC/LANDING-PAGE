@@ -25,12 +25,8 @@ export default function Modal({ onClose }: NewsletterModalProps) {
           <Box>
             <Title>App is already live for investors and partners!</Title>
             <Text>
-              Contact us at <Link href="mailto:support@0xkyc.id">support@0xkyc.id</Link> for credentials
+              Contact us at <Link href="mailto:support@0xkyc.id">support@0xkyc.id</Link> to get access
             </Text>
-
-            <SmallBtn href="https://app.0xkyc.id/" target="_blank" rel="noopener" onClick={onClose}>
-              Launch app
-            </SmallBtn>
           </Box>
         </Card>
       </Container>
@@ -57,7 +53,7 @@ const Card = styled.div`
   position: relative;
   flex-direction: column;
   margin: auto;
-  padding: 5rem 5rem;
+  padding: 4rem;
   /* background: rgb(var(--modalBackground)); */
   background: #f1f2f3;
   border-radius: 0.6rem;
@@ -65,8 +61,12 @@ const Card = styled.div`
   overflow: hidden;
   color: rgb(var(--text));
 
-  ${media('<=tablet')} {
-    padding: 7.5rem 2.5rem;
+  @media screen and (min-width: 600px) {
+    padding: 5rem;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 5rem;
+    padding-bottom: 3rem;
   }
 `;
 
@@ -95,7 +95,7 @@ const Title = styled.div`
 `;
 const Text = styled.p`
   font-size: 1.8rem;
-  margin: 1.5rem 0 1.7rem;
+  margin: 1rem;
 `;
 
 const Link = styled.a`

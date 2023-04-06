@@ -53,7 +53,7 @@ function NavItemsList({ items }: NavigationDrawerProps) {
         return (
           <NavItem key={idx}>
             <SmallBtn style={{ fontSize: '2rem' }} onClick={handleClick}>
-              Launch app
+              App (coming soon)
             </SmallBtn>
           </NavItem>
         );
