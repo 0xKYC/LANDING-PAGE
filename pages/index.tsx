@@ -1,17 +1,17 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import BasicSection, { BasicSectionWrapper, Title } from 'components/BasicSection';
+import BasicSection, { Title } from 'components/BasicSection';
+import Container from 'components/Container';
 
 import { EnvVars } from 'env';
 
-import Cta from 'views/HomePage/Cta';
+// import Cta from 'views/HomePage/Cta';
 import Features from 'views/HomePage/Features';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
 import Newsletter from 'views/HomePage/Newsletter';
 import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
-import Container from 'components/Container';
 
 export default function Homepage() {
   return (
@@ -55,7 +55,6 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           {/* <Cta /> */}
           {/* <BasicSectionWrapper> */}
-          <Testimonials />
           <Container style={{ textAlign: 'center' }}>
             <Title style={{ textAlign: 'center' }}>Why you need 0xKYC</Title>
             <Box>
