@@ -95,6 +95,7 @@ html {
   text-rendering: optimizelegibility;
   text-size-adjust: 100%;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 
   @media (max-width: 37.5em) {
     font-size: 50%;

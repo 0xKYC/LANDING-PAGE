@@ -11,7 +11,7 @@ interface Props {
 
 export default function Newsletter({ title, children }: PropsWithChildren<Props>) {
   return (
-    <Wrapper>
+    <Wrapper id="newsletter">
       <Box>
         <NewsletterBox />
 
