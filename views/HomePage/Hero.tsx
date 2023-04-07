@@ -17,12 +17,8 @@ export default function Hero() {
           Our revolutionary solution allows DeFi protocols and DAOs to verify their users without compromising personal information
         </Description>
         <CustomButtonGroup>
-          <Button
-            href="https://0xkyc.notion.site/0xKYC-Public-Documentation-f7db271a06e840f7862a929fb9f42299"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Documentation<span>&rarr;</span>
+          <Button href="#newsletter">
+            Sign Up to Our Newsletter<span>&rarr;</span>
           </Button>
         </CustomButtonGroup>
       </Contents>
