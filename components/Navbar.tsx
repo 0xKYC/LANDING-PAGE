@@ -12,7 +12,7 @@ import { media } from 'utils/media';
 import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
-import { HamburgerIcon } from './HamburgerIcon';
+// import { HamburgerIcon } from './HamburgerIcon';
 
 const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
 
@@ -81,9 +81,9 @@ export default function Navbar({ items }: NavbarProps) {
         <ColorSwitcherContainer>
           <ColorSwitcher />
         </ColorSwitcherContainer> */}
-        <HamburgerMenuWrapper>
+        {/* <HamburgerMenuWrapper>
           <HamburgerIcon aria-label="Toggle menu" onClick={toggle} />
-        </HamburgerMenuWrapper>
+        </HamburgerMenuWrapper> */}
       </Content>
     </NavbarContainer>
   );
@@ -107,10 +107,6 @@ const CustomButton = styled(Button)`
 const NavItemList = styled.div`
   display: flex;
   list-style: none;
-
-  ${media('<desktop')} {
-    display: none;
-  }
 `;
 
 const HamburgerMenuWrapper = styled.div`
