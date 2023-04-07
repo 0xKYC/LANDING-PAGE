@@ -17,6 +17,7 @@ const TESTIMONIALS = [
       title: 'CEO and Co-Founder',
       avatarUrl: '/testimonials/lomads-ceo.jpeg',
     },
+    href: 'https://www.lomads.xyz/',
   },
 ];
 
@@ -24,16 +25,18 @@ export default function Testimonials() {
   return (
     <div>
       <Separator />
-      <Title>What our clients says</Title>
+      <Title>What our clients say</Title>
       <TestimonialsWrapper>
         {TESTIMONIALS.map((singleTestimonial, idx) => (
           <TestimonialCard key={idx}>
-            <NextImage
-              src={singleTestimonial.companyLogoUrl}
-              alt={`${singleTestimonial.author.name}'s company logo`}
-              width={220}
-              height={32}
-            />
+            <a href={singleTestimonial.href} target="_blank" rel="noreferrer">
+              <NextImage
+                src={singleTestimonial.companyLogoUrl}
+                alt={`${singleTestimonial.author.name}'s company logo`}
+                width={220}
+                height={32}
+              />
+            </a>
             <Content>“{singleTestimonial.content}”</Content>
             <AuthorContainer>
               <AuthorImageContainer>
@@ -84,7 +87,7 @@ const TestimonialCard = styled.div`
 
 const Content = styled.blockquote`
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-style: italic;
   max-width: 65%;
 
