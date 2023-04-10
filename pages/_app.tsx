@@ -15,11 +15,12 @@ import WaveCta from 'components/WaveCta';
 
 import { ModalContextProvider, useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
+import { rgb } from 'polished';
 
 const navItems: NavItems = [
   // { title: 'About', href: '/features' },
   // { title: 'Contact', href: '/contact' },
-  { title: 'App (coming soon)', href: '' },
+  { title: 'Get access', href: '' },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -73,7 +74,23 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <WaveCta />
         <Footer />
-        <CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
+        <CookieConsent
+          style={{
+            position: 'sticky',
+            width: '96%',
+            margin: 'auto',
+            bottom: '20px',
+            borderRadius: '0.5rem',
+            fontSize: '1.5rem',
+          }}
+          buttonStyle={{
+            background: 'rgb(var(--primary)',
+            color: 'white',
+            fontSize: '1.5rem',
+          }}
+        >
+          This website uses cookies to improve your experience
+        </CookieConsent>
       </Providers>
       <Analytics />
     </>

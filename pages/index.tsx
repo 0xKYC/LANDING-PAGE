@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import BasicSection, { BasicSectionWrapper, Title } from 'components/BasicSection';
 
+import Container from 'components/Container';
 import { EnvVars } from 'env';
 
 import Cta from 'views/HomePage/Cta';
@@ -11,7 +12,6 @@ import Hero from 'views/HomePage/Hero';
 import Newsletter from 'views/HomePage/Newsletter';
 import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
-import Container from 'components/Container';
 
 export default function Homepage() {
   return (

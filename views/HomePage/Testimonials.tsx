@@ -17,23 +17,26 @@ const TESTIMONIALS = [
       title: 'CEO and Co-Founder',
       avatarUrl: '/testimonials/lomads-ceo.jpeg',
     },
+    href: 'https://www.lomads.xyz/',
   },
 ];
 
 export default function Testimonials() {
   return (
-    <>
+    <div>
       <Separator />
       <Title>What our clients say</Title>
       <TestimonialsWrapper>
         {TESTIMONIALS.map((singleTestimonial, idx) => (
           <TestimonialCard key={idx}>
-            <NextImage
-              src={singleTestimonial.companyLogoUrl}
-              alt={`${singleTestimonial.author.name}'s company logo`}
-              width={220}
-              height={32}
-            />
+            <a href={singleTestimonial.href} target="_blank" rel="noreferrer">
+              <NextImage
+                src={singleTestimonial.companyLogoUrl}
+                alt={`${singleTestimonial.author.name}'s company logo`}
+                width={220}
+                height={32}
+              />
+            </a>
             <Content>“{singleTestimonial.content}”</Content>
             <AuthorContainer>
               <AuthorImageContainer>
@@ -48,21 +51,21 @@ export default function Testimonials() {
         ))}
       </TestimonialsWrapper>
       <Separator />
-    </>
+    </div>
   );
 }
 
 const TestimonialsWrapper = styled(Container)`
   position: relative;
   text-align: center;
-  padding-bottom: 3rem;
 `;
 
 const Title = styled.h3`
   text-align: center;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
   line-height: 1.1;
+  margin-top: 7rem;
   margin-bottom: 7rem;
   padding: 0 1rem;
   letter-spacing: -0.03em;
