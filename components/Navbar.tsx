@@ -75,7 +75,7 @@ export default function Navbar({ items }: NavbarProps) {
           </LogoWrapper>
         </NextLink>
         <NavItemList>
-          <CustomButton onClick={() => setIsModalOpened(true)}>App (coming soon)</CustomButton>
+          <CustomButton onClick={() => setIsModalOpened(true)}>Get access</CustomButton>
         </NavItemList>
         {/* Hide color switcher
         <ColorSwitcherContainer>
