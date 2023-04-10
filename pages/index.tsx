@@ -5,7 +5,7 @@ import BasicSection, { BasicSectionWrapper, Title } from 'components/BasicSectio
 import Container from 'components/Container';
 import { EnvVars } from 'env';
 
-import Cta from 'views/HomePage/Cta';
+// import Cta from 'views/HomePage/Cta';
 import Features from 'views/HomePage/Features';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
@@ -36,6 +36,7 @@ export default function Homepage() {
               they are not on any sanctions lists, all stored within a Zero Knowledge (ZK) Proof on the blockchain
             </p>
           </Newsletter>
+          <Testimonials />
           <BasicSection
             imageUrl="/verified.png"
             href="https://mumbai.polygonscan.com/tx/0xdf3f3a07869a4d0925a992b5033da05d03ca9107aea4a4e38d01ef1e4bc5a802"
