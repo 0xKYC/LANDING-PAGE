@@ -20,7 +20,7 @@ import { rgb } from 'polished';
 const navItems: NavItems = [
   // { title: 'About', href: '/features' },
   // { title: 'Contact', href: '/contact' },
-  { title: 'App (coming soon)', href: '' },
+  { title: 'Get access', href: '' },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
