@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import BasicSection, { BasicSectionWrapper, Title } from 'components/BasicSection';
+import BasicSection, { Title } from 'components/BasicSection';
 
 import Container from 'components/Container';
 import { EnvVars } from 'env';
@@ -31,8 +31,8 @@ export default function Homepage() {
           </Newsletter>
           <Testimonials />
           <BasicSection
-            imageUrl="/verified.png"
-            href="https://mumbai.polygonscan.com/tx/0xdf3f3a07869a4d0925a992b5033da05d03ca9107aea4a4e38d01ef1e4bc5a802"
+            imageUrl="/github.gif"
+            href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md"
             title="Elevate your user verification game"
             overTitle=""
             reversed
@@ -48,7 +48,7 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           {/* <Cta /> */}
           {/* <BasicSectionWrapper> */}
-          <Container style={{ textAlign: 'center' }}>
+          <Container style={{ textAlign: 'center', marginTop: '8rem' }}>
             <Title style={{ textAlign: 'center' }}>Are you still running your DAO without 0xKYC?</Title>
             <Box>
               <p>
@@ -57,7 +57,7 @@ export default function Homepage() {
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
                 No more abuse of DAO governance systems, no more paying out to sanctioned individuals, say goodbye to users opening new
-                accounts as if they are a different person! #1Person1Vote
+                accounts as if they are a different person! <strong>#1Person1Vote</strong>
               </p>
             </Box>
             <Features />
@@ -95,12 +95,12 @@ const DarkerBackgroundContainer = styled.div`
 const WhiteBackgroundContainer = styled.div`
   background: rgb(var(--secondBackground));
   padding-bottom: 5rem;
-  & > *:not(:first-child) {
+  /* & > *:not(:first-child) {
     margin-top: 15rem;
-  }
-  @media screen and (max-width: 1240px) {
+  } */
+  /* @media screen and (max-width: 1240px) {
     & > *:not(:first-child) {
-      margin-top: 12rem;
-    }
+      margin-top: 6rem;
+    } */
   }
 `;

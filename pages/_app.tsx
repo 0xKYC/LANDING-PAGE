@@ -76,12 +76,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Footer />
         <CookieConsent
           style={{
-            position: 'sticky',
+            position: 'fixed',
             width: '96%',
             margin: 'auto',
             bottom: '20px',
             borderRadius: '0.5rem',
             fontSize: '1.5rem',
+            left: '50%',
+            marginBottom: '1rem',
+            transform: 'translateX(-50%)',
           }}
           buttonStyle={{
             background: 'rgb(var(--primary)',

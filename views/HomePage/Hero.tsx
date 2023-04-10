@@ -32,7 +32,7 @@ export default function Hero() {
 const HeroWrapper = styled(Container)`
   display: flex;
   padding-top: 5rem;
-
+  padding-bottom: 15rem;
   ${media('<=desktop')} {
     padding-top: 1rem;
     flex-direction: column;

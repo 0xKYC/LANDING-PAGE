@@ -20,7 +20,7 @@ export default function BasicSection({ imageUrl, title, overTitle, reversed, chi
       {href ? (
         <ImageContainer>
           <a rel="noreferrer" target="_blank" href={href}>
-            <NextImage src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+            <NextImage src={imageUrl} alt={title} layout="fill" objectFit="contain" />
           </a>
         </ImageContainer>
       ) : (

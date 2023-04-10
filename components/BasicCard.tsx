@@ -40,6 +40,7 @@ const Title = styled.div`
   font-weight: bold;
 `;
 
-const Description = styled.div`
+const Description = styled.p`
   opacity: 0.6;
+  min-height: 40%;
 `;

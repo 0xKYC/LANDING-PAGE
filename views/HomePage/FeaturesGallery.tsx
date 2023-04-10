@@ -136,12 +136,10 @@ const TabsContainer = styled.div`
 
   ${media('<=tablet')} {
     width: 500px;
-    background-color: pink;
   }
 
   @media screen and (max-width: 575px) {
     width: 100%;
-    background-color: blue;
   }
 `;
 
