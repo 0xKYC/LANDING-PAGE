@@ -10,25 +10,22 @@ import { media } from 'utils/media';
 
 const TABS = [
   {
-    title: 'Frontend Token-gate',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
+    title: 'Front-end Token Gate',
+    description: "With just a couple lines of code you're able to integrate our solution within your system.",
     imageUrl: '/frontend.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
-    title: 'Smart Contract Implemetation',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
+    title: 'Smart Contracts Integration',
+    description: 'Our team will assist you in smart contracts integration if necessary.',
     imageUrl: '/solidity2.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
-    title: 'On chain verification',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.',
+    title: 'On-chain Security',
+    description: 'The highest level of security is provided with zero knowledge proofs verifiable by regulators (if necessary)',
     imageUrl: '/on-chain.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
@@ -44,7 +41,7 @@ export default function FeaturesGallery() {
 
     return (
       <ImageContainer key={singleTab.title} isActive={isActive}>
-        <NextImage src={singleTab.imageUrl} alt={singleTab.title} layout="fill" objectFit="contain" priority={isFirst} />
+        <NextImage src={singleTab.imageUrl} alt={singleTab.title} width={600} height={500} objectFit="contain" priority={isFirst} />
       </ImageContainer>
     );
   });
@@ -76,7 +73,6 @@ export default function FeaturesGallery() {
   return (
     <FeaturesGalleryWrapper>
       <Content>
-        {/* <OverTitle>features</OverTitle> */}
         <SectionTitle>How easily integrate it</SectionTitle>
       </Content>
       <GalleryWrapper>
@@ -135,32 +131,25 @@ const TabsContainer = styled.div`
 
   ${media('<=desktop')} {
     margin-right: 0;
-    margin-bottom: 4rem;
+    width: 500px;
+  }
+
+  ${media('<=tablet')} {
+    width: 500px;
+    background-color: pink;
+  }
+
+  @media screen and (max-width: 575px) {
     width: 100%;
+    background-color: blue;
   }
 `;
 
 const ImageContainer = styled.div<{ isActive: boolean }>`
-  position: relative;
   overflow: hidden;
   border-radius: 0.8rem;
-  flex: ${(p) => (p.isActive ? '2' : '0')};
+  flex: ${(p) => (p.isActive ? '1.5' : '0')};
   box-shadow: var(--shadow-md);
-
-  &:before {
-    display: block;
-    content: '';
-    width: 100%;
-    padding-top: calc((9 / 16) * 100%);
-  }
-
-  & > div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
 
   ${media('<=desktop')} {
     width: ${(p) => (p.isActive ? '100%' : '0')};

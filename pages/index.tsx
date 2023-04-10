@@ -23,13 +23,6 @@ export default function Homepage() {
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
-
-          {/* <BasicSection imageUrl="/moon.png" title="The future of digital identification is here" overTitle="">
-            <p>
-              With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
-              they are not on any sanctions lists, all stored within a Zero Knowledge (ZK) Proof on the blockchain
-            </p>
-          </BasicSection> */}
           <Newsletter title="The future of digital identification is here">
             <p>
               With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
@@ -55,17 +48,16 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           {/* <Cta /> */}
           {/* <BasicSectionWrapper> */}
-          <Testimonials />
           <Container style={{ textAlign: 'center' }}>
-            <Title style={{ textAlign: 'center' }}>Why you need 0xKYC</Title>
+            <Title style={{ textAlign: 'center' }}>Are you still running your DAO without 0xKYC?</Title>
             <Box>
               <p>
-                Integrating 0xKYC into your decentralized application (dApp) can provide a seamless, secure, and decentralized way for users
-                to complete KYC once and use that verification across multiple dApps.{' '}
+                Integrating 0xKYC into your decentralized application (dApp) provides a seamless and secure experience. With 0xKYC you know
+                your community are unique and not sanctioned individuals.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
-                By reducing friction for users and complying with regulatory requirements, businesses can increase engagement and ultimately
-                boost their bottom line while maintaining user privacy and security.
+                No more abuse of DAO governance systems, no more paying out to sanctioned individuals, say goodbye to users opening new
+                accounts as if they are a different person! #1Person1Vote
               </p>
             </Box>
             <Features />
