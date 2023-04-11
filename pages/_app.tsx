@@ -90,6 +90,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             background: 'rgb(var(--primary)',
             color: 'white',
             fontSize: '1.5rem',
+            borderRadius: '0.4rem',
+            fontFamily: 'var(--font)',
           }}
         >
           This website uses cookies to improve your experience

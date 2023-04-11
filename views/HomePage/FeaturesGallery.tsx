@@ -11,21 +11,21 @@ import { media } from 'utils/media';
 const TABS = [
   {
     title: 'Front-end Token Gate',
-    description: "With just a couple lines of code you're able to integrate our solution within your system.",
+    description: "With just a couple lines of code you're able to integrate our solution within your system",
     imageUrl: '/frontend.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
     title: 'Smart Contracts Integration',
-    description: 'Our team will assist you in smart contracts integration if necessary.',
+    description: 'Easy contract integration and assistance from our team when needed',
     imageUrl: '/solidity2.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
     title: 'On-chain Security',
-    description: 'The highest level of security is provided with zero knowledge proofs verifiable by regulators (if necessary)',
+    description: 'Experience unparalleled on-chain security with zero-knowledge proofs',
     imageUrl: '/on-chain.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
@@ -73,7 +73,7 @@ export default function FeaturesGallery() {
   return (
     <FeaturesGalleryWrapper>
       <Content>
-        <SectionTitle>How easily integrate it</SectionTitle>
+        <SectionTitle>Easy to Integrate</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>

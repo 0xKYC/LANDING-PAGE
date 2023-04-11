@@ -49,7 +49,7 @@ export default function Homepage() {
           {/* <Cta /> */}
           {/* <BasicSectionWrapper> */}
           <Container style={{ textAlign: 'center', marginTop: '8rem' }}>
-            <Title style={{ textAlign: 'center' }}>Are you still running your DAO without 0xKYC?</Title>
+            <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
                 Integrating 0xKYC into your decentralized application (dApp) provides a seamless and secure experience. With 0xKYC you know

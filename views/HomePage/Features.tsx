@@ -9,20 +9,18 @@ const FEATURES = [
   {
     imageUrl: '/grid-icons/security.svg',
     title: 'DAO Work',
-    description:
-      "With 0xKYC you can block users who aren't legally allowed to work for your DAO as well as track them to never hire that one person who didn't do their job",
+    description: 'Block sanctioned users and track performance to ensure you never hire an unsuitable team member again.',
   },
   {
     imageUrl: '/grid-icons/vote.svg',
     title: 'DAO Governance',
-    description:
-      'Our system almost entirely eliminates the problem of users abusing their voting rights in DAOs as well as helps you verify if you can send or receive funds from',
+    description: 'Safeguard your DAO voting and transactions with our user verification and abuse prevention system.',
   },
   {
     imageUrl: '/grid-icons/terms.svg',
     title: 'NFT Marketplaces',
     description:
-      'No more free abuse of free mints and other minting mechanisms, now you know that users are the same person across wallets',
+      "Eliminate abuse of free mints and other minting mechanisms by verifying each user's unique decentralized identifier (DID).",
   },
 ];
 
