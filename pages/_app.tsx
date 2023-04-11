@@ -15,7 +15,6 @@ import WaveCta from 'components/WaveCta';
 
 import { ModalContextProvider, useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
-import { rgb } from 'polished';
 
 const navItems: NavItems = [
   // { title: 'About', href: '/features' },
