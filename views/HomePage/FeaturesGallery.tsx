@@ -11,7 +11,7 @@ import { media } from 'utils/media';
 const TABS = [
   {
     title: 'Front-end Token Gate',
-    description: "With just a couple lines of code you're able to integrate our solution within your system",
+    description: 'With a couple lines of code you can integrate our solution within your system',
     imageUrl: '/front.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
