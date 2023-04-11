@@ -74,6 +74,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <WaveCta />
         <Footer />
         <CookieConsent
+          buttonText="OKAY"
           style={{
             position: 'fixed',
             width: '96%',
@@ -91,6 +92,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             fontSize: '1.5rem',
             borderRadius: '0.4rem',
             fontFamily: 'var(--font)',
+            fontWeight: 'bold',
           }}
         >
           This website uses cookies to improve your experience
