@@ -12,21 +12,21 @@ const TABS = [
   {
     title: 'Front-end Token Gate',
     description: "With just a couple lines of code you're able to integrate our solution within your system",
-    imageUrl: '/frontend.png',
+    imageUrl: '/front.png',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
     title: 'Smart Contracts Integration',
     description: 'Easy contract integration and assistance from our team when needed',
-    imageUrl: '/solidity2.png',
+    imageUrl: '/sol-mod.png',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
     title: 'On-chain Security',
     description: 'Experience unparalleled on-chain security with zero-knowledge proofs',
-    imageUrl: '/on-chain.png',
+    imageUrl: '/onn-chain.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
   },
@@ -41,7 +41,7 @@ export default function FeaturesGallery() {
 
     return (
       <ImageContainer key={singleTab.title} isActive={isActive}>
-        <NextImage src={singleTab.imageUrl} alt={singleTab.title} width={600} height={500} objectFit="contain" priority={isFirst} />
+        <NextImage src={singleTab.imageUrl} alt={singleTab.title} objectFit="cover" width={750} height={550} priority={isFirst} />
       </ImageContainer>
     );
   });
