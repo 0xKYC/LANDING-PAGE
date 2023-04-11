@@ -15,7 +15,6 @@ import WaveCta from 'components/WaveCta';
 
 import { ModalContextProvider, useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
-import { rgb } from 'polished';
 
 const navItems: NavItems = [
   // { title: 'About', href: '/features' },
@@ -76,17 +75,22 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Footer />
         <CookieConsent
           style={{
-            position: 'sticky',
+            position: 'fixed',
             width: '96%',
             margin: 'auto',
             bottom: '20px',
             borderRadius: '0.5rem',
             fontSize: '1.5rem',
+            left: '50%',
+            marginBottom: '1rem',
+            transform: 'translateX(-50%)',
           }}
           buttonStyle={{
             background: 'rgb(var(--primary)',
             color: 'white',
             fontSize: '1.5rem',
+            borderRadius: '0.4rem',
+            fontFamily: 'var(--font)',
           }}
         >
           This website uses cookies to improve your experience

@@ -5,27 +5,27 @@ import styled from 'styled-components';
 // import { A11y, Autoplay, Navigation } from 'swiper';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 import Container from 'components/Container';
-import Separator from 'components/Separator';
+import { Separator } from 'components/Separator';
 import { media } from 'utils/media';
 
 const TESTIMONIALS = [
   {
     companyLogoUrl: '/fixed/lomads.png',
     content: `At Lomads, we take compliance and security very seriously. That's why we're excited to partner with 0xKYC to offer our customers an easy way to verify each contributor's uniqueness within their organization. This helps ensure that funds aren't sent to sanctioned individuals and keeps the organisation compliant. This service will be available through Soulbound tokens launched on our platform, and we're proud to offer one of the most reliable and user-friendly solutions out there with 0xKYC.`,
+    href: 'https://www.lomads.xyz/',
     author: {
       name: 'Nishant Bhaskar',
       title: 'CEO and Co-Founder',
       avatarUrl: '/testimonials/lomads-ceo.jpeg',
     },
-    href: 'https://www.lomads.xyz/',
   },
 ];
 
 export default function Testimonials() {
   return (
-    <div>
+    <Box>
       <Separator />
-      <Title>What our clients say</Title>
+      <Title style={{ margin: 0 }}>What our clients say</Title>
       <TestimonialsWrapper>
         {TESTIMONIALS.map((singleTestimonial, idx) => (
           <TestimonialCard key={idx}>
@@ -51,28 +51,31 @@ export default function Testimonials() {
         ))}
       </TestimonialsWrapper>
       <Separator />
-    </div>
+    </Box>
   );
 }
 
 const TestimonialsWrapper = styled(Container)`
   position: relative;
   text-align: center;
+  padding-bottom: 0rem;
+  margin-top: 7rem !important;
+`;
+
+const Box = styled.div`
+  padding-bottom: 3rem;
 `;
 
 const Title = styled.h3`
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
   line-height: 1.1;
-  margin-top: 7rem;
-  margin-bottom: 7rem;
   padding: 0 1rem;
   letter-spacing: -0.03em;
 
   ${media('<=phone')} {
     font-size: 3.5rem;
-    margin-bottom: 4rem;
   }
 `;
 

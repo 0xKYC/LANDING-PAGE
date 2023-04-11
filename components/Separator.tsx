@@ -1,14 +1,7 @@
 import styled from 'styled-components';
-import { media } from 'utils/media';
-
-const Separator = styled.div`
+export const Separator = styled.div`
   margin: 7rem 0;
+  margin-bottom: 4rem;
   border: 1px solid rgba(var(--secondary), 0.025);
   height: 0px;
-  margin-bottom: 1rem;
-  ${media('<=tablet')} {
-    margin: 5rem 0;
-  }
 `;
-
-export default Separator;

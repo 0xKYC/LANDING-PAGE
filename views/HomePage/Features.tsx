@@ -7,40 +7,20 @@ import { media } from 'utils/media';
 
 const FEATURES = [
   {
-    imageUrl: '/grid-icons/asset-1.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/grid-icons/security.svg',
+    title: 'DAO Work',
+    description: 'Block sanctioned users and track performance to ensure you never hire an unsuitable team member again.',
   },
   {
-    imageUrl: '/grid-icons/asset-2.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+    imageUrl: '/grid-icons/vote.svg',
+    title: 'DAO Governance',
+    description: 'Safeguard your DAO voting and transactions with our user verification and abuse prevention system.',
   },
   {
-    imageUrl: '/grid-icons/asset-3.svg',
-    title: 'Lorem ipsum dolor sit amet.',
+    imageUrl: '/grid-icons/terms.svg',
+    title: 'NFT Marketplaces',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-4.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-5.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
-  },
-  {
-    imageUrl: '/grid-icons/asset-6.svg',
-    title: 'Lorem ipsum dolor sit amet.',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis error dolorem ipsa dolore facere est consequuntur aut, eos doloribus voluptate?',
+      "Eliminate abuse of free mints and other minting mechanisms by verifying each user's unique decentralized identifier (DID).",
   },
 ];
 
@@ -57,10 +37,10 @@ export default function Features() {
 }
 
 const CustomAutofitGrid = styled(AutofitGrid)`
-  --autofit-grid-item-size: 40rem;
+  --autofit-grid-item-size: 30rem;
 
   ${media('<=tablet')} {
-    --autofit-grid-item-size: 30rem;
+    --autofit-grid-item-size: 20rem;
   }
 
   ${media('<=phone')} {
