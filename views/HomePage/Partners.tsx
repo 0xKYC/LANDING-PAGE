@@ -16,6 +16,7 @@ const PARTNER_LOGOS = [
   { name: 'lomads.png', alt: 'lomads', href: 'https://www.lomads.xyz/' },
   { name: 'codemonk.png', alt: 'codemonk', href: 'https://www.codemonk.ai/' },
   { name: 'mthrbrd.webp', alt: 'motherboard', href: 'https://www.motherboard.fi' },
+  { name: 'scroll.png', alt: 'scroll', href: 'https://scroll.io/alpha/ecosystem' },
 ];
 
 export default function Partners() {
