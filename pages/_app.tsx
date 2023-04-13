@@ -61,6 +61,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           }}
         /> */}
         {/* <script async src="https://www.google-analytics.com/analytics.js"></script> */}
+        <meta name="google-site-verification" content="FqOdOkygT3hoA9RZ6NGunUBJb38AgE4kd2hvIDsg8t4" />
       </Head>
       {/* <ColorModeScript /> */}
       <GlobalStyle />
