@@ -8,15 +8,15 @@ import styled from 'styled-components';
 import { media } from 'utils/media';
 
 const PARTNER_LOGOS = [
-  { name: 'cryptum.png', alt: 'cryptum', href: 'https://cryptum.io/' },
+  { name: 'mthrbrd.webp', alt: 'motherboard', href: 'https://www.motherboard.fi' },
   { name: 'blue.svg', alt: 'identdefi', href: 'https://www.blue.fi' },
-  { name: 'no-res.png', alt: 'new order', href: 'https://neworder.network/' },
   { name: 'OKX_logo-new.png', alt: 'okx', href: 'https://www.okx.com/web3' },
   { name: 'ov.png', alt: 'outlier ventures', href: 'https://outlierventures.io/' },
-  { name: 'lomads.png', alt: 'lomads', href: 'https://www.lomads.xyz/' },
-  { name: 'codemonk.png', alt: 'codemonk', href: 'https://www.codemonk.ai/' },
-  { name: 'mthrbrd.webp', alt: 'motherboard', href: 'https://www.motherboard.fi' },
+  { name: 'no-res.png', alt: 'new order', href: 'https://neworder.network/' },
   { name: 'scroll.png', alt: 'scroll', href: 'https://scroll.io/alpha/ecosystem' },
+  { name: 'lomads.png', alt: 'lomads', href: 'https://www.lomads.xyz/' },
+  { name: 'cryptum.png', alt: 'cryptum', href: 'https://cryptum.io/' },
+  { name: 'codemonk.png', alt: 'codemonk', href: 'https://www.codemonk.ai/' },
 ];
 
 export default function Partners() {
