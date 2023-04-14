@@ -18,9 +18,8 @@ const FEATURES = [
   },
   {
     imageUrl: '/grid-icons/terms.svg',
-    title: 'NFT Marketplaces',
-    description:
-      "Eliminate abuse of free mints and other minting mechanisms by verifying each user's unique decentralized identifier (DID).",
+    title: 'NFT Airdrops',
+    description: "Eliminate abuse of free mints and other minting mechanisms by verifying each user's unique decentralized identifier.",
   },
 ];
 

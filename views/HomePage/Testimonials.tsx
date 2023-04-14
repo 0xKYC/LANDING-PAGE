@@ -23,7 +23,7 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <Box>
+    <>
       <Separator />
       <Title style={{ margin: 0 }}>What our clients say</Title>
       <TestimonialsWrapper>
@@ -51,7 +51,7 @@ export default function Testimonials() {
         ))}
       </TestimonialsWrapper>
       <Separator />
-    </Box>
+    </>
   );
 }
 
@@ -60,10 +60,6 @@ const TestimonialsWrapper = styled(Container)`
   text-align: center;
   padding-bottom: 0rem;
   margin-top: 7rem !important;
-`;
-
-const Box = styled.div`
-  padding-bottom: 3rem;
 `;
 
 const Title = styled.h3`
