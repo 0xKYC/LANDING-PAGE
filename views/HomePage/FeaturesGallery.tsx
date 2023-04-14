@@ -101,7 +101,7 @@ const FeaturesGalleryWrapper = styled(Container)`
   flex-direction: column;
   justify-content: center;
   padding-bottom: 5rem;
-  padding-top: 8rem;
+  padding-top: 5rem;
 `;
 
 const GalleryWrapper = styled.div`
@@ -109,12 +109,14 @@ const GalleryWrapper = styled.div`
   align-items: center;
   margin-top: 4rem;
   margin-bottom: 5rem;
+
   ${media('<=desktop')} {
     flex-direction: column;
   }
 `;
 
 const Content = styled.div`
+  margin-bottom: 3rem;
   & > *:not(:first-child) {
     margin-top: 1rem;
   }

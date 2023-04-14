@@ -29,7 +29,21 @@ export default function Homepage() {
               they are not on any sanctions lists, all stored within a Zero Knowledge (ZK) Proof on the blockchain
             </p>
           </Newsletter>
-          <Testimonials />
+          <Container style={{ textAlign: 'center', marginTop: '8rem' }}>
+            <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
+            <Box>
+              <p>
+                Integrating 0xKYC into your decentralized application (dApp) provides a seamless and secure experience. With 0xKYC you know
+                your community are unique and not sanctioned individuals.
+              </p>
+              <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
+                No more abuse of DAO governance systems, no more paying out to sanctioned individuals, say goodbye to users opening new
+                accounts as if they are a different person! <strong>#1Person1Vote</strong>
+              </p>
+            </Box>
+            <Features />
+          </Container>
+
           <BasicSection
             imageUrl="/github.gif"
             href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md"
@@ -48,20 +62,7 @@ export default function Homepage() {
         <DarkerBackgroundContainer>
           {/* <Cta /> */}
           {/* <BasicSectionWrapper> */}
-          <Container style={{ textAlign: 'center', marginTop: '8rem' }}>
-            <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
-            <Box>
-              <p>
-                Integrating 0xKYC into your decentralized application (dApp) provides a seamless and secure experience. With 0xKYC you know
-                your community are unique and not sanctioned individuals.
-              </p>
-              <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
-                No more abuse of DAO governance systems, no more paying out to sanctioned individuals, say goodbye to users opening new
-                accounts as if they are a different person! <strong>#1Person1Vote</strong>
-              </p>
-            </Box>
-            <Features />
-          </Container>
+          <Testimonials />
           {/* </BasicSectionWrapper> */}
           <FeaturesGallery />
         </DarkerBackgroundContainer>
