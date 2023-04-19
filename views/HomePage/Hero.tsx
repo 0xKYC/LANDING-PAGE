@@ -6,6 +6,7 @@ import OverTitle from 'components/OverTitle';
 import YoutubeVideo from 'components/YoutubeVideo';
 import { media } from 'utils/media';
 import NewsletterModal from 'components/Modal';
+import Link from 'components/Link';
 
 export default function Hero() {
   return (
@@ -17,8 +18,8 @@ export default function Hero() {
           Our revolutionary solution allows DeFi protocols and DAOs to verify their users without compromising personal information
         </Description>
         <CustomButtonGroup>
-          <Button href="#newsletter">
-            Sign Up to Our Newsletter<span>&rarr;</span>
+          <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
+            Discover 0xKYC<span>&rarr;</span>
           </Button>
         </CustomButtonGroup>
       </Contents>

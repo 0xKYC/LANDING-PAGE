@@ -75,7 +75,7 @@ export default function Navbar({ items }: NavbarProps) {
           </LogoWrapper>
         </NextLink>
         <NavItemList>
-          <CustomButton onClick={() => setIsModalOpened(true)}>Get access</CustomButton>
+          <NavItem title="LAUNCH APP" href="https://app.0xkyc.id/" />
         </NavItemList>
         {/* Hide color switcher
         <ColorSwitcherContainer>
@@ -92,9 +92,13 @@ export default function Navbar({ items }: NavbarProps) {
 function NavItem({ href, title, outlined }: SingleNavItem) {
   return (
     <NavItemWrapper outlined={outlined}>
-      <NextLink href={href} passHref>
+      {/* <NextLink href={href} passHref>
         {title}
-      </NextLink>
+      </NextLink> */}
+
+      <Button href={href} target="_blank" rel="noreferrer">
+        {title}
+      </Button>
     </NavItemWrapper>
   );
 }
@@ -137,7 +141,8 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
 
   a {
     display: flex;
-    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
+    /* color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')}; */
+    color: white;
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
