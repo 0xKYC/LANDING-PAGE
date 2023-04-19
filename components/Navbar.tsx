@@ -92,10 +92,6 @@ export default function Navbar({ items }: NavbarProps) {
 function NavItem({ href, title, outlined }: SingleNavItem) {
   return (
     <NavItemWrapper outlined={outlined}>
-      {/* <NextLink href={href} passHref>
-        {title}
-      </NextLink> */}
-
       <Button href={href} target="_blank" rel="noreferrer">
         {title}
       </Button>
