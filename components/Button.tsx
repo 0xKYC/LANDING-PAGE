@@ -24,7 +24,7 @@ const Button = styled.a<ButtonProps>`
   cursor: pointer;
 
   span {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   &:hover {
