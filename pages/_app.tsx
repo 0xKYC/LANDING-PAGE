@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="0xKYC is a Zero Knowledge solution to create a verified record on-chain without showing user's name and surname"
         />
         <meta name="image" property="og:image" content="https://0xkyc.id/product-launch.svg" />
-        <meta name="title" property="og:title" content="Private, Zero Knowledge ID" />
+        <meta name="title" property="og:title" content="0xKYC - Private ☀️ Zero Knowledge ID" />
         <meta name="type" property="og:type" content="website" />
         <meta name="url" property="og:url" content="https://0xkyc.id" />
         <meta
