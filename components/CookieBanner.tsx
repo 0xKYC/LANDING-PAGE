@@ -36,10 +36,10 @@ export const CookieBanner = () => {
 };
 
 const StyledLink = styled('a')`
-  color: #ffffffe6;
+  color: #62b5e6;
   transition: all 0.3s;
   text-decoration: none;
   &:hover {
-    color: #ffffffcc;
+    color: #79bde4;
   }
 `;

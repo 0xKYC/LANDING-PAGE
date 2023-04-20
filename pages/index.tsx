@@ -17,7 +17,7 @@ export default function Homepage() {
   return (
     <>
       <Head>
-        <title>{EnvVars.SITE_NAME} | Private Zero Knowledge ID</title>
+        <title>{EnvVars.SITE_NAME} - Private ☀️ Zero Knowledge ID</title>
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
