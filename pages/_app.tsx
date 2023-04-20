@@ -4,7 +4,6 @@ import Head from 'next/head';
 // import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
 
-import CookieConsent from 'react-cookie-consent';
 import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
 import Modal from 'components/Modal';
@@ -15,6 +14,7 @@ import WaveCta from 'components/WaveCta';
 
 import { ModalContextProvider, useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
+import { CookieBanner } from 'components/CookieBanner';
 
 const navItems: NavItems = [
   // { title: 'About', href: '/features' },
@@ -74,30 +74,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <WaveCta />
         <Footer />
-        <CookieConsent
-          buttonText="OKAY"
-          style={{
-            position: 'fixed',
-            width: '96%',
-            margin: 'auto',
-            bottom: '20px',
-            borderRadius: '0.5rem',
-            fontSize: '1.5rem',
-            left: '50%',
-            marginBottom: '1rem',
-            transform: 'translateX(-50%)',
-          }}
-          buttonStyle={{
-            background: 'rgb(var(--primary)',
-            color: 'white',
-            fontSize: '1.5rem',
-            borderRadius: '0.4rem',
-            fontFamily: 'var(--font)',
-            fontWeight: 'bold',
-          }}
-        >
-          This website uses cookies to improve your experience
-        </CookieConsent>
+        <CookieBanner />
       </Providers>
       <Analytics />
     </>
