@@ -103,5 +103,4 @@ const WhiteBackgroundContainer = styled.div`
     & > *:not(:first-child) {
       margin-top: 6rem;
     } */
-  }
 `;

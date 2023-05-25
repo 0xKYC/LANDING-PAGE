@@ -1,9 +1,8 @@
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
-// import { A11y, Autoplay, Navigation } from 'swiper';
-// import { Swiper, SwiperSlide } from 'swiper/react';
 import Container from 'components/Container';
 import { Separator } from 'components/Separator';
 import { media } from 'utils/media';
@@ -19,6 +18,18 @@ const TESTIMONIALS = [
       avatarUrl: '/testimonials/lomads-ceo.jpeg',
     },
   },
+  {
+    companyLogoUrl: '/fixed/IS-logo-nobg.png',
+    content: `Thrilled to partner with 0xKYC at Insert Stonks! Their robust identity verification system is a game-changer, ensuring only genuine players get the rewards. We're stepping up our platform's security while maintaining a fair gaming environment.
+  0xKYC is unique because of their Proof of Uniqueness solution. It lets us verify user identities without sharing any personally identifiable information on-chain, truly respecting our players' privacy.
+  No personal data is shared with Insert Stonks, as 0xKYC handles all verification and stores the results securely. Our partnership is a big leap towards a safer and fairer gaming future in the Web3 world. Here's to enhanced security and privacy with 0xKYC!`,
+    href: 'https://www.insertstonks.io/',
+    author: {
+      name: 'Przemysław Wierzbicki',
+      title: 'Visionary Officer and Founder',
+      // avatarUrl: '/testimonials/lomads-ceo.jpeg',
+    },
+  },
 ];
 
 export default function Testimonials() {
@@ -27,28 +38,35 @@ export default function Testimonials() {
       <Separator />
       <Title style={{ margin: 0 }}>What our clients say</Title>
       <TestimonialsWrapper>
-        {TESTIMONIALS.map((singleTestimonial, idx) => (
-          <TestimonialCard key={idx}>
-            <a href={singleTestimonial.href} target="_blank" rel="noreferrer">
-              <NextImage
-                src={singleTestimonial.companyLogoUrl}
-                alt={`${singleTestimonial.author.name}'s company logo`}
-                width={220}
-                height={32}
-              />
-            </a>
-            <Content>“{singleTestimonial.content}”</Content>
-            <AuthorContainer>
-              <AuthorImageContainer>
-                <NextImage src={singleTestimonial.author.avatarUrl} alt={singleTestimonial.author.name} width={42} height={42} />
-              </AuthorImageContainer>
-              <AuthorContent>
-                <AuthorName>{singleTestimonial.author.name}</AuthorName>
-                <AuthorTitle>{singleTestimonial.author.title}</AuthorTitle>
-              </AuthorContent>
-            </AuthorContainer>
-          </TestimonialCard>
-        ))}
+        <Splide options={{ rewind: true }}>
+          {TESTIMONIALS.map((singleTestimonial, idx) => (
+            <SplideSlide key={idx}>
+              <TestimonialCard>
+                <a href={singleTestimonial.href} target="_blank" rel="noreferrer">
+                  <NextImage
+                    src={singleTestimonial.companyLogoUrl}
+                    alt={`${singleTestimonial.author.name}'s company logo`}
+                    width={220}
+                    height={32}
+                  />
+                </a>
+                <Content>“{singleTestimonial.content}”</Content>
+                <AuthorContainer>
+                  {singleTestimonial.author.avatarUrl && (
+                    <AuthorImageContainer>
+                      <NextImage src={singleTestimonial.author.avatarUrl} alt={singleTestimonial.author.name} width={42} height={42} />
+                    </AuthorImageContainer>
+                  )}
+
+                  <AuthorContent>
+                    <AuthorName>{singleTestimonial.author.name}</AuthorName>
+                    <AuthorTitle>{singleTestimonial.author.title}</AuthorTitle>
+                  </AuthorContent>
+                </AuthorContainer>
+              </TestimonialCard>
+            </SplideSlide>
+          ))}
+        </Splide>
       </TestimonialsWrapper>
       <Separator />
     </>
@@ -60,6 +78,7 @@ const TestimonialsWrapper = styled(Container)`
   text-align: center;
   padding-bottom: 0rem;
   margin-top: 7rem !important;
+  padding: 0;
 `;
 
 const Title = styled.h3`
@@ -79,7 +98,7 @@ const TestimonialCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  padding-bottom: 3rem;
   & > *:not(:first-child) {
     margin-top: 5rem;
   }
@@ -92,7 +111,7 @@ const Content = styled.blockquote`
   max-width: 65%;
 
   ${media('<=desktop')} {
-    max-width: 90%;
+    max-width: 85%;
   }
 `;
 
