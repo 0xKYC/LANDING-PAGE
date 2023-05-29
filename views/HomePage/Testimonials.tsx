@@ -9,16 +9,6 @@ import { media } from 'utils/media';
 
 const TESTIMONIALS = [
   {
-    companyLogoUrl: '/fixed/lomads.png',
-    content: `At Lomads, we take compliance and security very seriously. That's why we're excited to partner with 0xKYC to offer our customers an easy way to verify each contributor's uniqueness within their organization. This helps ensure that funds aren't sent to sanctioned individuals and keeps the organisation compliant. This service will be available through Soulbound tokens launched on our platform, and we're proud to offer one of the most reliable and user-friendly solutions out there with 0xKYC.`,
-    href: 'https://www.lomads.xyz/',
-    author: {
-      name: 'Nishant Bhaskar',
-      title: 'CEO and Co-Founder',
-      avatarUrl: '/testimonials/lomads-ceo.jpeg',
-    },
-  },
-  {
     companyLogoUrl: '/fixed/IS-logo-nobg.png',
     content: `Thrilled to partner with 0xKYC at Insert Stonks! Their robust identity verification system is a game-changer, ensuring only genuine players get the rewards. We're stepping up our platform's security while maintaining a fair gaming environment.
   0xKYC is unique because of their Proof of Uniqueness solution. It lets us verify user identities without sharing any personally identifiable information on-chain, truly respecting our players' privacy.
@@ -29,6 +19,20 @@ const TESTIMONIALS = [
       title: 'Visionary Officer and Founder',
       // avatarUrl: '/testimonials/lomads-ceo.jpeg',
     },
+    width: 170,
+    height: 42,
+  },
+  {
+    companyLogoUrl: '/fixed/lomads.png',
+    content: `At Lomads, we take compliance and security very seriously. That's why we're excited to partner with 0xKYC to offer our customers an easy way to verify each contributor's uniqueness within their organization. This helps ensure that funds aren't sent to sanctioned individuals and keeps the organisation compliant. This service will be available through Soulbound tokens launched on our platform, and we're proud to offer one of the most reliable and user-friendly solutions out there with 0xKYC.`,
+    href: 'https://www.lomads.xyz/',
+    author: {
+      name: 'Nishant Bhaskar',
+      title: 'CEO and Co-Founder',
+      avatarUrl: '/testimonials/lomads-ceo.jpeg',
+    },
+    width: 220,
+    height: 32,
   },
 ];
 
@@ -46,8 +50,8 @@ export default function Testimonials() {
                   <NextImage
                     src={singleTestimonial.companyLogoUrl}
                     alt={`${singleTestimonial.author.name}'s company logo`}
-                    width={220}
-                    height={32}
+                    width={singleTestimonial.width}
+                    height={singleTestimonial.height}
                   />
                 </a>
                 <Content>“{singleTestimonial.content}”</Content>

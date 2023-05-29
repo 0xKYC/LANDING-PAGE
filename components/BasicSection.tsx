@@ -88,7 +88,7 @@ export const BasicSectionWrapper = styled(Container)`
   display: flex;
   align-items: center;
   flex-direction: ${(p: Props) => (p.reversed ? 'row-reverse' : 'row')};
-  margin-top: 15rem;
+  margin-top: 10rem;
   ${ImageContainer} {
     margin: ${(p: Props) => (p.reversed ? '0 0 0 5rem' : '0 5rem 0 0')};
   }
