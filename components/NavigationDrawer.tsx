@@ -8,6 +8,7 @@ import { NavItems } from 'types';
 import ClientOnly from './ClientOnly';
 import CloseIcon from './CloseIcon';
 import OriginalDrawer from './Drawer';
+import { NavLink } from './Navbar';
 type NavigationDrawerProps = PropsWithChildren<{ items: NavItems }>;
 
 export default function NavigationDrawer({ children, items }: NavigationDrawerProps) {
@@ -33,7 +34,7 @@ export default function NavigationDrawer({ children, items }: NavigationDrawerPr
 function NavItemsList({ items }: NavigationDrawerProps) {
   const { close } = OriginalDrawer.useDrawer();
   const router = useRouter();
-  const { setIsModalOpened } = useModalContext();
+
   useEffect(() => {
     function handleRouteChangeComplete() {
       close();
@@ -45,16 +46,15 @@ function NavItemsList({ items }: NavigationDrawerProps) {
 
   const handleClick = () => {
     close();
-    setIsModalOpened(true);
   };
   return (
     <ul>
       {items.map((singleItem, idx) => {
         return (
           <NavItem key={idx}>
-            <SmallBtn style={{ fontSize: '2rem' }} onClick={handleClick}>
-              Get access
-            </SmallBtn>
+            <a href={singleItem.href} onClick={handleClick}>
+              {singleItem.title}
+            </a>
           </NavItem>
         );
       })}
@@ -122,7 +122,7 @@ const NavItem = styled.li`
     font-size: 3rem;
     text-transform: uppercase;
     display: block;
-    color: white;
+    color: black;
     text-decoration: none;
     border-radius: 0.5rem;
     padding: 1rem 2rem;

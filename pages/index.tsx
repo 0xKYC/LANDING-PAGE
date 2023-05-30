@@ -13,6 +13,7 @@ import Newsletter from 'views/HomePage/Newsletter';
 import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
 import { Separator } from 'components/Separator';
+import News from 'views/HomePage/News';
 
 export default function Homepage() {
   return (
@@ -45,7 +46,7 @@ export default function Homepage() {
             </ul>
           </BasicSection>
           <Separator />
-          <Container style={{ textAlign: 'center', marginTop: '10rem' }}>
+          <Container style={{ textAlign: 'center', marginTop: '10rem' }} id="use-cases">
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
@@ -61,6 +62,8 @@ export default function Homepage() {
           </Container>
           <Testimonials />
           <FeaturesGallery />
+          <Separator />
+          <News />
         </WhiteBackgroundContainer>
         {/* <DarkerBackgroundContainer> */}
         {/* <Cta /> */}
