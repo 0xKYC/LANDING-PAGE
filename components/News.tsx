@@ -23,14 +23,23 @@ export const News = ({ title, description, imgUrl, order, href }: Props) => {
         <Title>{title}</Title>
         <P>{description}</P>
 
-        <Anchor rel="noreferrer" target="_blank" href={href}>
-          Read more
-        </Anchor>
+        <LinkWrapper>
+          <Anchor rel="noreferrer" target="_blank" href={href}>
+            Read more
+          </Anchor>
+          <Image src="/external-link.svg" width={14} height={14} alt="" />
+        </LinkWrapper>
       </TextWrapper>
     </Wrapper>
   );
 };
 
+const LinkWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+`;
 const P = styled.p`
   margin: 0 1rem;
   margin-bottom: 2rem;

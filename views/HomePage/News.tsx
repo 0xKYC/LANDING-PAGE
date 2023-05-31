@@ -31,7 +31,7 @@ const NEWS = [
 export default function NewsSection() {
   return (
     <Container id="news">
-      <SectionTitle style={{ marginTop: '8rem', marginBottom: '8rem' }}>Latest updates</SectionTitle>
+      <SectionTitle style={{ marginTop: '8rem', marginBottom: '8rem' }}>Latest news</SectionTitle>
 
       {NEWS.map((news) => {
         return (

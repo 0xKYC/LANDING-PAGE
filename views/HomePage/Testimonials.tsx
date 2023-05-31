@@ -3,6 +3,8 @@ import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
+import '@splidejs/react-splide/css/skyblue';
+
 import Container from 'components/Container';
 import { Separator } from 'components/Separator';
 import { media } from 'utils/media';

@@ -17,9 +17,9 @@ import { ModalContextProvider, useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
 
 const navItems: NavItems = [
+  { title: 'News', href: '#news' },
   { title: 'Use Cases', href: '#use-cases' },
   { title: 'Integration', href: '#integration' },
-  { title: 'News', href: '#news' },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
