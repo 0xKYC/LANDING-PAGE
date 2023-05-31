@@ -3,8 +3,6 @@ import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
-import '@splidejs/react-splide/css/skyblue';
-
 import Container from 'components/Container';
 import { Separator } from 'components/Separator';
 import { media } from 'utils/media';
@@ -19,7 +17,6 @@ const TESTIMONIALS = [
     author: {
       name: 'Przemysław Wierzbicki',
       title: 'Visionary Officer and Founder',
-      // avatarUrl: '/testimonials/lomads-ceo.jpeg',
     },
     width: 170,
     height: 42,
@@ -44,7 +41,7 @@ export default function Testimonials() {
       <Separator />
       <Title style={{ margin: 0 }}>What our clients say</Title>
       <TestimonialsWrapper>
-        <Splide options={{ rewind: true }}>
+        <StyledSplide options={{ rewind: true }}>
           {TESTIMONIALS.map((singleTestimonial, idx) => (
             <SplideSlide key={idx}>
               <TestimonialCard>
@@ -72,13 +69,21 @@ export default function Testimonials() {
               </TestimonialCard>
             </SplideSlide>
           ))}
-        </Splide>
+        </StyledSplide>
       </TestimonialsWrapper>
       <Separator />
     </>
   );
 }
+const StyledSplide = styled(Splide)`
+  .splide__pagination__page {
+    background-color: gray;
+  }
 
+  .splide__pagination__page.is-active {
+    background-color: rgb(251, 115, 36);
+  }
+`;
 const TestimonialsWrapper = styled(Container)`
   position: relative;
   text-align: center;
