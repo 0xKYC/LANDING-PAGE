@@ -12,7 +12,8 @@ import { media } from 'utils/media';
 import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
-// import { HamburgerIcon } from './HamburgerIcon';
+import Link from 'next/link';
+import { HamburgerIcon } from './HamburgerIcon';
 
 const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
 
@@ -75,15 +76,18 @@ export default function Navbar({ items }: NavbarProps) {
           </LogoWrapper>
         </NextLink>
         <NavItemList>
+          {items.map((item) => {
+            return <NavLink key={item.title} href={item.href} title={item.title} />;
+          })}
           <NavItem title="LAUNCH APP" href="https://app.0xkyc.id/" />
         </NavItemList>
         {/* Hide color switcher
         <ColorSwitcherContainer>
           <ColorSwitcher />
         </ColorSwitcherContainer> */}
-        {/* <HamburgerMenuWrapper>
+        <HamburgerMenuWrapper>
           <HamburgerIcon aria-label="Toggle menu" onClick={toggle} />
-        </HamburgerMenuWrapper> */}
+        </HamburgerMenuWrapper>
       </Content>
     </NavbarContainer>
   );
@@ -98,11 +102,13 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
     </NavItemWrapper>
   );
 }
-
-const CustomButton = styled(Button)`
-  padding: 1rem 1.4rem;
-  line-height: 1.8;
-`;
+export function NavLink({ href, title, outlined }: SingleNavItem) {
+  return (
+    <CustomNavItemWrapper outlined={outlined}>
+      <a href={href}>{title}</a>
+    </CustomNavItemWrapper>
+  );
+}
 
 const NavItemList = styled.div`
   display: flex;
@@ -137,8 +143,8 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
 
   a {
     display: flex;
-    /* color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')}; */
-    color: white;
+    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'white')};
+    /* color: white; */
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
@@ -149,7 +155,15 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
     margin-right: 2rem;
   }
 `;
+const CustomNavItemWrapper = styled(NavItemWrapper)`
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 
+  a {
+    color: black;
+  }
+`;
 const NavbarContainer = styled.div<NavbarContainerProps>`
   display: flex;
   position: sticky;

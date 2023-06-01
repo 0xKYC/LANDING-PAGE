@@ -71,7 +71,7 @@ export default function FeaturesGallery() {
   }
 
   return (
-    <FeaturesGalleryWrapper>
+    <FeaturesGalleryWrapper id="integration">
       <Content>
         <SectionTitle>Easy to Integrate</SectionTitle>
       </Content>

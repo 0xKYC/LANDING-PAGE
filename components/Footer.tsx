@@ -66,7 +66,7 @@ export default function Footer() {
 
           <ShareBar>
             <Flex>
-              <ListItem title="Privacy Policy" href="/privacy-policy" />
+              <ListItem title="Privacy Policy" href="https://app.0xkyc.id/privacy-policy" link={true} />
               <ListItem title="Contact" href="mailto:support@0xkyc.id" />
               <ListItem
                 title="Documentation"

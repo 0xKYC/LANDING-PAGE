@@ -4,6 +4,7 @@ import Head from 'next/head';
 // import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
 
+import { CookieBanner } from 'components/CookieBanner';
 import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
 import Modal from 'components/Modal';
@@ -14,12 +15,11 @@ import WaveCta from 'components/WaveCta';
 
 import { ModalContextProvider, useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
-import { CookieBanner } from 'components/CookieBanner';
 
 const navItems: NavItems = [
-  // { title: 'About', href: '/features' },
-  // { title: 'Contact', href: '/contact' },
-  { title: 'Get access', href: '' },
+  { title: 'News', href: '#news' },
+  { title: 'Use Cases', href: '#use-cases' },
+  { title: 'Integration', href: '#integration' },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
