@@ -17,6 +17,7 @@ const TESTIMONIALS = [
     author: {
       name: 'Przemysław Wierzbicki',
       title: 'Visionary Officer and Founder',
+      avatarUrl: '/testimonials/is-ceo.jpg',
     },
     width: 170,
     height: 42,

@@ -47,7 +47,7 @@ export default function Homepage() {
           </BasicSection>
           <Separator />
           <News />
-          <Separator />
+          <Testimonials />
           <Container style={{ textAlign: 'center', marginTop: '10rem' }} id="use-cases">
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
@@ -62,7 +62,7 @@ export default function Homepage() {
             </Box>
             <Features />
           </Container>
-          <Testimonials />
+          <Separator />
           <FeaturesGallery />
         </WhiteBackgroundContainer>
         {/* <DarkerBackgroundContainer> */}
