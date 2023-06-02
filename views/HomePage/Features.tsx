@@ -9,7 +9,7 @@ const FEATURES = [
   {
     imageUrl: '/grid-icons/security.svg',
     title: 'Web3 Games',
-    description: 'Verify if your users have the amount of accounts they claim to have with our Proof of Uniqueness solution',
+    description: 'Verify if your users have the amount of accounts they claim to have with our Proof of Uniqueness solution.',
   },
   {
     imageUrl: '/grid-icons/vote.svg',
