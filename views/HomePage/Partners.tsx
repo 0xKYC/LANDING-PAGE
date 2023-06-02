@@ -12,16 +12,20 @@ const PARTNER_LOGOS = [
   { name: 'blue.svg', alt: 'identdefi', href: 'https://www.blue.fi' },
   { name: 'OKX_logo-new.png', alt: 'okx', href: 'https://www.okx.com/web3' },
   { name: 'ov.png', alt: 'outlier ventures', href: 'https://outlierventures.io/' },
+  // { name: 'polygon-logo.png', alt: 'outlier ventures', href: 'https://outlierventures.io/' },
   { name: 'no-res.png', alt: 'new order', href: 'https://neworder.network/' },
+  { name: 'insert-stonks.png', alt: 'insert stonks', href: ' https://insertstonks.io/' },
   { name: 'scroll.png', alt: 'scroll', href: 'https://scroll.io/alpha/ecosystem' },
-  { name: 'lomads.png', alt: 'lomads', href: 'https://www.lomads.xyz/' },
+  { name: '5ire-logo.png', alt: '5ire', href: 'https://www.5ire.org/' },
+
   { name: 'cryptum.png', alt: 'cryptum', href: 'https://cryptum.io/' },
   { name: 'aragon.png', alt: 'aragon', href: 'https://aragon.org/' },
+  { name: 'lomads.png', alt: 'lomads', href: 'https://www.lomads.xyz/' },
+
   // { name: 'codemonk.png', alt: 'codemonk', href: 'https://www.codemonk.ai/' },
   { name: 'chainalysis.png', alt: 'chainalysis', href: 'https://www.chainalysis.com/' },
   { name: 'onfido-logo.png', alt: 'onfido', href: 'https://onfido.com/' },
   { name: 'comply-logo.jpeg', alt: 'comply advantage', href: 'https://complyadvantage.com/' },
-  { name: 'insert-stonks.png', alt: 'insert stonks', href: ' https://insertstonks.io/' },
 ];
 
 export default function Partners() {

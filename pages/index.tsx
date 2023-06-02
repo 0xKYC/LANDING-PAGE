@@ -43,7 +43,9 @@ export default function Homepage() {
               <li>over 18 years of age</li>
               <li>not OFAC sanctioned</li>
               <li>not on known fraud wallet lists</li>
+              <li>unique across different wallets and cross-chain</li>
             </ul>
+            <p>All of our checks are permissionless and interoperable</p>
           </BasicSection>
           <Separator />
           <News />
