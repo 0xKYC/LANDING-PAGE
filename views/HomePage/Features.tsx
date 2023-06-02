@@ -8,8 +8,8 @@ import { media } from 'utils/media';
 const FEATURES = [
   {
     imageUrl: '/grid-icons/security.svg',
-    title: 'DAO Work',
-    description: 'Block sanctioned users and track performance to ensure you never hire an unsuitable team member again.',
+    title: 'Web3 Games',
+    description: 'Verify if your users have the amount of accounts they claim to have with our Proof of Uniqueness solution',
   },
   {
     imageUrl: '/grid-icons/vote.svg',
