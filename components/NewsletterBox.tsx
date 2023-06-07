@@ -50,7 +50,7 @@ export const NewsletterBox = () => {
       ) : (
         <>
           <Text>Subscribe to our updates</Text>
-          <InfoText>Stay informed about our Polygon launch by subscribing.</InfoText>
+          <InfoText>Stay in the loop! Subscribe for our latest updates.</InfoText>
           <Flex>
             <FormWrapper onSubmit={handleSubmit(onSubmit)}>
               <Box>
