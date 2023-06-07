@@ -23,7 +23,7 @@ const NEWS = [
   {
     title: 'Our Beginnings',
     description:
-      'ETHWarsaw was a pivotal event for us, where our team brainstormed ideas and created a zero-knowledge proof solution for storing AML data on-chain',
+      'ETHWarsaw was a pivotal event for us, where our team brainstormed ideas and created a zero-knowledge proof solution for storing AML data on-chain.',
     imgUrl: '/posts/ethwarsaw.jpg',
     href: 'https://medium.com/ethwarsaw/0xkyc-the-ethwarsaw-success-story-5c3663a33996',
   },
