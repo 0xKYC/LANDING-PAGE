@@ -28,7 +28,7 @@ export default function Homepage() {
           <Newsletter title="The future of digital identification is here">
             <p>
               With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
-              they are not on any sanctions lists, all stored within a Zero Knowledge (ZK) Proof on the blockchain
+              they are not on any sanctions lists, over 18 years of age and unique on the blockchain.
             </p>
           </Newsletter>
           <BasicSection
