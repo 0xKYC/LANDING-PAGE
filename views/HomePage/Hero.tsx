@@ -36,6 +36,7 @@ const HeroWrapper = styled(Container)`
     padding-top: 1rem;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 8rem;
   }
 `;
 
