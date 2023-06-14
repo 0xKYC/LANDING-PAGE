@@ -55,7 +55,7 @@ export default function BackedBy() {
               <Box>
                 <StyledImage src={`/fixed/${angel.img}`} alt={angel.name} width="54px" height="54px" />
                 <InfoBox>
-                  <p>{angel.name}</p>
+                  <P>{angel.name}</P>
                   <Description>{angel.desc}</Description>
                 </InfoBox>
 
@@ -68,14 +68,18 @@ export default function BackedBy() {
     </Wrapper>
   );
 }
-
+const P = styled.p`
+  font-size: 1.6rem;
+  padding-top: 0.4rem;
+`;
 const InfoBox = styled.div`
   padding: 0 2rem;
   width: 80%;
 `;
 const Description = styled.p`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   opacity: 0.9;
+  padding-bottom: 0.4rem;
 `;
 const StyledLink = styled.a`
   color: inherit;
