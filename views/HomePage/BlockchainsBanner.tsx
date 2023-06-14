@@ -17,19 +17,19 @@ const BLOCKCHAINS = [
     name: 'Polygon Mumbai',
     img: 'polygon.png',
     alt: 'polygon',
-    href: 'https://mumbai.polygonscan.com/',
+    href: 'https://polygon.technology/',
   },
   {
     name: 'Ethereum Goerli',
     img: 'ethereum-logo.png',
     alt: 'polygon',
-    href: 'https://goerli.etherscan.io/',
+    href: 'https://ethereum.org/en/',
   },
   {
     name: 'Scroll Alpha',
     img: 'scroll.png',
     alt: 'polygon',
-    href: 'https://scrollscan.co/',
+    href: 'https://scroll.io/',
   },
   // {
   //   name: 'BNB (coming soon)',
