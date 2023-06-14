@@ -29,8 +29,8 @@ const ANGELS = [
   {
     name: 'Ismail Khoffi',
     img: 'dave-deputy.jpeg',
-    href: '',
-    desc: 'Celestia CTO',
+    href: 'https://twitter.com/kreuzuquer?s=21&t=t9gGR0AhxEhaNCTjgEwnSg',
+    desc: 'Co-Founder and CTO of Celestia Labs',
   },
 ];
 export default function BackedBy() {
@@ -77,7 +77,7 @@ const InfoBox = styled.div`
   width: 80%;
 `;
 const Description = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   opacity: 0.9;
   padding-bottom: 0.4rem;
 `;
@@ -93,7 +93,6 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
   padding-right: 2rem;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   background: rgb(var(--background));

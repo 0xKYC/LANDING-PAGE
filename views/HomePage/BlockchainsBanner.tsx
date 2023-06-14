@@ -26,7 +26,7 @@ const BLOCKCHAINS = [
     href: 'https://goerli.etherscan.io/',
   },
   {
-    name: 'Scroll',
+    name: 'Scroll Alpha',
     img: 'scroll.png',
     alt: 'polygon',
     href: 'https://scrollscan.co/',
@@ -60,7 +60,7 @@ const StyledSplide = styled(Splide)`
 export default function BlockchainsBanner() {
   return (
     <Wrapper>
-      <Title>Supported blockchains</Title>
+      <Title>Supported blockchains (MAINNET COMING SOON)</Title>
 
       <StyledSplide
         aria-label="Partners"
