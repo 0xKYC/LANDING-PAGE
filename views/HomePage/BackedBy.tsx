@@ -10,7 +10,7 @@ const INVESTORS = [
     img: 'new-order.png',
     href: 'https://www.neworder.network/',
   },
-  { name: 'Outlier Ventures', img: 'ov.png', href: 'https://outlierventures.io/' },
+  { name: 'Outlier Ventures', img: 'outlier-ventures.png', href: 'https://outlierventures.io/' },
 ];
 
 const ANGELS = [
@@ -30,7 +30,7 @@ const ANGELS = [
     name: 'Ismail Khoffi',
     img: 'celestia-ceo.jpeg',
     href: 'https://twitter.com/KreuzUQuer',
-    desc: 'Co-Founder and CTO of Celestia Labs',
+    desc: 'Co-Founder, CTO of Celestia Labs',
   },
 ];
 export default function BackedBy() {
