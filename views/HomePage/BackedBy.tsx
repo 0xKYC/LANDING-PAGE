@@ -116,6 +116,7 @@ const InverstorsWrapper = styled.div`
   display: flex;
   justify-content: center;
   gap: 3rem;
+  padding-bottom: 2rem;
 
   @media screen and(max-width:1024px) {
     margin: 0 10rem;
