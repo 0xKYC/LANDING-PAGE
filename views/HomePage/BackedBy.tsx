@@ -28,8 +28,8 @@ const ANGELS = [
   },
   {
     name: 'Ismail Khoffi',
-    img: 'dave-deputy.jpeg',
-    href: 'https://twitter.com/kreuzuquer?s=21&t=t9gGR0AhxEhaNCTjgEwnSg',
+    img: 'celestia-ceo.jpeg',
+    href: 'https://twitter.com/KreuzUQuer',
     desc: 'Co-Founder and CTO of Celestia Labs',
   },
 ];
@@ -143,9 +143,6 @@ const Wrapper = styled.div`
   max-width: 1300px;
   margin: 0 auto;
   padding-bottom: 15rem;
-
-  @media screen and (min-width: 1024px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;

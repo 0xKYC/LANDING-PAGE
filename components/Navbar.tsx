@@ -75,6 +75,12 @@ export default function Navbar({ items }: NavbarProps) {
             <Image src="/new-logo.png" alt="logo" width={164} height={50} />
           </LogoWrapper>
         </NextLink>
+        <NextLink href="/" passHref>
+          <MobileLogoWrapper>
+            <Image src="/0xkyc-icon.png" alt="logo" width={50} height={50} />
+          </MobileLogoWrapper>
+        </NextLink>
+
         <NavItemList>
           {items.map((item) => {
             return <NavLink key={item.title} href={item.href} title={item.title} />;
@@ -122,11 +128,22 @@ const HamburgerMenuWrapper = styled.div`
 `;
 
 const LogoWrapper = styled.a`
-  display: flex;
+  display: none;
   margin-right: auto;
   text-decoration: none;
 
   color: rgb(var(--logoColor));
+
+  @media screen and (min-width: 360px) {
+    display: flex;
+  }
+`;
+
+const MobileLogoWrapper = styled(LogoWrapper)`
+  display: flex;
+  @media screen and (min-width: 360px) {
+    display: none;
+  }
 `;
 
 const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
