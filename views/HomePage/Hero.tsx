@@ -13,7 +13,8 @@ export default function Hero() {
         <Heading>Unlock the power of privacy</Heading>
 
         <Description>
-          Our revolutionary solution allows DeFi protocols and DAOs to verify their users without compromising personal information
+          Our revolutionary solution allows DeFi protocols, Web3 games and DAOs to verify their users without compromising personal
+          information
         </Description>
         <CustomButtonGroup>
           <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
@@ -36,6 +37,7 @@ const HeroWrapper = styled(Container)`
     padding-top: 1rem;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 8rem;
   }
 `;
 

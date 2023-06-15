@@ -14,6 +14,8 @@ import News from 'views/HomePage/News';
 import Newsletter from 'views/HomePage/Newsletter';
 // import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
+import Partners from 'views/HomePage/BlockchainsBanner';
+import BackedBy from 'views/HomePage/BackedBy';
 
 export default function Homepage() {
   return (
@@ -24,7 +26,8 @@ export default function Homepage() {
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Hero />
-          {/* <Partners /> */}
+          <Partners />
+          <BackedBy />
           <Newsletter title="The future of digital identification is here">
             <p>
               With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
