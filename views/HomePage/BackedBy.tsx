@@ -28,7 +28,7 @@ const ANGELS = [
   },
   {
     name: 'Ismail Khoffi',
-    img: 'celestia-ceo.jpeg',
+    img: 'celestia-ceo.jpg',
     href: 'https://twitter.com/KreuzUQuer',
     desc: 'Co-Founder, CTO of Celestia Labs',
   },
