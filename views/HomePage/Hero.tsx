@@ -20,6 +20,9 @@ export default function Hero() {
           <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
             Discover 0xKYC<span>&rarr;</span>
           </Button>
+          <Button transparent={true} href="https://calendly.com/adamzasada" target="_blank" rel="noreferrer">
+            Book a demo<span>&rarr;</span>
+          </Button>
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
