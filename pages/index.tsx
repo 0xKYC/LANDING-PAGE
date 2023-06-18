@@ -42,7 +42,7 @@ export default function Homepage() {
             overTitle=""
             reversed
           >
-            <p>Verify if users have double accounts w just a token gate!</p>
+            <p>Verify if users have double accounts with just a token gate!</p>
             <ul>
               <li><b></b>Stand-Alone Web3 Game ID</b></li>
               <li>Biometrics and/or Documents ✅</li>
