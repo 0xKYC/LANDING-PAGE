@@ -30,8 +30,9 @@ export default function Homepage() {
           <BackedBy />
           <Newsletter title="The future of digital identification is here">
             <p>
-              With our simple process, users can scan their identification document and we generate a unique, soulbound token that confirms
-              they are not on any sanctions lists, over 18 years of age and unique on the blockchain.
+              We can scan IDs or do an award-winning 1Vote check to verify if you are unique on the blockchain ☀ With our simple process you 
+              generate a unique, soulbound token that confirms you are not a bot and an unique inidividual available as a Aragon OSx plugin, 
+              a soulbound token on the blockchain and via our unique minting mechanism.
             </p>
           </Newsletter>
           <BasicSection
@@ -41,14 +42,15 @@ export default function Homepage() {
             overTitle=""
             reversed
           >
-            <p>No bulky integrations needed. With just a token gate, you can ensure your users are:</p>
+            <p>Verify if users have double accounts w just a token gate!</p>
             <ul>
-              <li>over 18 years of age</li>
-              <li>not OFAC sanctioned</li>
-              <li>not on known fraud wallet lists</li>
-              <li>unique across different wallets and cross-chain</li>
+              <li><b></b>Stand-Alone Web3 Game ID</b></li>
+              <li>Biometrics and/or Documents ✅</li>
+              <li>Web3 fraud wallet lists ✅</li>
+              <li>sanctions checks on-chain ✅</li>
+              <li>unique across different wallets and cross-chain 🌐</li>
             </ul>
-            <p>All of our checks are permissionless and interoperable</p>
+            <p>All of our checks are permissionless and interoperable 🗻⛺ Backed by New Order DAO and Outlier Ventures.</p>
           </BasicSection>
           <Separator />
           <News />
@@ -57,12 +59,10 @@ export default function Homepage() {
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
-                Integrating 0xKYC into your decentralized application (dApp) provides a seamless and secure experience. With 0xKYC you know
-                your community are unique and not sanctioned individuals.
+                Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of NPCs ruining your game. Verify uniqueness on-chain, get a sanctions-free verification and integrate 0xKYC into your decentralized application today! Contact us at https://calendly.com/adamzasada - We are at your service.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
-                No more abuse of DAO governance systems, no more paying out to sanctioned individuals, say goodbye to users opening new
-                accounts as if they are a different person! <strong>#1Person1Vote</strong>
+                No more destruction of Web3 and airdrop economics, tokenomics and inefficient give-aways. No more abuse of DAO governance power, no more paying out to sanctioned individuals, say goodbye to users opening new accounts as if they are a different person! <strong>#1User1Vote</strong>
               </p>
             </Box>
             <Features />
