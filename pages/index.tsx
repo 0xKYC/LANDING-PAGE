@@ -7,6 +7,8 @@ import { Separator } from 'components/Separator';
 import { EnvVars } from 'env';
 
 // import Cta from 'views/HomePage/Cta';
+import BackedBy from 'views/HomePage/BackedBy';
+import Partners from 'views/HomePage/BlockchainsBanner';
 import Features from 'views/HomePage/Features';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
@@ -14,8 +16,6 @@ import News from 'views/HomePage/News';
 import Newsletter from 'views/HomePage/Newsletter';
 // import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
-import Partners from 'views/HomePage/BlockchainsBanner';
-import BackedBy from 'views/HomePage/BackedBy';
 
 export default function Homepage() {
   return (
@@ -30,8 +30,8 @@ export default function Homepage() {
           <BackedBy />
           <Newsletter title="The future of digital identification is here">
             <p>
-              We can scan IDs or do an award-winning 1Vote check to verify if you are unique on the blockchain ☀ With our simple process you 
-              generate a unique, soulbound token that confirms you are not a bot and an unique inidividual available as a Aragon OSx plugin, 
+              We can scan IDs or do an award-winning 1Vote check to verify if you are unique on the blockchain ☀ With our simple process you
+              generate a unique, soulbound token that confirms you are not a bot and an unique inidividual available as a Aragon OSx plugin,
               a soulbound token on the blockchain and via our unique minting mechanism.
             </p>
           </Newsletter>
@@ -44,7 +44,9 @@ export default function Homepage() {
           >
             <p>Verify if users have double accounts with just a token gate!</p>
             <ul>
-              <li><b></b>Stand-Alone Web3 Game ID</b></li>
+              <li>
+                <b>Stand-Alone Web3 Game ID</b>
+              </li>
               <li>Biometrics and/or Documents ✅</li>
               <li>Web3 fraud wallet lists ✅</li>
               <li>sanctions checks on-chain ✅</li>
@@ -59,10 +61,14 @@ export default function Homepage() {
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
-                Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of NPCs ruining your game. Verify uniqueness on-chain, get a sanctions-free verification and integrate 0xKYC into your decentralized application today! Contact us at https://calendly.com/adamzasada - We are at your service.
+                Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of NPCs
+                ruining your game. Verify uniqueness on-chain, get a sanctions-free verification and integrate 0xKYC into your decentralized
+                application today! Contact us at https://calendly.com/adamzasada - We are at your service.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
-                No more destruction of Web3 and airdrop economics, tokenomics and inefficient give-aways. No more abuse of DAO governance power, no more paying out to sanctioned individuals, say goodbye to users opening new accounts as if they are a different person! <strong>#1User1Vote</strong>
+                No more destruction of Web3 and airdrop economics, tokenomics and inefficient give-aways. No more abuse of DAO governance
+                power, no more paying out to sanctioned individuals, say goodbye to users opening new accounts as if they are a different
+                person! <strong>#1User1Vote</strong>
               </p>
             </Box>
             <Features />
