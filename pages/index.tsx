@@ -63,7 +63,7 @@ export default function Homepage() {
               <p>
                 Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of NPCs
                 ruining your game. Verify uniqueness on-chain, get a sanctions-free verification and integrate 0xKYC into your decentralized
-                application today! Contact us at <a href="https://calendly.com/adamzasada">Calendly link</a> - We are at your service.
+                application today! Contact us via <a href="https://calendly.com/adamzasada">Calendly</a> - We are at your service.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
                 No more destruction of Web3 and airdrop economics, tokenomics and inefficient give-aways. No more abuse of DAO governance
