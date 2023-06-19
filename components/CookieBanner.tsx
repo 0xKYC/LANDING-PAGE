@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const CookieBanner = () => {
   return (
     <CookieConsent
+      enableDeclineButton
       buttonText="OKAY"
       style={{
         position: 'fixed',
@@ -15,6 +16,14 @@ export const CookieBanner = () => {
         left: '50%',
         marginBottom: '1rem',
         transform: 'translateX(-50%)',
+      }}
+      declineButtonText="CANCEL"
+      declineButtonStyle={{
+        color: 'white',
+        fontSize: '1.2rem',
+        borderRadius: '0.4rem',
+        fontFamily: 'var(--font)',
+        fontWeight: 'bold',
       }}
       buttonStyle={{
         background: 'rgb(var(--primary)',

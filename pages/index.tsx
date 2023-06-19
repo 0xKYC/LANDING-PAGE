@@ -16,6 +16,7 @@ import News from 'views/HomePage/News';
 import Newsletter from 'views/HomePage/Newsletter';
 // import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
+import Link, { Anchor } from 'components/Link';
 
 export default function Homepage() {
   return (
@@ -30,9 +31,16 @@ export default function Homepage() {
           <BackedBy />
           <Newsletter title="The future of digital identification is here">
             <p>
-              We can scan IDs or do an award-winning <a href="https://github.com/0xKYC/0xkyc-1vote-aragon-plugin">1Vote</a> check to verify if you are unique on the blockchain ☀ With our simple process you
-              generate a unique, soulbound token that confirms you are not a bot and an unique inidividual available on <a href="https://blog.aragon.org/dao-global-hackathon-bounty-winners/">Aragon OSx</a>,
-              as a soulbound token or via our unique minting mechanism.
+              We can scan IDs or do an award-winning{' '}
+              <Anchor rel="noreferrer" target="_blank" href="https://github.com/0xKYC/0xkyc-1vote-aragon-plugin">
+                1Vote
+              </Anchor>{' '}
+              check to verify if you are unique on the blockchain <span style={{ color: 'rgb(var(--primary))' }}>☀</span> With our simple
+              process you generate a unique, soulbound token that confirms you are not a bot and an unique inidividual available on{' '}
+              <Anchor rel="noreferrer" target="_blank" href="https://blog.aragon.org/dao-global-hackathon-bounty-winners/">
+                Aragon OSx
+              </Anchor>
+              , as a soulbound token or via our unique minting mechanism.
             </p>
           </Newsletter>
           <BasicSection
@@ -52,7 +60,21 @@ export default function Homepage() {
               <li>Sanctions checks on-chain ✅</li>
               <li>Unique across different wallets and cross-chain 🌐</li>
             </ul>
-            <p>All of our checks are permissionless and interoperable 🗻⛺ Backed by <a href="https://www.neworder.network/">New Order DAO</a> and <a href="https://outlierventures.io/">Outlier Ventures</a>. We are officially a part of the <a href="https://scroll.io/ecosystem">Scroll ecosystem</a> 📜</p>
+            <p>
+              All of our checks are permissionless and interoperable 🗻⛺ Backed by{' '}
+              <a style={{ color: 'inherit' }} rel="noreferrer" target="_blank" href="https://www.neworder.network/">
+                New Order DAO
+              </a>{' '}
+              and{' '}
+              <a style={{ color: 'inherit' }} rel="noreferrer" target="_blank" href="https://outlierventures.io/">
+                Outlier Ventures
+              </a>
+              . We are officially a part of the{' '}
+              <a style={{ color: 'inherit' }} rel="noreferrer" target="_blank" href="https://scroll.io/ecosystem">
+                Scroll ecosystem
+              </a>{' '}
+              📜
+            </p>
           </BasicSection>
           <Separator />
           <News />
@@ -63,7 +85,11 @@ export default function Homepage() {
               <p>
                 Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of bots
                 ruining your game. Verify uniqueness on-chain, get a sanctions-free verification and integrate 0xKYC into your decentralized
-                app today. Contact us: <a href="https://calendly.com/adamzasada">Calendly</a> - We are at your service.
+                app today. Contact us:{' '}
+                <a rel="noreferrer" target="_blank" href="https://calendly.com/adamzasada">
+                  Calendly
+                </a>{' '}
+                - We are at your service.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
                 No more destruction of Web3 and airdrop economics, tokenomics and inefficient give-aways. No more abuse of DAO governance
