@@ -31,8 +31,8 @@ export default function Homepage() {
           <Newsletter title="The future of digital identification is here">
             <p>
               We can scan IDs or do an award-winning <a href="https://github.com/0xKYC/0xkyc-1vote-aragon-plugin">1Vote</a> check to verify if you are unique on the blockchain ☀ With our simple process you
-              generate a unique, soulbound token that confirms you are not a bot and an unique inidividual available as a <a href="https://blog.aragon.org/dao-global-hackathon-bounty-winners/">Aragon OSx plugin</a>,
-              a soulbound token and via our unique minting mechanism.
+              generate a unique, soulbound token that confirms you are not a bot and an unique inidividual available on <a href="https://blog.aragon.org/dao-global-hackathon-bounty-winners/">Aragon OSx</a>,
+              as a soulbound token or via our unique minting mechanism.
             </p>
           </Newsletter>
           <BasicSection
@@ -61,13 +61,13 @@ export default function Homepage() {
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
-                Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of NPCs
+                Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of bots
                 ruining your game. Verify uniqueness on-chain, get a sanctions-free verification and integrate 0xKYC into your decentralized
-                application today! Contact us via <a href="https://calendly.com/adamzasada">Calendly</a> - We are at your service.
+                app today. Contact us: <a href="https://calendly.com/adamzasada">Calendly</a> - We are at your service.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
                 No more destruction of Web3 and airdrop economics, tokenomics and inefficient give-aways. No more abuse of DAO governance
-                power, no more paying out to sanctioned individuals, say goodbye to users opening new accounts as if they are a different
+                power, no more paying out to sanctioned individuals, say goodbye to users opening new accounts as if they were a different
                 person! <strong>#1User1Vote</strong>
               </p>
             </Box>
