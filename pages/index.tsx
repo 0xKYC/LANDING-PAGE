@@ -62,18 +62,17 @@ export default function Homepage() {
             </ul>
             <p>
               All of our checks are permissionless and interoperable 🗻⛺ Backed by{' '}
-              <a style={{ color: 'inherit' }} rel="noreferrer" target="_blank" href="https://www.neworder.network/">
+              <Anchor rel="noreferrer" target="_blank" href="https://www.neworder.network/">
                 New Order DAO
-              </a>{' '}
+              </Anchor>{' '}
               and{' '}
-              <a style={{ color: 'inherit' }} rel="noreferrer" target="_blank" href="https://outlierventures.io/">
+              <Anchor rel="noreferrer" target="_blank" href="https://outlierventures.io/">
                 Outlier Ventures
-              </a>
+              </Anchor>
               . We are officially a part of the{' '}
-              <a style={{ color: 'inherit' }} rel="noreferrer" target="_blank" href="https://scroll.io/ecosystem">
-                Scroll ecosystem
-              </a>{' '}
-              📜
+              <Anchor rel="noreferrer" target="_blank" href="https://scroll.io/ecosystem">
+                Scroll ecosystem 📜
+              </Anchor>
             </p>
           </BasicSection>
           <Separator />
@@ -86,9 +85,9 @@ export default function Homepage() {
                 Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of bots
                 ruining your game. Verify uniqueness on-chain, get a sanctions-free verification and integrate 0xKYC into your decentralized
                 app today. Contact us:{' '}
-                <a rel="noreferrer" target="_blank" href="https://calendly.com/adamzasada">
+                <Anchor rel="noreferrer" target="_blank" href="https://calendly.com/adamzasada">
                   Calendly
-                </a>{' '}
+                </Anchor>
                 - We are at your service.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
