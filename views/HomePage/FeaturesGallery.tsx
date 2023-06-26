@@ -7,6 +7,7 @@ import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
 import ThreeLayersCircle from 'components/ThreeLayersCircle';
 import { media } from 'utils/media';
+import { Anchor } from 'components/Link';
 
 const TABS = [
   {
@@ -81,9 +82,9 @@ export default function FeaturesGallery() {
       </GalleryWrapper>
       <StyledText>
         For more details visit our{' '}
-        <StyledLink rel="noreferrer" target="_blank" href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md">
+        <Anchor rel="noreferrer" target="_blank" href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md">
           Technical Documentation
-        </StyledLink>
+        </Anchor>
       </StyledText>
     </FeaturesGalleryWrapper>
   );
