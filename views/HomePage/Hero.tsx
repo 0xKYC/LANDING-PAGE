@@ -13,12 +13,12 @@ export default function Hero() {
         <Heading>Unlock the power of privacy</Heading>
 
         <Description>
-          Our revolutionary solution allows DeFi protocols, Web3 games and DAOs to verify their users without compromising personal
-          information
+          Our solution allows Web3 games, DAOs and DeFi protocols to verify if their users have multiple accounts, are bots or sanctioned
+          individuals without revealing their personal information to those entities
         </Description>
         <CustomButtonGroup>
           <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
-            Discover 0xKYC<span>&rarr;</span>
+            Click to Open our dApp<span>&rarr;</span>
           </Button>
           <Button transparent={true} href="https://calendly.com/adamzasada" target="_blank" rel="noreferrer">
             Book a demo<span>&rarr;</span>
