@@ -8,6 +8,7 @@ import SectionTitle from 'components/SectionTitle';
 import ThreeLayersCircle from 'components/ThreeLayersCircle';
 import { media } from 'utils/media';
 import { Anchor } from 'components/Link';
+import Image from 'next/image';
 
 const TABS = [
   {
@@ -25,9 +26,9 @@ const TABS = [
     secondColor: '99,172,232',
   },
   {
-    title: 'On-chain Security',
-    description: 'Experience unparalleled on-chain security with zero-knowledge proofs',
-    imageUrl: '/onn-chain.png',
+    title: 'API (Live already!)',
+    description: "Get an identifier without reveling user's name or biometric information",
+    imageUrl: '/api-callback.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
   },
@@ -86,22 +87,23 @@ export default function FeaturesGallery() {
           Technical Documentation
         </Anchor>
       </StyledText>
+
+      <Image src="/0xkyc-logo-black.png" alt="0xkyc logo" objectFit="contain" width={360} height={100} />
     </FeaturesGalleryWrapper>
   );
 }
 
 const StyledText = styled('p')`
+  text-align: center;
   font-size: 2rem;
+  margin-bottom: 5rem;
 `;
-const StyledLink = styled('a')`
-  color: inherit;
-`;
+
 const FeaturesGalleryWrapper = styled(Container)`
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 5rem;
   padding-top: 5rem;
 `;
 
