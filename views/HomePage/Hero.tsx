@@ -13,8 +13,8 @@ export default function Hero() {
         <Heading>Unlock the power of privacy</Heading>
 
         <Description>
-          Our solution allows Web3 games, DAOs and DeFi protocols to verify if their users have multiple accounts, are bots or sanctioned
-          individuals without revealing their personal information to those entities
+          Verify if your users <strong>are real and </strong>have the amount of accounts they claim to have with our Proof of Uniqueness
+          solution.
         </Description>
         <CustomButtonGroup>
           <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
