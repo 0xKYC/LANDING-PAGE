@@ -13,8 +13,7 @@ export default function Hero() {
         <Heading>Unlock the power of privacy</Heading>
 
         <Description>
-          Verify if your users <strong>are real and </strong>have the amount of accounts they claim to have with our Proof of Uniqueness
-          solution.
+          Verify if your users are real and have the amount of accounts they claim to have with our Proof of Uniqueness solution.
         </Description>
         <CustomButtonGroup>
           <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
@@ -69,11 +68,11 @@ const ImageContainer = styled.div`
   min-height: 320px;
 `;
 
-const Description = styled.p`
+const Description = styled.h2`
   font-size: 1.7rem;
   opacity: 0.8;
   line-height: 1.6;
-
+  font-weight: 400;
   ${media('<=desktop')} {
     font-size: 1.5rem;
   }
