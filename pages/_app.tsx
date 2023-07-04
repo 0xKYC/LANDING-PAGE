@@ -4,6 +4,7 @@ import Head from 'next/head';
 // import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
 
+import { Baner } from 'components/Baner';
 import { CookieBanner } from 'components/CookieBanner';
 import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
@@ -70,6 +71,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Providers>
         <Modals />
+        <Baner
+          title={'Live on Polygon Mainnet 🎉'}
+          subtitle="Leaders of the Virtual Realm"
+          imgUrl="/blockchains/polygon.png"
+          href={'asdf'}
+        />
         <Navbar items={navItems} />
 
         <Component {...pageProps} />
