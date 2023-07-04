@@ -105,6 +105,7 @@ const FeaturesGalleryWrapper = styled(Container)`
   flex-direction: column;
   justify-content: center;
   padding-top: 5rem;
+  scroll-margin-top: 100px;
 `;
 
 const GalleryWrapper = styled.div`
