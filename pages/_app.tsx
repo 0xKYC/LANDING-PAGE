@@ -73,7 +73,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Modals />
         <Baner
           title={'Live on Polygon Mainnet 🎉'}
-          subtitle="Leaders of the Virtual Realm"
+          subtitle="0xKYC: Simplifying Web3 user verification, securely"
           imgUrl="/blockchains/polygon.png"
           href={'asdf'}
         />
