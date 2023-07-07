@@ -71,11 +71,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Providers>
         <Modals />
+        <div style={{ background: '#8247e5' }}>
+          <Baner title={'Live on Polygon Mainnet'} imgUrl="/blockchains/polygon.png" />
+        </div>
         <Baner
-          title={'Live on Polygon Mainnet 🎉'}
-          subtitle="0xKYC: Simplifying Web3 user verification, securely"
+          subtitle="Simplifying Web3 user verification, securely"
           imgUrl="/blockchains/polygon.png"
-          href={'asdf'}
+          href={'https://medium.com/0xkyc'}
         />
         <Navbar items={navItems} />
 
