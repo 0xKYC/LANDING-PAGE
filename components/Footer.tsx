@@ -44,7 +44,7 @@ const Flex = styled.div`
   ${media('<=desktop')} {
     display: none;
   }
-  @media screen and (max-width: 1079px) {
+  @media screen and (max-width: 1150px) {
     display: none;
   }
 `;
@@ -87,6 +87,9 @@ export default function Footer() {
             </a>
             <a href="https://www.crunchbase.com/organization/0xkyc" rel="noreferrer" target="_blank">
               <Image src="/crunchbase.png" alt="crunchbase" width={48} height={48} />
+            </a>
+            <a href="https://discord.com/invite/p58hBne2Ue" rel="noreferrer" target="_blank">
+              <Image src="/discord.png" alt="discord" width={48} height={48} />
             </a>
           </ShareBar>
           <Copyright>&copy; 2023 0xKYC, Inc. All rights reserved.</Copyright>
@@ -141,7 +144,7 @@ const ListContainer = styled.div`
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1151px) {
     display: none;
   }
 `;
