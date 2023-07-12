@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/dist/shared/lib/router/router';
 import Head from 'next/head';
+import Script from 'next/script';
 // import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
 
@@ -61,11 +62,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             __html: `window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
           ga('create', 'UA-117119829-1', 'auto');
           ga('send', 'pageview');`,
-          }}
-        /> */}
+        }}
+      /> */}
         {/* <script async src="https://www.google-analytics.com/analytics.js"></script> */}
         <meta name="google-site-verification" content="FqOdOkygT3hoA9RZ6NGunUBJb38AgE4kd2hvIDsg8t4" />
       </Head>
+      <Script src="cookie3.js" />
       {/* <ColorModeScript /> */}
       <GlobalStyle />
 
