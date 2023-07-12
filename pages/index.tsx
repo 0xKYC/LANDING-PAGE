@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import BasicSection, { Title } from 'components/BasicSection';
 
 import Container from 'components/Container';
+import { Anchor } from 'components/Link';
 import { Separator } from 'components/Separator';
 import { EnvVars } from 'env';
 
@@ -16,7 +17,6 @@ import News from 'views/HomePage/News';
 import Newsletter from 'views/HomePage/Newsletter';
 // import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
-import Link, { Anchor } from 'components/Link';
 
 export default function Homepage() {
   return (
@@ -104,9 +104,7 @@ export default function Homepage() {
         {/* <DarkerBackgroundContainer> */}
         {/* <Cta /> */}
         {/* <BasicSectionWrapper> */}
-        {/* <Testimonials /> */}
         {/* </BasicSectionWrapper> */}
-        {/* <FeaturesGallery /> */}
         {/* </DarkerBackgroundContainer> */}
       </HomepageWrapper>
     </>
