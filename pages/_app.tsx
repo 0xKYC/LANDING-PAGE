@@ -4,6 +4,7 @@ import Head from 'next/head';
 // import { ColorModeScript } from 'nextjs-color-mode';
 import React, { PropsWithChildren } from 'react';
 
+import { Baner } from 'components/Baner';
 import { CookieBanner } from 'components/CookieBanner';
 import Footer from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyles';
@@ -70,6 +71,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Providers>
         <Modals />
+        <div style={{ background: '#8247e5' }}>
+          <Baner title={'Live on Polygon Mainnet'} imgUrl="/blockchains/polygon.png" />
+        </div>
+        <Baner
+          subtitle="Simplifying Web3 user verification, securely"
+          imgUrl="/blockchains/polygon.png"
+          href={'https://medium.com/0xkyc'}
+        />
         <Navbar items={navItems} />
 
         <Component {...pageProps} />

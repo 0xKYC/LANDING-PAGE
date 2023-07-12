@@ -7,12 +7,12 @@ import styled from 'styled-components';
 import { media } from 'utils/media';
 
 const BLOCKCHAINS = [
-  // {
-  //   name: 'Polygon Mainnet (coming soon)',
-  //   img: 'polygon.png',
-  //   alt: 'polygon',
-  //   href: 'www.polygon.com',
-  // },
+  {
+    name: 'Polygon Mainnet',
+    img: 'polygon.png',
+    alt: 'polygon',
+    href: 'https://polygon.technology/',
+  },
   {
     name: 'Polygon Mumbai',
     img: 'polygon.png',
@@ -20,15 +20,15 @@ const BLOCKCHAINS = [
     href: 'https://polygon.technology/',
   },
   {
-    name: 'Ethereum Goerli',
+    name: 'Ethereum Sepolia',
     img: 'ethereum-logo.png',
-    alt: 'polygon',
+    alt: 'Ethereum Sepolia',
     href: 'https://ethereum.org/en/',
   },
   {
     name: 'Scroll Alpha',
     img: 'scroll.png',
-    alt: 'polygon',
+    alt: 'Scroll Alpha',
     href: 'https://scroll.io/',
   },
   // {
@@ -60,7 +60,7 @@ const StyledSplide = styled(Splide)`
 export default function BlockchainsBanner() {
   return (
     <Wrapper>
-      <Title>Supported blockchains (MAINNET COMING SOON)</Title>
+      <Title>Supported blockchains</Title>
 
       <StyledSplide
         aria-label="Partners"
