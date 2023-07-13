@@ -1,5 +1,3 @@
-const CopyPlugin = require('copy-webpack-plugin');
-
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -8,15 +6,20 @@ module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
-    domains: ['github.blog'],
-    deviceSizes: [320, 640, 1080, 1200],
-    imageSizes: [64, 128],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn-images-1.medium.com',
+        port: '',
+        pathname: '/max/1024/**',
+      },
+    ],
   },
   swcMinify: true,
   compiler: {
     styledComponents: true,
   },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {
