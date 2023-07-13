@@ -22,7 +22,9 @@ export const Baner = ({ title, subtitle, imgUrl, order, href }: Props) => {
       {subtitle && (
         <SubtitleWrapper>
           <Title>
-            <Url href={href}>{subtitle}</Url>
+            <Url href={href} target="_blank">
+              {subtitle}
+            </Url>
           </Title>
         </SubtitleWrapper>
       )}

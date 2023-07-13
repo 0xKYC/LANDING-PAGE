@@ -3,12 +3,10 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Collapse from 'components/Collapse';
 import Container from 'components/Container';
-import OverTitle from 'components/OverTitle';
+import { Anchor } from 'components/Link';
 import SectionTitle from 'components/SectionTitle';
 import ThreeLayersCircle from 'components/ThreeLayersCircle';
 import { media } from 'utils/media';
-import { Anchor } from 'components/Link';
-import Image from 'next/image';
 
 const TABS = [
   {
@@ -87,8 +85,6 @@ export default function FeaturesGallery() {
           Technical Documentation
         </Anchor>
       </StyledText>
-
-      <Image src="/0xkyc-logo-black.png" alt="0xkyc logo" objectFit="contain" width={360} height={100} />
     </FeaturesGalleryWrapper>
   );
 }
@@ -96,7 +92,6 @@ export default function FeaturesGallery() {
 const StyledText = styled('p')`
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 5rem;
 `;
 
 const FeaturesGalleryWrapper = styled(Container)`

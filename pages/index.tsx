@@ -10,6 +10,7 @@ import { EnvVars } from 'env';
 // import Cta from 'views/HomePage/Cta';
 import BackedBy from 'views/HomePage/BackedBy';
 import Partners from 'views/HomePage/BlockchainsBanner';
+import Blog from 'views/HomePage/Blog';
 import Features from 'views/HomePage/Features';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
@@ -100,6 +101,7 @@ export default function Homepage() {
           </Container>
           <Separator />
           <FeaturesGallery />
+          <Blog />
         </WhiteBackgroundContainer>
         {/* <DarkerBackgroundContainer> */}
         {/* <Cta /> */}

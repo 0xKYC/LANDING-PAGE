@@ -23,6 +23,7 @@ const navItems: NavItems = [
   { title: 'News', href: '#news' },
   { title: 'Use Cases', href: '#use-cases' },
   { title: 'Integration', href: '#integration' },
+  { title: 'Blog', href: '#blog' },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
