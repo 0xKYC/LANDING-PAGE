@@ -9,7 +9,7 @@ const NEWS = [
       'Our integration utilizes blockchain-based identity verification and token-gating solutions to combat fraud, ensuring a safer gaming environment.',
     imgUrl: '/posts/ov-banner.jpeg',
 
-    href: 'https://outlierventures.io/securing-the-open-metaverse-0xkyc-and-insert-stonks-collaborate-to-tackle-fraud/',
+    href: 'https://outlierventures.io/article/securing-the-open-metaverse-0xkyc-and-insert-stonks-collaborate-to-tackle-fraud/',
   },
   {
     title: 'Winning the DAO Global Hackathon',
