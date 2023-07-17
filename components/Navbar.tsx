@@ -1,74 +1,23 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useRef, useState } from 'react';
+
 import styled from 'styled-components';
 
-import { useModalContext } from 'contexts/modal.context';
-import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
 import { NavItems, SingleNavItem } from 'types';
 import { media } from 'utils/media';
 import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
-import Link from 'next/link';
+
 import { HamburgerIcon } from './HamburgerIcon';
 
-const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
-
 type NavbarProps = { items: NavItems };
-type ScrollingDirections = 'up' | 'down' | 'none';
-type NavbarContainerProps = { hidden: boolean; transparent: boolean };
 
 export default function Navbar({ items }: NavbarProps) {
-  const router = useRouter();
   const { toggle } = Drawer.useDrawer();
-  const { setIsModalOpened } = useModalContext();
-  const [scrollingDirection, setScrollingDirection] = useState<ScrollingDirections>('none');
-
-  let lastScrollY = useRef(0);
-  const lastRoute = useRef('');
-  const stepSize = useRef(50);
-
-  useScrollPosition(scrollPositionCallback, [router.asPath], undefined, undefined, 50);
-
-  function scrollPositionCallback({ currPos }: ScrollPositionEffectProps) {
-    const routerPath = router.asPath;
-    const hasRouteChanged = routerPath !== lastRoute.current;
-
-    if (hasRouteChanged) {
-      lastRoute.current = routerPath;
-      setScrollingDirection('none');
-      return;
-    }
-
-    const currentScrollY = currPos.y;
-    const isScrollingUp = currentScrollY > lastScrollY.current;
-    const scrollDifference = Math.abs(lastScrollY.current - currentScrollY);
-    const hasScrolledWholeStep = scrollDifference >= stepSize.current;
-    const isInNonCollapsibleArea = lastScrollY.current > -50;
-
-    if (isInNonCollapsibleArea) {
-      setScrollingDirection('none');
-      lastScrollY.current = currentScrollY;
-      return;
-    }
-
-    if (!hasScrolledWholeStep) {
-      lastScrollY.current = currentScrollY;
-      return;
-    }
-
-    setScrollingDirection(isScrollingUp ? 'up' : 'down');
-    lastScrollY.current = currentScrollY;
-  }
-
-  const isNavbarHidden = scrollingDirection === 'down';
-  const isTransparent = scrollingDirection === 'none';
 
   return (
-    <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>
+    <NavbarContainer>
       <Content>
         <NextLink href="/" passHref>
           <LogoWrapper>
@@ -116,9 +65,10 @@ export function NavLink({ href, title, outlined }: SingleNavItem) {
   );
 }
 
-const NavItemList = styled.div`
+const NavItemList = styled.ul`
   display: flex;
   list-style: none;
+  padding: 0;
 `;
 
 const HamburgerMenuWrapper = styled.div`
@@ -181,7 +131,7 @@ const CustomNavItemWrapper = styled(NavItemWrapper)`
     color: black;
   }
 `;
-const NavbarContainer = styled.div<NavbarContainerProps>`
+const NavbarContainer = styled.div`
   display: flex;
   position: sticky;
   top: 0;

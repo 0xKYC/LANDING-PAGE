@@ -1,6 +1,7 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import Image from 'next/image';
 
 import styled from 'styled-components';
 
@@ -84,16 +85,16 @@ export default function BlockchainsBanner() {
       >
         {BLOCKCHAINS.map((logo, idx) => (
           <SplideSlide key={idx}>
-            <StyledLink href={logo.href} target="_blank" rel="noreferrer" style={{ cursor: 'pointer' }}>
-              <img src={'/blockchains/' + logo.img} alt={logo.alt} height="42px" /> {logo.name}
+            <StyledLink href={logo.href} target="_blank" rel="noreferrer">
+              <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
             </StyledLink>
           </SplideSlide>
         ))}
       </StyledSplide>
       <LogosWrapper>
         {BLOCKCHAINS.map((logo, idx) => (
-          <StyledLink key={idx} href={logo.href} target="_blank" rel="noreferrer" style={{ cursor: 'pointer' }}>
-            <img src={'/blockchains/' + logo.img} alt={logo.alt} height="42px" /> {logo.name}
+          <StyledLink key={idx} href={logo.href} target="_blank" rel="noreferrer">
+            <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
           </StyledLink>
         ))}
       </LogosWrapper>
@@ -120,6 +121,7 @@ const StyledLink = styled.a`
   color: black;
   text-decoration: none;
   font-size: 1.3rem;
+  cursor: pointer;
 `;
 
 export const Title = styled.h3`

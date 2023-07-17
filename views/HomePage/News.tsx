@@ -10,6 +10,7 @@ const NEWS = [
     imgUrl: '/posts/ov-banner.jpeg',
 
     href: 'https://outlierventures.io/article/securing-the-open-metaverse-0xkyc-and-insert-stonks-collaborate-to-tackle-fraud/',
+    ariaLabel: '0xKYC and Insert Stonks Collaboration',
   },
   {
     title: 'Winning the DAO Global Hackathon',
@@ -18,6 +19,7 @@ const NEWS = [
     imgUrl: '/posts/dao-global.png',
     href: 'https://blog.aragon.org/dao-global-hackathon-bounty-winners/',
     order: 2,
+    ariaLabel: 'Winning the DAO Global Hackathon',
   },
 
   {
@@ -26,6 +28,7 @@ const NEWS = [
       'ETHWarsaw was a pivotal event for us, where our team brainstormed ideas and created a zero-knowledge proof solution for storing AML data on-chain.',
     imgUrl: '/posts/ethwarsaw.jpg',
     href: 'https://medium.com/ethwarsaw/0xkyc-the-ethwarsaw-success-story-5c3663a33996',
+    ariaLabel: 'Our Beginnings',
   },
 ];
 export default function NewsSection() {
@@ -36,6 +39,7 @@ export default function NewsSection() {
       {NEWS.map((news) => {
         return (
           <News
+            ariaLabel={news.ariaLabel}
             description={news.description}
             imgUrl={news.imgUrl}
             title={news.title}

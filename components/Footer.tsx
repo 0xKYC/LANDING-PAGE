@@ -74,21 +74,21 @@ export default function Footer() {
                 link={true}
               />
             </Flex>
-            <a href="https://twitter.com/0xKYCinc" rel="noreferrer" target="_blank">
+            <a href="https://twitter.com/0xKYCinc" rel="noreferrer" target="_blank" aria-label="Twitter">
               <TwitterIcon size={50} round={true} />
             </a>
 
-            <a href="https://github.com/0xKYC" rel="noreferrer" target="_blank">
+            <a href="https://github.com/0xKYC" rel="noreferrer" target="_blank" aria-label="Github">
               <Image src="/gh-new.png" alt="github" width={48} height={48} />
             </a>
 
-            <a href="https://www.linkedin.com/company/0xkyc/" rel="noreferrer" target="_blank">
+            <a href="https://www.linkedin.com/company/0xkyc/" rel="noreferrer" target="_blank" aria-label="Linkedin">
               <LinkedinIcon size={50} round={true} />
             </a>
-            <a href="https://www.crunchbase.com/organization/0xkyc" rel="noreferrer" target="_blank">
+            <a href="https://www.crunchbase.com/organization/0xkyc" rel="noreferrer" target="_blank" aria-label="Crunchbase">
               <Image src="/crunchbase.png" alt="crunchbase" width={48} height={48} />
             </a>
-            <a href="https://discord.com/invite/p58hBne2Ue" rel="noreferrer" target="_blank">
+            <a href="https://discord.com/invite/p58hBne2Ue" rel="noreferrer" target="_blank" aria-label="Discord">
               <Image src="/discord.png" alt="discord" width={48} height={48} />
             </a>
           </ShareBar>

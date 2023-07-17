@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import Link, { Anchor } from './Link';
+import { Anchor } from './Link';
 
 type Props = {
   title: string;
   description: string;
   imgUrl: string;
-  order?: number;
   href: string;
+  ariaLabel: string;
+  order?: number;
 };
-export const News = ({ title, description, imgUrl, order, href }: Props) => {
+export const News = ({ title, description, imgUrl, order, href, ariaLabel }: Props) => {
   return (
     <Wrapper>
       <ImgWrapper order={order}>
@@ -24,7 +25,7 @@ export const News = ({ title, description, imgUrl, order, href }: Props) => {
         <P>{description}</P>
 
         <LinkWrapper>
-          <Anchor rel="noreferrer" target="_blank" href={href}>
+          <Anchor rel="noreferrer" target="_blank" href={href} aria-labelledby={ariaLabel}>
             Read more
           </Anchor>
           <Image src="/external-link.svg" width={14} height={14} alt="" />
