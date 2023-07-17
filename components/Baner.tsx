@@ -50,6 +50,7 @@ const TitleWrapper = styled.div`
 `;
 
 const SubtitleWrapper = styled.div`
+  text-align: center;
   display: flex;
   flex-direction: row;
   padding: 0.5rem 5rem;

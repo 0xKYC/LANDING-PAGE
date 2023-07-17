@@ -65,9 +65,10 @@ export function NavLink({ href, title, outlined }: SingleNavItem) {
   );
 }
 
-const NavItemList = styled.div`
+const NavItemList = styled.ul`
   display: flex;
   list-style: none;
+  padding: 0;
 `;
 
 const HamburgerMenuWrapper = styled.div`

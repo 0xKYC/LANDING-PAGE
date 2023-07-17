@@ -24,7 +24,7 @@ export const Blog = ({ title, description, imgUrl, order, href }: Props) => {
         <P dangerouslySetInnerHTML={{ __html: `${description.slice(0, 200)}` }} />
 
         <LinkWrapper>
-          <Anchor rel="noreferrer" target="_blank" href={href}>
+          <Anchor rel="noreferrer" target="_blank" href={href} aria-labelledby={title}>
             Read more
           </Anchor>
           <Image src="/external-link.svg" width={14} height={14} alt="" />
