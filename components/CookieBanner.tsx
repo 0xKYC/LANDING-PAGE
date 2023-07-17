@@ -33,7 +33,7 @@ export const CookieBanner = () => {
         marginRight: '3.5rem',
       }}
     >
-      <StyledBtn onClick={declineCookies}>
+      <StyledBtn onClick={declineCookies} aria-label="Close">
         <svg
           height="16px"
           version="1.1"
