@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import NextLink from 'next/link';
 
 import styled from 'styled-components';
@@ -19,12 +19,12 @@ export default function Navbar({ items }: NavbarProps) {
   return (
     <NavbarContainer>
       <Content>
-        <NextLink href="/" passHref>
+        <NextLink href="/">
           <LogoWrapper>
             <Image src="/new-logo.png" alt="logo" width={164} height={50} />
           </LogoWrapper>
         </NextLink>
-        <NextLink href="/" passHref>
+        <NextLink href="/">
           <MobileLogoWrapper>
             <Image src="/0xkyc-icon.png" alt="logo" width={50} height={50} />
           </MobileLogoWrapper>

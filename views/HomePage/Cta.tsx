@@ -20,12 +20,12 @@ export default function Cta() {
             culpa.
           </Description>
           <ButtonGroup>
-            <NextLink href="#early-access" passHref>
+            <NextLink href="#early-access">
               <Button>
                 Call To Action <span>&rarr;</span>
               </Button>
             </NextLink>
-            <NextLink href="#whitepaper" passHref>
+            <NextLink href="#whitepaper">
               <OutlinedButton transparent>
                 Features <span>&rarr;</span>
               </OutlinedButton>

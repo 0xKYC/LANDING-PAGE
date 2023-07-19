@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import NextLink from 'next/link';
+import Link from 'next/link';
 import { LinkedinIcon, TwitterIcon } from 'react-share';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
-import Link from 'next/link';
 
 type SingleFooterListItem = { title: string; href: string; link?: boolean };
 type FooterListItems = SingleFooterListItem[];
@@ -58,7 +58,7 @@ export default function Footer() {
           ))}
         </ListContainer>
         <BottomBar>
-          <Link href="/" passHref>
+          <Link href="/" passHref legacyBehavior>
             <LogoWrapper>
               <Image src="/logo-white.png" alt="logo" width={164} height={50} />
             </LogoWrapper>
@@ -113,7 +113,7 @@ function FooterList({ title, items }: SingleFooterList) {
 function ListItem({ title, href, link }: SingleFooterListItem) {
   return (
     <ListItemWrapper>
-      <NextLink href={href} passHref>
+      <NextLink href={href} passHref legacyBehavior>
         {link ? (
           <a href={href} rel="noreferrer" target="_blank">
             {title}

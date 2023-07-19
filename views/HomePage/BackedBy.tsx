@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { TwitterIcon } from 'react-share';
 import styled from 'styled-components';
 
@@ -42,7 +42,7 @@ export default function BackedBy() {
         {INVESTORS.map((investor) => {
           return (
             <a key={investor.name} href={investor.href} rel="noreferrer" target="_blank">
-              <SImage src={`/fixed/${investor.img}`} alt={investor.name} width="320px" height="50px" objectFit="contain" />
+              <SImage src={`/fixed/${investor.img}`} alt={investor.name} width={320} height={50} />
             </a>
           );
         })}
@@ -53,7 +53,7 @@ export default function BackedBy() {
           return (
             <StyledLink key={angel.name} href={angel.href} rel="noreferrer" target="_blank">
               <Box>
-                <StyledImage src={`/fixed/${angel.img}`} alt={angel.name} width="54px" height="54px" />
+                <StyledImage src={`/fixed/${angel.img}`} alt={angel.name} width={54} height={54} />
                 <InfoBox>
                   <P>{angel.name}</P>
                   <Description>{angel.desc}</Description>

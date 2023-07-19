@@ -1,5 +1,5 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import NextImage from 'next/image';
+import NextImage from "next/legacy/image";
 import React from 'react';
 import styled from 'styled-components';
 
