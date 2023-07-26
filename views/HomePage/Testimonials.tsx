@@ -35,7 +35,7 @@ const TESTIMONIALS = [
     height: 32,
   },
   {
-    title: 'Hashup',
+    title: 'HashUp',
     companyLogoUrl: '/hashup.webp',
     content: `0xKYC is one of the best crypto projects to emerge recently in our region. A common KYC infrastructure solution for decentralized applications is badly needed, and I believe this project has a chance to stir things up in this sphere.`,
     href: 'https://hashup.it/',

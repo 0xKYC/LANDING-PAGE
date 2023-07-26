@@ -13,6 +13,7 @@ const INVESTORS = [
     href: 'https://www.neworder.network/',
   },
   { name: 'Outlier Ventures', img: 'outlier-ventures.png', href: 'https://outlierventures.io/' },
+  { name: 'Bufficorn', img: 'buffi-bg.png', href: 'https://bufficorn.ventures/' },
 ];
 
 const ANGELS = [
@@ -194,13 +195,18 @@ const SImage = styled(Image)`
 `;
 const InverstorsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 3rem;
   padding-bottom: 2rem;
 
-  @media screen and(max-width:1024px) {
+  /* @media screen and (max-width: 799px) {
     margin: 0 10rem;
     gap: 10rem;
+  } */
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
   }
 `;
 
