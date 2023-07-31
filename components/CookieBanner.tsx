@@ -22,6 +22,7 @@ export const CookieBanner = () => {
         left: '50%',
         marginBottom: '1rem',
         transform: 'translateX(-50%)',
+        padding: '.6rem',
       }}
       buttonStyle={{
         background: 'rgb(var(--primary)',

@@ -86,7 +86,7 @@ export default function BlockchainsBanner() {
         {BLOCKCHAINS.map((logo, idx) => (
           <SplideSlide key={idx}>
             <StyledLink href={logo.href} target="_blank" rel="noreferrer">
-              <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
+              <img src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
             </StyledLink>
           </SplideSlide>
         ))}

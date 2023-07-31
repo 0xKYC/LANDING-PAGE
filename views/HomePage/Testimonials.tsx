@@ -34,6 +34,18 @@ const TESTIMONIALS = [
     width: 220,
     height: 32,
   },
+  {
+    companyLogoUrl: '/hashup.jpg',
+    content: `0xKYC is one of the best crypto projects to emerge recently in our region. A common KYC infrastructure solution for decentralized applications is badly needed, and I believe this project has a chance to stir things up in this sphere.`,
+    href: 'https://hashup.it/',
+    author: {
+      name: 'Szymon Jankowski',
+      title: 'CEO and Founder',
+      avatarUrl: '/testimonials/hashup-ceo.jpg',
+    },
+    width: 300,
+    height: 80,
+  },
 ];
 
 export default function Testimonials() {
@@ -46,21 +58,20 @@ export default function Testimonials() {
           {TESTIMONIALS.map((singleTestimonial, idx) => (
             <SplideSlide key={idx}>
               <TestimonialCard>
-                <a href={singleTestimonial.href} target="_blank" rel="noreferrer">
+                <Link href={singleTestimonial.href} target="_blank" rel="noreferrer">
                   <NextImage
                     src={singleTestimonial.companyLogoUrl}
                     alt={`${singleTestimonial.author.name}'s company logo`}
                     width={singleTestimonial.width}
                     height={singleTestimonial.height}
+                    objectFit="contain"
                   />
-                </a>
+                </Link>
                 <Content>“{singleTestimonial.content}”</Content>
                 <AuthorContainer>
-                  {singleTestimonial.author.avatarUrl && (
-                    <AuthorImageContainer>
-                      <NextImage src={singleTestimonial.author.avatarUrl} alt={singleTestimonial.author.name} width={42} height={42} />
-                    </AuthorImageContainer>
-                  )}
+                  <AuthorImageContainer>
+                    <NextImage src={singleTestimonial.author.avatarUrl} alt={singleTestimonial.author.name} width={42} height={42} />
+                  </AuthorImageContainer>
 
                   <AuthorContent>
                     <AuthorName>{singleTestimonial.author.name}</AuthorName>
@@ -85,6 +96,14 @@ const StyledSplide = styled(Splide)`
     background-color: rgb(251, 115, 36);
   }
 `;
+
+const Link = styled.a`
+  font-size: 3rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+`;
+
 const TestimonialsWrapper = styled(Container)`
   position: relative;
   text-align: center;
@@ -110,10 +129,12 @@ const TestimonialCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 100%;
   padding-bottom: 3rem;
-  & > *:not(:first-child) {
+  /* & > *:not(:first-child) {
     margin-top: 5rem;
-  }
+  } */
 `;
 
 const Content = styled.blockquote`
@@ -121,15 +142,21 @@ const Content = styled.blockquote`
   font-size: 1.6rem;
   font-style: italic;
   max-width: 65%;
-
   ${media('<=desktop')} {
     max-width: 85%;
+  }
+  @media screen and (max-width: 1024px) {
+    height: auto;
   }
 `;
 
 const AuthorContainer = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 5rem;
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const AuthorContent = styled.div`
