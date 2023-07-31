@@ -35,8 +35,7 @@ const TESTIMONIALS = [
     height: 32,
   },
   {
-    title: 'HashUp',
-    companyLogoUrl: '/hashup.webp',
+    companyLogoUrl: '/hashup.jpg',
     content: `0xKYC is one of the best crypto projects to emerge recently in our region. A common KYC infrastructure solution for decentralized applications is badly needed, and I believe this project has a chance to stir things up in this sphere.`,
     href: 'https://hashup.it/',
     author: {
@@ -44,8 +43,8 @@ const TESTIMONIALS = [
       title: 'CEO',
       avatarUrl: '/testimonials/hashup-ceo.jpg',
     },
-    width: 42,
-    height: 42,
+    width: 300,
+    height: 80,
   },
 ];
 
@@ -60,15 +59,13 @@ export default function Testimonials() {
             <SplideSlide key={idx}>
               <TestimonialCard>
                 <Link href={singleTestimonial.href} target="_blank" rel="noreferrer">
-                  <Box>
-                    <NextImage
-                      src={singleTestimonial.companyLogoUrl}
-                      alt={`${singleTestimonial.author.name}'s company logo`}
-                      width={singleTestimonial.width}
-                      height={singleTestimonial.height}
-                    />
-                    {singleTestimonial.title && singleTestimonial.title}
-                  </Box>
+                  <NextImage
+                    src={singleTestimonial.companyLogoUrl}
+                    alt={`${singleTestimonial.author.name}'s company logo`}
+                    width={singleTestimonial.width}
+                    height={singleTestimonial.height}
+                    objectFit="contain"
+                  />
                 </Link>
                 <Content>“{singleTestimonial.content}”</Content>
                 <AuthorContainer>
@@ -107,11 +104,6 @@ const Link = styled.a`
   font-weight: 500;
 `;
 
-const Box = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`;
 const TestimonialsWrapper = styled(Container)`
   position: relative;
   text-align: center;
@@ -140,9 +132,9 @@ const TestimonialCard = styled.div`
   justify-content: space-between;
   height: 100%;
   padding-bottom: 3rem;
-  & > *:not(:first-child) {
+  /* & > *:not(:first-child) {
     margin-top: 5rem;
-  }
+  } */
 `;
 
 const Content = styled.blockquote`
@@ -161,7 +153,7 @@ const Content = styled.blockquote`
 const AuthorContainer = styled.div`
   display: flex;
   align-items: center;
-
+  margin-top: 5rem;
   @media screen and (min-width: 1024px) {
     margin-bottom: 2rem;
   }
