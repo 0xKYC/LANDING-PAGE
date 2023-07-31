@@ -40,7 +40,7 @@ const TESTIMONIALS = [
     href: 'https://hashup.it/',
     author: {
       name: 'Szymon Jankowski',
-      title: 'CEO',
+      title: 'CEO and Founder',
       avatarUrl: '/testimonials/hashup-ceo.jpg',
     },
     width: 300,
