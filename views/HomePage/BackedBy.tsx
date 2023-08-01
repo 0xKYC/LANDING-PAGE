@@ -39,7 +39,7 @@ const ANGELS = [
     name: 'Dominic Rohde',
     img: 'dominic.jpg',
     href: 'https://twitter.com/DomRohde',
-    desc: 'Ex-Head of Talent, Maker DAO',
+    desc: 'Ex-Head of Talent, DAO Maker',
   },
 ];
 export default function BackedBy() {
