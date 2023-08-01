@@ -18,19 +18,16 @@ export const NewsletterBox = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { register, handleSubmit, formState, setError } = useForm<FormValue>();
   const { errors, isSubmitSuccessful } = formState;
-
   const onSubmit: SubmitHandler<FormValue> = async ({ email }) => {
     const isValid = isCompanyEmail(email);
     if (!isValid) {
       return setError('email', { message: 'Invalid email address' });
     }
-
     try {
       setIsLoading(true);
-      const res = await axios.post('/api/subscribeNewsletter', {
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL!}/user/newsletter/signup`, {
         email,
       });
-      console.log(res);
       setIsLoading(false);
     } catch (err) {
       console.error(err);
@@ -64,10 +61,12 @@ export const NewsletterBox = () => {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                       message: 'Invalid email address',
                     },
+                    maxLength: 100,
                   })}
                   title="Type your email here"
                 />
                 {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+                {errors.email && errors.email.type === 'maxLength' && <ErrorMessage>Max length exceeded</ErrorMessage>}
               </Box>
               <StyledButton disabled={isLoading}>
                 {isLoading && <Spinner />}
