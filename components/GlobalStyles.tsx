@@ -10,7 +10,11 @@ import { createGlobalStyle } from 'styled-components';
 // }
 
 export const GlobalStyle = createGlobalStyle`
-
+  .CookieConsent  > div:first-child {
+  @media screen and (max-width:350px) {
+    flex: 1 0 200px !important;
+  }
+ }
 
 .next-light-theme {
   --background: 251,251,253;

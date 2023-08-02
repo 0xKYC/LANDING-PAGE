@@ -36,10 +36,10 @@ export const CookieBanner = () => {
     >
       <StyledBtn onClick={declineCookies} aria-label="Close">
         <svg
-          height="16px"
+          height="18px"
           version="1.1"
           viewBox="0 0 512 512"
-          width="16px"
+          width="18px"
           xmlSpace="preserve"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -50,12 +50,14 @@ export const CookieBanner = () => {
           />
         </svg>
       </StyledBtn>
-      This website uses cookies to improve your experience. Please review our
-      <StyledLink href="https://app.0xkyc.id/privacy-policy" target="_blank" rel="noreferrer">
-        {' '}
-        Cookie Policy (as a part of our Privacy Policy){' '}
-      </StyledLink>{' '}
-      for more information.
+      <p style={{ marginRight: '.5rem' }}>
+        This website uses cookies to improve your experience. Please review our
+        <StyledLink href="https://app.0xkyc.id/privacy-policy" target="_blank" rel="noreferrer">
+          {' '}
+          Cookie Policy (as a part of our Privacy Policy){' '}
+        </StyledLink>{' '}
+        for more information.
+      </p>
     </CookieConsent>
   );
 };
