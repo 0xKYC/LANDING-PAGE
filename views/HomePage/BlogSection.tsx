@@ -1,9 +1,13 @@
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { Blog } from 'components/Blog';
+
+import styled from 'styled-components';
+import { BlogPost } from 'components/BlogPost';
 import Container from 'components/Container';
+import { Anchor } from 'components/Link';
 import SectionTitle from 'components/SectionTitle';
 
-type BlogPost = {
+type IBlogPost = {
   title: string;
   pubDate: string;
   link: string;
@@ -17,7 +21,7 @@ type BlogPost = {
 };
 
 export default function BlogSection() {
-  const [blogposts, setBlogposts] = useState<BlogPost[]>([]);
+  const [blogposts, setBlogposts] = useState<IBlogPost[]>([]);
 
   useEffect(() => {
     async function startFetching() {
@@ -26,7 +30,7 @@ export default function BlogSection() {
         .then((data) => {
           // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
 
-          const res: BlogPost[] = data.items; //This is an array with the content. No feed, no info about author etc..
+          const res: IBlogPost[] = data.items; //This is an array with the content. No feed, no info about author etc..
 
           const posts = res.filter((item) => item.categories.length > 0); // That's the main trick* !
 
@@ -48,9 +52,24 @@ export default function BlogSection() {
     <Container id="blog">
       <SectionTitle style={{ marginTop: '8rem', marginBottom: '8rem' }}>Blog</SectionTitle>
 
-      {blogposts?.map((news) => {
-        return <Blog description={news.content} imgUrl={news.thumbnail} title={news.title} key={news.guid} href={news.link} />;
+      {blogposts?.slice(0, 3).map((news) => {
+        return <BlogPost description={news.content} imgUrl={news.thumbnail} title={news.title} key={news.guid} href={news.link} />;
       })}
+      <LinkWrapper>
+        <Anchor rel="noreferrer" target="_blank" href="https://medium.com/0xkyc">
+          Show more
+        </Anchor>
+        <Image src="/external-link.svg" width={14} height={14} alt="" />
+      </LinkWrapper>
     </Container>
   );
 }
+
+const LinkWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+  margin-top: 4rem;
+`;

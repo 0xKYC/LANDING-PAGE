@@ -10,7 +10,7 @@ type Props = {
   order?: number;
   href: string;
 };
-export const Blog = ({ title, description, imgUrl, order, href }: Props) => {
+export const BlogPost = ({ title, description, imgUrl, order, href }: Props) => {
   return (
     <Wrapper>
       <ImgWrapper order={order}>
