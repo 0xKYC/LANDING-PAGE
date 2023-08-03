@@ -10,10 +10,10 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <Heading>Unlock the power of privacy</Heading>
+        <Heading>Block bots and multiple users</Heading>
 
         <Description>
-          Verify if your users are real and have the amount of accounts they claim to have with our Proof of Uniqueness solution.
+          Verify if your users are real and have the amount of accounts they claim to have with our Proof of Sunscreen check.
         </Description>
         <CustomButtonGroup>
           <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
