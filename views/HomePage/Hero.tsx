@@ -13,7 +13,7 @@ export default function Hero() {
         <Heading>Block bots and multiple users</Heading>
 
         <Description>
-          Verify if your users are real and have the amount of accounts they claim to have with our Proof of Sunscreen check.
+          Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check.
         </Description>
         <CustomButtonGroup>
           <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
