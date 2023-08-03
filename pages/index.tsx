@@ -65,10 +65,14 @@ export default function Homepage() {
               All of our checks are permissionless and interoperable 🗻⛺ Backed by{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://www.neworder.network/">
                 New Order DAO
-              </Anchor>{' '}
-              and{' '}
+              </Anchor>
+              ,{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://outlierventures.io/">
                 Outlier Ventures
+              </Anchor>{' '}
+              and{' '}
+              <Anchor rel="noreferrer" target="_blank" href="https://bufficorn.ventures/">
+                Bufficorn Ventures
               </Anchor>
               . We are officially a part of the{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://scroll.io/ecosystem">

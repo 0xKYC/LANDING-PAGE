@@ -36,16 +36,15 @@ export default function Hero() {
         </StyledLink>
 
         <P>
-          {' '}
-          “The solution that 0xKYC has created using Onfido’s technology is hugely innovative,” said Onfido’s CPO Yuelin Li. “By creating a
-          token for cleared users, 0xKYC has established a level of privacy that will boost security on Web3 and the Metaverse.” -{' '}
+          “The solution that 0xKYC has created using Onfido’s technology is hugely innovative, by creating a token for cleared users, 0xKYC
+          has established a level of privacy that will boost security on Web3 and the Metaverse.” - Onfido’s CPO Yuelin Li.{' '}
           <Anchor
             rel="noreferrer"
             target="_blank"
             href="https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/"
             style={{ marginRight: '0.4rem' }}
           >
-            read more{' '}
+            Read more{' '}
           </Anchor>
           <Image src="/external-link.svg" width={10} height={10} alt="" />
         </P>
@@ -55,7 +54,7 @@ export default function Hero() {
 }
 
 const P = styled.p`
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   text-align: center;
   margin: 0.5rem;
 
@@ -63,7 +62,7 @@ const P = styled.p`
     margin: 1rem 10rem;
   }
   @media screen and (min-width: 1025px) {
-    margin: 0.5rem;
+    margin: 0.5rem 0;
   }
 `;
 const StyledLink = styled.a`

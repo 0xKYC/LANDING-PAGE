@@ -27,7 +27,7 @@ const BLOCKCHAINS = [
     href: 'https://ethereum.org/en/',
   },
   {
-    name: 'Scroll Alpha (Official Partner)',
+    name: 'Scroll Alpha',
     img: 'scroll.png',
     alt: 'Scroll Alpha',
     href: 'https://scroll.io/ecosystem',
@@ -51,7 +51,9 @@ const BLOCKCHAINS = [
   //   href: 'www.polygon.com',
   // },
 ];
-
+const OrangeSpan = styled.span`
+  color: rgb(var(--primary));
+`;
 const StyledSplide = styled(Splide)`
   display: block;
   @media screen and (min-width: 600px) {
@@ -87,6 +89,7 @@ export default function BlockchainsBanner() {
           <SplideSlide key={idx}>
             <StyledLink href={logo.href} target="_blank" rel="noreferrer">
               <img src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
+              {logo.name === 'Scroll Alpha' && <OrangeSpan>(Official Partner)</OrangeSpan>}
             </StyledLink>
           </SplideSlide>
         ))}
@@ -94,7 +97,9 @@ export default function BlockchainsBanner() {
       <LogosWrapper>
         {BLOCKCHAINS.map((logo, idx) => (
           <StyledLink key={idx} href={logo.href} target="_blank" rel="noreferrer">
-            <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
+            <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" />
+            {logo.name}
+            {logo.name === 'Scroll Alpha' && <OrangeSpan>(Official Partner)</OrangeSpan>}
           </StyledLink>
         ))}
       </LogosWrapper>
