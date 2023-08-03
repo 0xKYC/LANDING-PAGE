@@ -30,7 +30,7 @@ const BLOCKCHAINS = [
     name: 'Scroll Alpha',
     img: 'scroll.png',
     alt: 'Scroll Alpha',
-    href: 'https://scroll.io/',
+    href: 'https://scroll.io/ecosystem',
   },
   // {
   //   name: 'BNB (coming soon)',
@@ -52,12 +52,6 @@ const BLOCKCHAINS = [
   // },
 ];
 
-const StyledSplide = styled(Splide)`
-  display: block;
-  @media screen and (min-width: 600px) {
-    display: none;
-  }
-`;
 export default function BlockchainsBanner() {
   return (
     <Wrapper>
@@ -87,6 +81,7 @@ export default function BlockchainsBanner() {
           <SplideSlide key={idx}>
             <StyledLink href={logo.href} target="_blank" rel="noreferrer">
               <img src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
+              {logo.name === 'Scroll Alpha' && <OrangeSpan>(Official Partner)</OrangeSpan>}
             </StyledLink>
           </SplideSlide>
         ))}
@@ -94,13 +89,26 @@ export default function BlockchainsBanner() {
       <LogosWrapper>
         {BLOCKCHAINS.map((logo, idx) => (
           <StyledLink key={idx} href={logo.href} target="_blank" rel="noreferrer">
-            <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
+            <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" />
+            {logo.name}
+            {logo.name === 'Scroll Alpha' && <OrangeSpan>(Official Partner)</OrangeSpan>}
           </StyledLink>
         ))}
       </LogosWrapper>
     </Wrapper>
   );
 }
+
+const OrangeSpan = styled.span`
+  color: rgb(var(--primary));
+  margin-left: -7px;
+`;
+const StyledSplide = styled(Splide)`
+  display: block;
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+`;
 const LogosWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -109,7 +117,7 @@ const LogosWrapper = styled.div`
   @media screen and (max-width: 1024px) {
     gap: 5rem;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
