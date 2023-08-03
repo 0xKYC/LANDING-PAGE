@@ -1,9 +1,10 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 
-import YoutubeVideo from 'components/YoutubeVideo';
+import { Anchor } from 'components/Link';
 import { media } from 'utils/media';
 
 export default function Hero() {
@@ -16,21 +17,68 @@ export default function Hero() {
           Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check.
         </Description>
         <CustomButtonGroup>
-          <Button href="https://app.0xkyc.id/" target="_blank" rel="noreferrer">
-            Click to Open our dApp<span>&rarr;</span>
+          <Button href="https://docsend.com/view/fu6m2ntk2qiivi4g" target="_blank" rel="noreferrer">
+            See our Product Offering<span>&rarr;</span>
           </Button>
           <Button transparent={true} href="https://calendly.com/adamzasada" target="_blank" rel="noreferrer">
             Book a demo<span>&rarr;</span>
           </Button>
         </CustomButtonGroup>
       </Contents>
+
       <ImageContainer>
-        <YoutubeVideo url="https://www.youtube.com/watch?v=OSgYUkuCjss&t=333s" title="Demo app" />
+        <StyledLink
+          rel="noreferrer"
+          target="_blank"
+          href="https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/"
+        >
+          <Image src="/onfido-0xkyc.webp" width={800} height={300} objectFit="cover" alt="Onfido partnership with 0xkyc" />
+        </StyledLink>
+
+        <P>
+          {' '}
+          “The solution that 0xKYC has created using Onfido’s technology is hugely innovative,” said Onfido’s CPO Yuelin Li. “By creating a
+          token for cleared users, 0xKYC has established a level of privacy that will boost security on Web3 and the Metaverse.” -{' '}
+          <Anchor
+            rel="noreferrer"
+            target="_blank"
+            href="https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/"
+            style={{ marginRight: '0.4rem' }}
+          >
+            read more{' '}
+          </Anchor>
+          <Image src="/external-link.svg" width={10} height={10} alt="" />
+        </P>
       </ImageContainer>
     </HeroWrapper>
   );
 }
 
+const P = styled.p`
+  font-size: 1.35rem;
+  text-align: center;
+  margin: 0.5rem;
+
+  @media screen and (min-width: 975px) {
+    margin: 1rem 10rem;
+  }
+  @media screen and (min-width: 1025px) {
+    margin: 0.5rem;
+  }
+`;
+const StyledLink = styled.a`
+  color: black;
+  text-decoration: none;
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 320px;
+`;
 const HeroWrapper = styled(Container)`
   display: flex;
   padding-top: 5rem;
@@ -39,33 +87,22 @@ const HeroWrapper = styled(Container)`
     padding-top: 1rem;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
   }
 `;
 
 const Contents = styled.div`
-  flex: 1;
   max-width: 70rem;
   margin-right: 5rem;
   ${media('<=desktop')} {
     max-width: 100%;
     margin-right: 0;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 `;
 
 const CustomButtonGroup = styled(ButtonGroup)`
   margin-top: 4rem;
-`;
-
-const ImageContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: 100%;
-  min-height: 320px;
 `;
 
 const Description = styled.h2`

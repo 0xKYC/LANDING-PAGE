@@ -18,8 +18,8 @@ const INVESTORS = [
 
 const ANGELS = [
   {
-    name: 'David Deputy',
-    img: 'dave-deputy.jpeg',
+    name: 'Deputy Dog',
+    img: 'deputy-dog.png',
     href: 'https://twitter.com/DeputyDavid',
     desc: 'Ex-UK Banking Regulator',
   },

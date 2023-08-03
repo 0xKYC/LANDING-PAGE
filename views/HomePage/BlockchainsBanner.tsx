@@ -27,10 +27,10 @@ const BLOCKCHAINS = [
     href: 'https://ethereum.org/en/',
   },
   {
-    name: 'Scroll Alpha',
+    name: 'Scroll Alpha (Official Partner)',
     img: 'scroll.png',
     alt: 'Scroll Alpha',
-    href: 'https://scroll.io/',
+    href: 'https://scroll.io/ecosystem',
   },
   // {
   //   name: 'BNB (coming soon)',
