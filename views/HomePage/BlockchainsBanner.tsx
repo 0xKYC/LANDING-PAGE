@@ -51,15 +51,7 @@ const BLOCKCHAINS = [
   //   href: 'www.polygon.com',
   // },
 ];
-const OrangeSpan = styled.span`
-  color: rgb(var(--primary));
-`;
-const StyledSplide = styled(Splide)`
-  display: block;
-  @media screen and (min-width: 600px) {
-    display: none;
-  }
-`;
+
 export default function BlockchainsBanner() {
   return (
     <Wrapper>
@@ -106,6 +98,17 @@ export default function BlockchainsBanner() {
     </Wrapper>
   );
 }
+
+const OrangeSpan = styled.span`
+  color: rgb(var(--primary));
+  margin-left: -7px;
+`;
+const StyledSplide = styled(Splide)`
+  display: block;
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+`;
 const LogosWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -114,7 +117,7 @@ const LogosWrapper = styled.div`
   @media screen and (max-width: 1024px) {
     gap: 5rem;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
