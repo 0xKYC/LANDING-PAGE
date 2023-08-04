@@ -26,7 +26,7 @@ export default function Newsletter({ title, children }: PropsWithChildren<Props>
 
 const Box = styled.div`
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   max-width: 115em;
