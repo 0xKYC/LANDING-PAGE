@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { Anchor } from './Link';
+import { ExternalLink } from './ExternalLink';
 
 type Props = {
   title: string;
@@ -9,12 +9,14 @@ type Props = {
   imgUrl: string;
   href: string;
   ariaLabel: string;
-  order?: number;
+  index: number;
 };
-export const News = ({ title, description, imgUrl, order, href, ariaLabel }: Props) => {
+export const News = ({ title, description, imgUrl, href, ariaLabel, index }: Props) => {
+  const isOddIndex = index % 2 === 1;
+
   return (
     <Wrapper>
-      <ImgWrapper order={order}>
+      <ImgWrapper isOddIndex={isOddIndex}>
         <a rel="noreferrer" target="_blank" href={href}>
           <Img src={imgUrl} alt={title} width={550} height={280} objectFit="cover" />
         </a>
@@ -24,23 +26,12 @@ export const News = ({ title, description, imgUrl, order, href, ariaLabel }: Pro
         <Title>{title}</Title>
         <P>{description}</P>
 
-        <LinkWrapper>
-          <Anchor rel="noreferrer" target="_blank" href={href} aria-labelledby={ariaLabel}>
-            Read more
-          </Anchor>
-          <Image src="/external-link.svg" width={14} height={14} alt="" />
-        </LinkWrapper>
+        <ExternalLink href={href} ariaLabel={ariaLabel} text="Read more" />
       </TextWrapper>
     </Wrapper>
   );
 };
 
-const LinkWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-`;
 const P = styled.p`
   margin: 0 1rem;
   margin-bottom: 2rem;
@@ -49,9 +40,9 @@ const P = styled.p`
 const Img = styled(Image)`
   border-radius: 0.6rem;
 `;
-const ImgWrapper = styled.div<{ order?: number }>`
+const ImgWrapper = styled.div<{ isOddIndex: boolean }>`
   width: 50%;
-  order: ${(props) => (props.order ? props.order : 0)};
+  order: ${(props) => (props.isOddIndex ? 2 : 0)};
   @media screen and (max-width: 760px) {
     display: none;
   }
@@ -68,7 +59,7 @@ const Title = styled.h4`
   margin-bottom: 1rem;
   font-size: 2rem;
 `;
-const Wrapper = styled.div`
+const Wrapper = styled.article`
   display: flex;
   padding: 2.5rem;
   border: 1px solid rgb(251, 115, 36);
