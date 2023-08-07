@@ -1,8 +1,17 @@
+import NextLink from 'next/link';
 import Container from 'components/Container';
+import { Anchor } from 'components/Link';
 import { News } from 'components/News';
 import SectionTitle from 'components/SectionTitle';
+export const NEWS = [
+  {
+    title: 'Onfido and 0xKYC Partnership',
+    description: '0xKYC partners with Onfido to provide fraud protection protocols on blockchain and in the Metaverse.',
+    imgUrl: '/onfido-0xkyc.webp',
 
-const NEWS = [
+    href: 'https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/',
+    ariaLabel: 'Onfido and 0xKYC Partnership',
+  },
   {
     title: '0xKYC and Insert Stonks Collaboration',
     description:
@@ -18,7 +27,7 @@ const NEWS = [
       'Leveraging our proprietary Proof of Uniqueness technology to democratize DAO governance. Users can secure a unique identifier and a single verified vote with a simple selfie, eliminating fake accounts and duplicate votes.',
     imgUrl: '/posts/dao-global.png',
     href: 'https://blog.aragon.org/dao-global-hackathon-bounty-winners/',
-    order: 2,
+
     ariaLabel: 'Winning the DAO Global Hackathon',
   },
 
@@ -33,22 +42,26 @@ const NEWS = [
 ];
 export default function NewsSection() {
   return (
-    <Container id="news">
-      <SectionTitle style={{ marginTop: '8rem', marginBottom: '8rem' }}>Latest news</SectionTitle>
-
-      {NEWS.map((news) => {
-        return (
-          <News
-            ariaLabel={news.ariaLabel}
-            description={news.description}
-            imgUrl={news.imgUrl}
-            title={news.title}
-            key={news.title}
-            order={news.order}
-            href={news.href}
-          />
-        );
-      })}
+    <Container id="news" style={{ textAlign: 'center' }}>
+      <SectionTitle style={{ margin: '8rem 0' }}>Latest news</SectionTitle>
+      <div style={{ marginBottom: '5rem' }}>
+        {NEWS.slice(0, 3).map((news, index) => {
+          return (
+            <News
+              ariaLabel={news.ariaLabel}
+              description={news.description}
+              imgUrl={news.imgUrl}
+              title={news.title}
+              key={news.title}
+              index={index}
+              href={news.href}
+            />
+          );
+        })}
+      </div>
+      <NextLink href="/news" passHref>
+        <Anchor style={{ fontSize: '2rem' }}>Show more</Anchor>
+      </NextLink>
     </Container>
   );
 }

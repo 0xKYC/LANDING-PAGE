@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <Heading>Block bots and multiple users</Heading>
+        <Heading>Block bots and duplicate-account users</Heading>
 
         <Description>
           Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check.
@@ -92,7 +92,7 @@ const HeroWrapper = styled(Container)`
 
 const Contents = styled.div`
   max-width: 70rem;
-  margin-right: 5rem;
+  margin-right: 4.5rem;
   ${media('<=desktop')} {
     max-width: 100%;
     margin-right: 0;
@@ -115,13 +115,13 @@ const Description = styled.h2`
 `;
 
 const Heading = styled.h1`
-  font-size: 6.5rem;
+  font-size: 5.2rem;
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 4rem;
   letter-spacing: -0.03em;
   ${media('<=tablet')} {
-    font-size: 4.6rem;
+    font-size: 3.2rem;
     margin-bottom: 2rem;
   }
 `;

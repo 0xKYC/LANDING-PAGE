@@ -38,7 +38,7 @@ const ANGELS = [
   {
     name: 'Dominic Rohde',
     img: 'dominic.jpg',
-    href: 'https://twitter.com/DomRohde',
+    href: 'https://twitter.com/allesdom',
     desc: 'Ex-Head of Talent, DAO Maker',
   },
 ];
@@ -149,6 +149,9 @@ const AnglesWrapperSplide = styled(Splide)`
 const P = styled.p`
   font-size: 1.6rem;
   padding-top: 0.4rem;
+  @media screen and (max-width: 320px) {
+    font-size: 1.4rem;
+  }
 `;
 const InfoBox = styled.div`
   padding: 0 2rem;
@@ -179,6 +182,10 @@ const Box = styled.div`
 
   :hover {
     box-shadow: 0 0 5px rgb(251, 115, 36);
+  }
+
+  @media screen and (max-width: 320px) {
+    min-width: 280px;
   }
 `;
 
