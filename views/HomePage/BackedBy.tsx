@@ -38,7 +38,7 @@ const ANGELS = [
   {
     name: 'Dominic Rohde',
     img: 'dominic.jpg',
-    href: 'https://twitter.com/DomRohde',
+    href: 'https://twitter.com/allesdom',
     desc: 'Ex-Head of Talent, DAO Maker',
   },
 ];
