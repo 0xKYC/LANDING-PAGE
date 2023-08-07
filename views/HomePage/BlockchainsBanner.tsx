@@ -81,7 +81,7 @@ export default function BlockchainsBanner() {
           <SplideSlide key={idx}>
             <StyledLink href={logo.href} target="_blank" rel="noreferrer">
               <img src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
-              {logo.name === 'Scroll Alpha' && <OrangeSpan>(Official Partner)</OrangeSpan>}
+              {logo.name === 'Scroll Alpha' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
             </StyledLink>
           </SplideSlide>
         ))}
@@ -91,7 +91,7 @@ export default function BlockchainsBanner() {
           <StyledLink key={idx} href={logo.href} target="_blank" rel="noreferrer">
             <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" />
             {logo.name}
-            {logo.name === 'Scroll Alpha' && <OrangeSpan>(Official Partner)</OrangeSpan>}
+            {logo.name === 'Scroll Alpha' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
           </StyledLink>
         ))}
       </LogosWrapper>

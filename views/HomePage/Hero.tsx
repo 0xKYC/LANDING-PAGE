@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <Heading>Block bots and multiple users</Heading>
+        <Heading>Block bots and duplicate-account users</Heading>
 
         <Description>
           Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check.
