@@ -22,7 +22,7 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
         <Price>{children}</Price>
         {isAnyBenefitPresent && (
           <CustomRichText>
-            <ul>
+            <ul style={{ textAlign: 'left' }}>
               {benefits.map((singleBenefit, idx) => (
                 <li key={idx}>{singleBenefit}</li>
               ))}
@@ -30,7 +30,7 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
           </CustomRichText>
         )}
       </PriceContainer>
-      <CustomButton>Get started</CustomButton>
+      <CustomButton>Contact Sales</CustomButton>
     </Wrapper>
   );
 }
@@ -43,7 +43,7 @@ const Wrapper = styled.div<{ isOutlined?: boolean }>`
   box-shadow: ${(p) => (p.isOutlined ? 'var(--shadow-lg)' : 'var(--shadow-md)')};
   transform: ${(p) => (p.isOutlined ? 'scale(1.1)' : 'scale(1.0)')};
   text-align: center;
-
+  border-radius: 1rem;
   & > *:not(:first-child) {
     margin-top: 1rem;
   }
@@ -61,7 +61,7 @@ const Title = styled.h3`
 `;
 
 const Description = styled.p`
-  font-size: 2.5rem;
+  font-size: 2rem;
 `;
 
 const PriceContainer = styled.div`
@@ -76,7 +76,7 @@ const Price = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1;
   font-weight: bold;
 
@@ -88,8 +88,8 @@ const Price = styled.div`
 
 const CustomRichText = styled(RichText)`
   li {
-    margin: auto;
-    width: fit-content;
+    /* margin: auto; */
+    /* width: fit-content; */
   }
 `;
 

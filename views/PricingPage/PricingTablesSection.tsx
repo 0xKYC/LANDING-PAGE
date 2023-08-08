@@ -7,37 +7,44 @@ import SectionTitle from 'components/SectionTitle';
 export default function PricingTablesSection() {
   return (
     <Wrapper>
-      <SectionTitle>Flexible pricing for agile teams</SectionTitle>
+      <SectionTitle>
+        Simple and sustainable pricing. <br />
+        Flexible features.{' '}
+      </SectionTitle>
       <AutofitGrid>
         <PricingCard
-          title="free"
-          description="Give us a try for free"
-          benefits={['1 seat', '1 active project', 'Ulimited viewers', '10 blocks']}
+          title="Sunscreen"
+          description="Uniqueness verification"
+          benefits={['Unique indentifer for human', 'Sanctions-free status for Web3 wallet', 'Some feature', 'Some feature']}
         >
-          $0<span>/month</span>
+          $1<span>/check</span>
         </PricingCard>
         <PricingCard
-          title="Starter"
-          description="Best for individual desginers"
-          benefits={['1 seat', '3 active project', 'Ulimited viewers', '100 blocks', 'CSV Downloader', 'Password protection']}
+          title="0xKYC"
+          description="Sanctions check"
+          benefits={[
+            'Unique indentifer for human',
+            'User sanction status in ZK proof',
+            'User +18 age confirmation',
+            'Sanctions-free status for Web3',
+            'Some feature',
+            'Some feature',
+          ]}
           isOutlined
         >
-          $29<span>/month</span>
+          $3<span>/check</span>
         </PricingCard>
         <PricingCard
-          title="Premium"
-          description="Get your team together"
+          title="Enterprise"
+          description="Customisable solution for your needs"
           benefits={[
-            '10 seat',
-            '10 active project',
-            'Ulimited viewers',
-            'Unlimited blocks',
-            'CSV Downloader',
-            'Password protection',
-            'Customization',
+            'Unique indentifer for human',
+            'User sanction status in ZK proof',
+            'User +18 age confirmation',
+            'Sanctions-free status for Web3 wallet',
           ]}
         >
-          $79<span>/month</span>
+          $<span>/let&apos;s chat</span>
         </PricingCard>
       </AutofitGrid>
     </Wrapper>
@@ -45,6 +52,7 @@ export default function PricingTablesSection() {
 }
 
 const Wrapper = styled.div`
+  padding-top: 5rem;
   & > *:not(:first-child) {
     margin-top: 8rem;
   }

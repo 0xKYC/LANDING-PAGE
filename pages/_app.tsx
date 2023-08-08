@@ -18,6 +18,7 @@ import { ModalContextProvider, useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
 
 import '@splidejs/splide/dist/css/splide.min.css';
+import { useRouter } from 'next/router';
 
 const navItems: NavItems = [
   { title: 'News', href: '#news' },
@@ -27,6 +28,9 @@ const navItems: NavItems = [
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { asPath } = useRouter();
+  console.log(asPath);
+  const pricingPage = asPath === '/pricing';
   return (
     <>
       <Head>
@@ -81,9 +85,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           href={'https://medium.com/0xkyc'}
         />
         <Navbar items={navItems} />
-
-        <Component {...pageProps} />
-
+        <div style={{ background: pricingPage ? 'rgb(251,251,253)' : '' }}>
+          <Component {...pageProps} />
+        </div>
         <WaveCta />
         <Footer />
         <CookieBanner />
