@@ -35,7 +35,7 @@ const TESTIMONIALS = [
     height: 32,
   },
   {
-    companyLogoUrl: '/hashup.jpg',
+    companyLogoUrl: '/testimonials/hashup.png',
     content: `0xKYC is one of the best crypto projects to emerge recently in our region. A common KYC infrastructure solution for decentralized applications is badly needed, and I believe this project has a chance to stir things up in this sphere.`,
     href: 'https://hashup.it/',
     author: {
@@ -43,8 +43,8 @@ const TESTIMONIALS = [
       title: 'CEO and Founder',
       avatarUrl: '/testimonials/hashup-ceo.jpg',
     },
-    width: 300,
-    height: 80,
+    width: 160,
+    height: 38,
   },
 ];
 
@@ -85,6 +85,10 @@ const First = styled.div`
   background-color: #0352971c;
   padding: 2rem;
   border-radius: 1rem;
+
+  /* box-shadow: var(--shadow-lg); */
+  /* background: rgb(var(--background)); */
+  background-color: rgb(243 244 246);
 `;
 
 const Second = styled.div`
@@ -95,6 +99,7 @@ const Second = styled.div`
   background-color: #ed724c33;
   padding: 2rem;
   border-radius: 1rem;
+  background-color: rgb(243 244 246);
 `;
 
 const Third = styled.div`
@@ -104,6 +109,7 @@ const Third = styled.div`
 
   padding: 2rem;
   border-radius: 1rem;
+  background-color: rgb(243 244 246);
 `;
 
 export default function Testimonials() {
@@ -134,6 +140,17 @@ export default function Testimonials() {
             </AuthorImageContainer>
           </First>
           <Second>
+            <Link href={TESTIMONIALS[0].href} target="_blank" rel="noreferrer">
+              <NextImage
+                src={TESTIMONIALS[0].companyLogoUrl}
+                alt={`${TESTIMONIALS[0].author.name}'s company logo`}
+                width={TESTIMONIALS[0].width}
+                height={TESTIMONIALS[0].height}
+                objectFit="contain"
+              />
+            </Link>
+
+            <Content>“{TESTIMONIALS[1].content}”</Content>
             <AuthorImageContainer>
               <StyledImage src={TESTIMONIALS[1].author.avatarUrl} alt={TESTIMONIALS[1].author.name} width={42} height={42} />{' '}
               <AuthorContent>
@@ -141,9 +158,19 @@ export default function Testimonials() {
                 <AuthorTitle>{TESTIMONIALS[1].author.title}</AuthorTitle>
               </AuthorContent>
             </AuthorImageContainer>
-            <Content>“{TESTIMONIALS[1].content}”</Content>
           </Second>
           <Third>
+            <Link href={TESTIMONIALS[2].href} target="_blank" rel="noreferrer">
+              <NextImage
+                src={TESTIMONIALS[2].companyLogoUrl}
+                alt={`${TESTIMONIALS[2].author.name}'s company logo`}
+                width={TESTIMONIALS[2].width}
+                height={TESTIMONIALS[2].height}
+                objectFit="contain"
+              />
+            </Link>
+
+            <Content>“{TESTIMONIALS[2].content}”</Content>
             <AuthorImageContainer>
               <StyledImage src={TESTIMONIALS[2].author.avatarUrl} alt={TESTIMONIALS[2].author.name} width={42} height={42} />{' '}
               <AuthorContent>
@@ -151,8 +178,6 @@ export default function Testimonials() {
                 <AuthorTitle>{TESTIMONIALS[2].author.title}</AuthorTitle>
               </AuthorContent>
             </AuthorImageContainer>
-
-            <Content>“{TESTIMONIALS[2].content}”</Content>
           </Third>
         </GridContainer>
       </TestimonialsWrapper>
@@ -181,7 +206,7 @@ const TestimonialsWrapper = styled(Container)`
   position: relative;
   text-align: center;
   padding-bottom: 0rem;
-  margin-top: 7rem !important;
+  margin-top: 4rem !important;
   padding: 0;
 `;
 
@@ -251,6 +276,7 @@ const AuthorImageContainer = styled.div`
   justify-content: center;
   border-radius: 10rem;
   margin-right: 1rem;
+  margin-top: 1rem;
   overflow: hidden;
 `;
 
