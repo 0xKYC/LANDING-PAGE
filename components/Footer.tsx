@@ -41,10 +41,7 @@ const Flex = styled.div`
   gap: 3rem;
   margin-right: 3.5rem;
 
-  ${media('<=desktop')} {
-    display: none;
-  }
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 1199px) {
     display: none;
   }
 `;
@@ -67,7 +64,8 @@ export default function Footer() {
           <ShareBar>
             <Flex>
               <ListItem title="Privacy Policy" href="https://app.0xkyc.id/privacy-policy" link={true} />
-              <ListItem title="Contact" href="mailto:support@0xkyc.id" />
+              <ListItem title="Terms Of Service" href="https://app.0xkyc.id/terms-of-service" link={true} />
+
               <ListItem
                 title="Documentation"
                 href="https://0xkyc.notion.site/0xKYC-Public-Documentation-f7db271a06e840f7862a929fb9f42299"
@@ -144,7 +142,7 @@ const ListContainer = styled.div`
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: 1151px) {
+  @media screen and (min-width: 1200px) {
     display: none;
   }
 `;
@@ -214,7 +212,7 @@ const BottomBar = styled.div`
   align-items: center;
   gap: 1.5rem;
 
-  ${media('<=tablet')} {
+  @media screen and (max-width: 1199px) {
     flex-direction: column;
   }
   @media screen and (max-width: 1100px) {
