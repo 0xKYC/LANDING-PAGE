@@ -81,7 +81,7 @@ export default function FeaturesGallery() {
       </GalleryWrapper>
       <StyledText>
         For more details visit our{' '}
-        <Anchor rel="noreferrer" target="_blank" href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md">
+        <Anchor rel="noreferrer" target="_blank" href="https://docs.0xkyc.id/">
           Technical Documentation
         </Anchor>
       </StyledText>
