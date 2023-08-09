@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Collapse from 'components/Collapse';
 import Container from 'components/Container';
-import { Anchor } from 'components/Link';
+import Link, { Anchor } from 'components/Link';
 import SectionTitle from 'components/SectionTitle';
 import ThreeLayersCircle from 'components/ThreeLayersCircle';
 import { media } from 'utils/media';
@@ -84,6 +84,10 @@ export default function FeaturesGallery() {
         <Anchor rel="noreferrer" target="_blank" href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md">
           Technical Documentation
         </Anchor>
+      </StyledText>
+
+      <StyledText style={{ marginTop: '4rem' }}>
+        Discover our <Link href="/pricing">competitive pricing</Link> and get in touch with our sales team
       </StyledText>
     </FeaturesGalleryWrapper>
   );

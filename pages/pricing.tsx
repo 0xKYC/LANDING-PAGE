@@ -1,5 +1,4 @@
-import Container from 'components/Container';
-import SectionTitle from 'components/SectionTitle';
+import Container from 'components/Container'
 import PricingTablesSection from 'views/PricingPage/PricingTablesSection';
 
 export default function Pricing() {

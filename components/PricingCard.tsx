@@ -38,9 +38,8 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
 const Wrapper = styled.div<{ isOutlined?: boolean }>`
   display: flex;
   flex-direction: column;
-  padding: 3rem;
-  background: rgb(var(--cardBackground));
-  box-shadow: ${(p) => (p.isOutlined ? 'var(--shadow-lg)' : 'var(--shadow-md)')};
+
+  /* box-shadow: ${(p) => (p.isOutlined ? 'var(--shadow-lg)' : 'var(--shadow-md)')}; */
   transform: ${(p) => (p.isOutlined ? 'scale(1.1)' : 'scale(1.0)')};
   text-align: center;
   border-radius: 1rem;
@@ -95,4 +94,9 @@ const CustomRichText = styled(RichText)`
 
 const CustomButton = styled(Button)`
   width: 100%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1080px) {
+    width: 80%;
+  }
 `;

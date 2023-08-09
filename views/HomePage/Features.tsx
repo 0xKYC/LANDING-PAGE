@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import AutofitGrid from 'components/AutofitGrid';
+
 import BasicCard from 'components/BasicCard';
 import Container from 'components/Container';
 import { media } from 'utils/media';
+import { AutofitGrid } from 'components/AutofitGrid';
 
 const FEATURES = [
   {
