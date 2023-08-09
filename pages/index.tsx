@@ -83,7 +83,7 @@ export default function Homepage() {
           <Separator />
           <News />
           <Testimonials />
-          <Container style={{ textAlign: 'center', marginTop: '10rem' }} id="use-cases">
+          <Container style={{ textAlign: 'center', marginTop: '5rem' }} id="use-cases">
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
