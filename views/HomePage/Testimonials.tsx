@@ -1,4 +1,3 @@
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
@@ -35,7 +34,7 @@ const TESTIMONIALS = [
     height: 32,
   },
   {
-    companyLogoUrl: '/hashup.jpg',
+    companyLogoUrl: '/testimonials/hashup.png',
     content: `0xKYC is one of the best crypto projects to emerge recently in our region. A common KYC infrastructure solution for decentralized applications is badly needed, and I believe this project has a chance to stir things up in this sphere.`,
     href: 'https://hashup.it/',
     author: {
@@ -43,8 +42,8 @@ const TESTIMONIALS = [
       title: 'CEO and Founder',
       avatarUrl: '/testimonials/hashup-ceo.jpg',
     },
-    width: 300,
-    height: 80,
+    width: 160,
+    height: 38,
   },
 ];
 
@@ -54,49 +53,119 @@ export default function Testimonials() {
       <Separator />
       <Title style={{ margin: 0 }}>What our clients say</Title>
       <TestimonialsWrapper>
-        <StyledSplide options={{ rewind: true }}>
-          {TESTIMONIALS.map((singleTestimonial, idx) => (
-            <SplideSlide key={idx}>
-              <TestimonialCard>
-                <Link href={singleTestimonial.href} target="_blank" rel="noreferrer">
-                  <NextImage
-                    src={singleTestimonial.companyLogoUrl}
-                    alt={`${singleTestimonial.author.name}'s company logo`}
-                    width={singleTestimonial.width}
-                    height={singleTestimonial.height}
-                    objectFit="contain"
-                  />
-                </Link>
-                <Content>“{singleTestimonial.content}”</Content>
-                <AuthorContainer>
-                  <AuthorImageContainer>
-                    <NextImage src={singleTestimonial.author.avatarUrl} alt={singleTestimonial.author.name} width={42} height={42} />
-                  </AuthorImageContainer>
+        <GridContainer>
+          <First>
+            <Link href={TESTIMONIALS[0].href} target="_blank" rel="noreferrer">
+              <NextImage
+                src={TESTIMONIALS[0].companyLogoUrl}
+                alt={`${TESTIMONIALS[0].author.name}'s company logo`}
+                width={TESTIMONIALS[0].width}
+                height={TESTIMONIALS[0].height}
+                objectFit="contain"
+              />
+            </Link>
 
-                  <AuthorContent>
-                    <AuthorName>{singleTestimonial.author.name}</AuthorName>
-                    <AuthorTitle>{singleTestimonial.author.title}</AuthorTitle>
-                  </AuthorContent>
-                </AuthorContainer>
-              </TestimonialCard>
-            </SplideSlide>
-          ))}
-        </StyledSplide>
+            <Content>“{TESTIMONIALS[0].content}”</Content>
+            <AuthorImageContainer>
+              <StyledImage src={TESTIMONIALS[0].author.avatarUrl} alt={TESTIMONIALS[0].author.name} width={42} height={42} />{' '}
+              <AuthorContent>
+                <AuthorName>{TESTIMONIALS[0].author.name}</AuthorName>
+                <AuthorTitle>{TESTIMONIALS[0].author.title}</AuthorTitle>
+              </AuthorContent>
+            </AuthorImageContainer>
+          </First>
+          <Second>
+            <Link href={TESTIMONIALS[0].href} target="_blank" rel="noreferrer">
+              <NextImage
+                src={TESTIMONIALS[0].companyLogoUrl}
+                alt={`${TESTIMONIALS[0].author.name}'s company logo`}
+                width={TESTIMONIALS[0].width}
+                height={TESTIMONIALS[0].height}
+                objectFit="contain"
+              />
+            </Link>
+
+            <Content>“{TESTIMONIALS[1].content}”</Content>
+            <AuthorImageContainer>
+              <StyledImage src={TESTIMONIALS[1].author.avatarUrl} alt={TESTIMONIALS[1].author.name} width={42} height={42} />{' '}
+              <AuthorContent>
+                <AuthorName>{TESTIMONIALS[1].author.name}</AuthorName>
+                <AuthorTitle>{TESTIMONIALS[1].author.title}</AuthorTitle>
+              </AuthorContent>
+            </AuthorImageContainer>
+          </Second>
+          <Third>
+            <Link href={TESTIMONIALS[2].href} target="_blank" rel="noreferrer">
+              <NextImage
+                src={TESTIMONIALS[2].companyLogoUrl}
+                alt={`${TESTIMONIALS[2].author.name}'s company logo`}
+                width={TESTIMONIALS[2].width}
+                height={TESTIMONIALS[2].height}
+                objectFit="contain"
+              />
+            </Link>
+
+            <Content>“{TESTIMONIALS[2].content}”</Content>
+            <AuthorImageContainer>
+              <StyledImage src={TESTIMONIALS[2].author.avatarUrl} alt={TESTIMONIALS[2].author.name} width={42} height={42} />{' '}
+              <AuthorContent>
+                <AuthorName>{TESTIMONIALS[2].author.name}</AuthorName>
+                <AuthorTitle>{TESTIMONIALS[2].author.title}</AuthorTitle>
+              </AuthorContent>
+            </AuthorImageContainer>
+          </Third>
+        </GridContainer>
       </TestimonialsWrapper>
-      <Separator />
+      <Separator style={{ marginBottom: 0 }} />
     </>
   );
 }
-const StyledSplide = styled(Splide)`
-  .splide__pagination__page {
-    background-color: gray;
-  }
 
-  .splide__pagination__page.is-active {
-    background-color: rgb(251, 115, 36);
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  margin: 0 2rem;
+  grid-template-areas:
+    'first first first'
+    'second second thrid'
+    '. . .';
+
+  @media (max-width: 880px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'first'
+      'second'
+      'thrid';
   }
 `;
 
+const First = styled.div`
+  grid-area: first;
+  background-color: rgb(var(--tertiary));
+  background-color: #5316904d;
+  background-color: #0352971c;
+  padding: 2rem;
+  border-radius: 1rem;
+`;
+
+const Second = styled.div`
+  grid-area: second;
+  background-color: #e1e1ff;
+  background-color: #ed724c33;
+  padding: 2rem;
+  border-radius: 1rem;
+`;
+
+const Third = styled.div`
+  grid-area: thrid;
+  background-color: #525ee140;
+
+  padding: 2rem;
+  border-radius: 1rem;
+`;
 const Link = styled.a`
   font-size: 3rem;
   text-decoration: none;
@@ -108,7 +177,7 @@ const TestimonialsWrapper = styled(Container)`
   position: relative;
   text-align: center;
   padding-bottom: 0rem;
-  margin-top: 7rem !important;
+  margin-top: 4rem !important;
   padding: 0;
 `;
 
@@ -139,12 +208,9 @@ const TestimonialCard = styled.div`
 
 const Content = styled.blockquote`
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-style: italic;
-  max-width: 65%;
-  ${media('<=desktop')} {
-    max-width: 85%;
-  }
+
   @media screen and (max-width: 1024px) {
     height: auto;
   }
@@ -164,6 +230,7 @@ const AuthorContent = styled.div`
   flex-direction: column;
   justify-content: space-between;
   font-size: 1.4rem;
+  margin: 2rem;
 `;
 
 const AuthorTitle = styled.p`
@@ -176,7 +243,14 @@ const AuthorName = styled.p`
 
 const AuthorImageContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10rem;
   margin-right: 1rem;
+  margin-top: 1rem;
   overflow: hidden;
+`;
+
+const StyledImage = styled(NextImage)`
+  border-radius: 10rem;
 `;
