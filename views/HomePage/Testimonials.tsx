@@ -1,4 +1,3 @@
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
@@ -47,70 +46,6 @@ const TESTIMONIALS = [
     height: 38,
   },
 ];
-
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
-  margin: 0 2rem;
-  grid-template-areas:
-    'first first first'
-    'second second thrid'
-    '. . .';
-  /* 
-  @media (max-width: 860px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      'first first'
-      'second second thrid'
-      '. .';
-  } */
-
-  @media (max-width: 880px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      'first'
-      'second'
-      'thrid';
-  }
-`;
-
-const First = styled.div`
-  grid-area: first;
-  background-color: rgb(var(--tertiary));
-  /* background-color: #5316904d; */
-  background-color: #0352971c;
-  padding: 2rem;
-  border-radius: 1rem;
-
-  /* box-shadow: var(--shadow-lg); */
-  /* background: rgb(var(--background)); */
-  background-color: rgb(243 244 246);
-`;
-
-const Second = styled.div`
-  grid-area: second;
-  /* background-color: #e1e1ff; */
-
-  /* background-color: #fff6f4; */
-  background-color: #ed724c33;
-  padding: 2rem;
-  border-radius: 1rem;
-  background-color: rgb(243 244 246);
-`;
-
-const Third = styled.div`
-  grid-area: thrid;
-  /* background-color: #fde4e8; */
-  background-color: #525ee140;
-
-  padding: 2rem;
-  border-radius: 1rem;
-  background-color: rgb(243 244 246);
-`;
 
 export default function Testimonials() {
   return (
@@ -181,20 +116,56 @@ export default function Testimonials() {
           </Third>
         </GridContainer>
       </TestimonialsWrapper>
-      <Separator />
+      <Separator style={{ marginBottom: 0 }} />
     </>
   );
 }
-const StyledSplide = styled(Splide)`
-  .splide__pagination__page {
-    background-color: gray;
-  }
 
-  .splide__pagination__page.is-active {
-    background-color: rgb(251, 115, 36);
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  margin: 0 2rem;
+  grid-template-areas:
+    'first first first'
+    'second second thrid'
+    '. . .';
+
+  @media (max-width: 880px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'first'
+      'second'
+      'thrid';
   }
 `;
 
+const First = styled.div`
+  grid-area: first;
+  background-color: rgb(var(--tertiary));
+  background-color: #5316904d;
+  background-color: #0352971c;
+  padding: 2rem;
+  border-radius: 1rem;
+`;
+
+const Second = styled.div`
+  grid-area: second;
+  background-color: #e1e1ff;
+  background-color: #ed724c33;
+  padding: 2rem;
+  border-radius: 1rem;
+`;
+
+const Third = styled.div`
+  grid-area: thrid;
+  background-color: #525ee140;
+
+  padding: 2rem;
+  border-radius: 1rem;
+`;
 const Link = styled.a`
   font-size: 3rem;
   text-decoration: none;
