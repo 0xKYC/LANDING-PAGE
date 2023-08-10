@@ -235,6 +235,10 @@ const AuthorContent = styled.div`
 
 const AuthorTitle = styled.p`
   font-weight: bold;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const AuthorName = styled.p`
