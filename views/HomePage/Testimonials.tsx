@@ -30,8 +30,8 @@ const TESTIMONIALS = [
       title: 'CEO and Co-Founder',
       avatarUrl: '/testimonials/lomads-ceo.jpeg',
     },
-    width: 220,
-    height: 32,
+    width: 180,
+    height: 30,
   },
   {
     companyLogoUrl: '/testimonials/hashup.png',
@@ -75,12 +75,12 @@ export default function Testimonials() {
             </AuthorImageContainer>
           </First>
           <Second>
-            <Link href={TESTIMONIALS[0].href} target="_blank" rel="noreferrer">
+            <Link href={TESTIMONIALS[1].href} target="_blank" rel="noreferrer">
               <NextImage
-                src={TESTIMONIALS[0].companyLogoUrl}
-                alt={`${TESTIMONIALS[0].author.name}'s company logo`}
-                width={TESTIMONIALS[0].width}
-                height={TESTIMONIALS[0].height}
+                src={TESTIMONIALS[1].companyLogoUrl}
+                alt={`${TESTIMONIALS[1].author.name}'s company logo`}
+                width={TESTIMONIALS[1].width}
+                height={TESTIMONIALS[1].height}
                 objectFit="contain"
               />
             </Link>
