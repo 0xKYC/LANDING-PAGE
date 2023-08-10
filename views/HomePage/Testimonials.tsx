@@ -19,7 +19,7 @@ const TESTIMONIALS = [
       avatarUrl: '/testimonials/is-ceo.jpg',
     },
     width: 170,
-    height: 42,
+    height: 40,
   },
   {
     companyLogoUrl: '/fixed/lomads.png',
@@ -43,7 +43,7 @@ const TESTIMONIALS = [
       avatarUrl: '/testimonials/hashup-ceo.jpg',
     },
     width: 160,
-    height: 38,
+    height: 36,
   },
 ];
 
@@ -210,7 +210,7 @@ const Content = styled.blockquote`
   text-align: center;
   font-size: 1.5rem;
   font-style: italic;
-
+  margin-top: 1rem;
   @media screen and (max-width: 1024px) {
     height: auto;
   }
