@@ -23,7 +23,7 @@ const footerItems: FooterItems = [
   {
     title: 'Knowledge',
     items: [
-      { title: 'Documentation', href: 'https://0xkyc.notion.site/0xKYC-Public-Documentation-f7db271a06e840f7862a929fb9f42299', link: true },
+      { title: 'Documentation', href: 'https://docs.0xkyc.id/', link: true },
       { title: 'Contact', href: 'mailto:support@0xkyc.id', link: true },
     ],
   },
@@ -66,11 +66,7 @@ export default function Footer() {
               <ListItem title="Privacy Policy" href="https://app.0xkyc.id/privacy-policy" link={true} />
               <ListItem title="Terms Of Service" href="https://app.0xkyc.id/terms-of-service" link={true} />
 
-              <ListItem
-                title="Documentation"
-                href="https://0xkyc.notion.site/0xKYC-Public-Documentation-f7db271a06e840f7862a929fb9f42299"
-                link={true}
-              />
+              <ListItem title="Documentation" href="https://docs.0xkyc.id/" link={true} />
             </Flex>
             <a href="https://twitter.com/0xKYCinc" rel="noreferrer" target="_blank" aria-label="Twitter">
               <TwitterIcon size={44} round={true} />

@@ -19,7 +19,7 @@ const TESTIMONIALS = [
       avatarUrl: '/testimonials/is-ceo.jpg',
     },
     width: 170,
-    height: 42,
+    height: 40,
   },
   {
     companyLogoUrl: '/fixed/lomads.png',
@@ -30,8 +30,8 @@ const TESTIMONIALS = [
       title: 'CEO and Co-Founder',
       avatarUrl: '/testimonials/lomads-ceo.jpeg',
     },
-    width: 220,
-    height: 32,
+    width: 180,
+    height: 30,
   },
   {
     companyLogoUrl: '/testimonials/hashup.png',
@@ -43,7 +43,7 @@ const TESTIMONIALS = [
       avatarUrl: '/testimonials/hashup-ceo.jpg',
     },
     width: 160,
-    height: 38,
+    height: 36,
   },
 ];
 
@@ -75,12 +75,12 @@ export default function Testimonials() {
             </AuthorImageContainer>
           </First>
           <Second>
-            <Link href={TESTIMONIALS[0].href} target="_blank" rel="noreferrer">
+            <Link href={TESTIMONIALS[1].href} target="_blank" rel="noreferrer">
               <NextImage
-                src={TESTIMONIALS[0].companyLogoUrl}
-                alt={`${TESTIMONIALS[0].author.name}'s company logo`}
-                width={TESTIMONIALS[0].width}
-                height={TESTIMONIALS[0].height}
+                src={TESTIMONIALS[1].companyLogoUrl}
+                alt={`${TESTIMONIALS[1].author.name}'s company logo`}
+                width={TESTIMONIALS[1].width}
+                height={TESTIMONIALS[1].height}
                 objectFit="contain"
               />
             </Link>
@@ -210,7 +210,7 @@ const Content = styled.blockquote`
   text-align: center;
   font-size: 1.5rem;
   font-style: italic;
-
+  margin-top: 1rem;
   @media screen and (max-width: 1024px) {
     height: auto;
   }
@@ -235,6 +235,10 @@ const AuthorContent = styled.div`
 
 const AuthorTitle = styled.p`
   font-weight: bold;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const AuthorName = styled.p`
