@@ -24,6 +24,7 @@ const navItems: NavItems = [
   { title: 'Use Cases', href: '#use-cases' },
   { title: 'Integration', href: '#integration' },
   { title: 'Blog', href: '#blog' },
+  { title: 'FAQ', href: '#faq' },
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
