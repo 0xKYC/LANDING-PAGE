@@ -30,7 +30,8 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
           </CustomRichText>
         )}
       </PriceContainer>
-      <CustomButton>Contact Sales</CustomButton>
+
+      <CustomButton href="mailto:support@0xkyc.id">Contact Sales</CustomButton>
     </Wrapper>
   );
 }

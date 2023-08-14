@@ -18,6 +18,7 @@ import News from 'views/HomePage/News';
 import Newsletter from 'views/HomePage/Newsletter';
 // import Partners from 'views/HomePage/Partners';
 import Testimonials from 'views/HomePage/Testimonials';
+import { Pricing } from 'views/HomePage/Pricing';
 
 export default function Homepage() {
   return (
@@ -105,7 +106,10 @@ export default function Homepage() {
           </Container>
           <Separator />
           <FeaturesGallery />
+          <Separator />
           <Blog />
+          <Separator />
+          <Pricing />
         </WhiteBackgroundContainer>
         {/* <DarkerBackgroundContainer> */}
         {/* <Cta /> */}

@@ -85,10 +85,6 @@ export default function FeaturesGallery() {
           Technical Documentation
         </Anchor>
       </StyledText>
-
-      <StyledText style={{ marginTop: '4rem' }}>
-        Discover our <Link href="/pricing">competitive pricing</Link> and get in touch with our sales team
-      </StyledText>
     </FeaturesGalleryWrapper>
   );
 }
