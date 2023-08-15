@@ -95,7 +95,6 @@ export default function Homepage() {
                 <Anchor rel="noreferrer" target="_blank" href="https://calendly.com/adamzasada">
                   Calendly
                 </Anchor>
-                - We are at your service.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
                 No more destruction of Web3 and airdrop economics, tokenomics and inefficient give-aways. No more abuse of DAO governance

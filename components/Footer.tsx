@@ -15,7 +15,8 @@ const footerItems: FooterItems = [
   {
     title: 'Company',
     items: [
-      { title: 'Privacy Policy', href: '/privacy-policy' },
+      { title: 'Privacy Policy', href: 'https://app.0xkyc.id/privacy-policy', link: true },
+      { title: 'Terms Of Service', href: 'https://app.0xkyc.id/terms-of-service', link: true },
       // { title: 'Cookies Policy', href: '/cookies-policy' },
     ],
   },

@@ -23,7 +23,7 @@ const PRICING_TABS = [
   {
     name: 'Enterprise',
     index: 2,
-    features: ['Combine Any Features', 'Exclude Countries (e.g. the U.S.)', 'AML Monitoring', 'Customizations and Branding'],
+    features: ['Combine Any Features', 'Exclude Countries (e.g. the USA)', 'AML Monitoring', 'Customizations and Branding'],
     description: 'Customisable Solution',
   },
 ];

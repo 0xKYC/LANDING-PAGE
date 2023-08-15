@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styled from 'styled-components';
 import { News } from 'components/News';
 import SectionTitle from 'components/SectionTitle';
@@ -15,22 +16,27 @@ const Container = styled.section`
 
 export default function NewsPage() {
   return (
-    <Container>
-      <SectionTitle>All news</SectionTitle>
+    <>
+      <Head>
+        <title>News - 0xKYC ☀️ </title>
+      </Head>
+      <Container>
+        <SectionTitle>All news</SectionTitle>
 
-      {NEWS.map((news, index) => {
-        return (
-          <News
-            ariaLabel={news.ariaLabel}
-            description={news.description}
-            imgUrl={news.imgUrl}
-            title={news.title}
-            key={news.title}
-            index={index}
-            href={news.href}
-          />
-        );
-      })}
-    </Container>
+        {NEWS.map((news, index) => {
+          return (
+            <News
+              ariaLabel={news.ariaLabel}
+              description={news.description}
+              imgUrl={news.imgUrl}
+              title={news.title}
+              key={news.title}
+              index={index}
+              href={news.href}
+            />
+          );
+        })}
+      </Container>
+    </>
   );
 }
