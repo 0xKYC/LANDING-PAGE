@@ -3,29 +3,98 @@ import styled from 'styled-components';
 import { AutofitGrid, AutofitGridMobile } from 'components/AutofitGrid';
 import PricingCard from 'components/PricingCard';
 import SectionTitle from 'components/SectionTitle';
+import { Anchor } from 'components/Link';
 
 const PRICING_TABS = [
   {
     name: 'Sunscreen',
     index: 0,
-    features: ['some feature', 'some feature', 'some feature', 'some feature'],
+    features: ['Liveness Check', 'iBeta Level 2 Compliance', 'Proof of Uniqueness', 'Verification for Web3 and Discord'],
     price: 1,
     description: 'Uniqueness Verification',
   },
   {
     name: '0xKYC',
     index: 1,
-    features: ['some feature', 'some feature', 'some feature', 'some feature'],
+    features: ['Sanctions Check', 'Verification of age (18+)', 'Proof of Uniqueness', 'Best-in-Class ID Verification'],
     price: 3,
     description: 'Sanctions Check',
   },
   {
     name: 'Enterprise',
     index: 2,
-    features: ['some feature', 'some feature', 'some feature', 'some feature'],
+    features: ['Combine Any Features', 'Exclude Countries (e.g. the U.S.)', 'AML Monitoring', 'Customizations and Branding'],
     description: 'Customisable Solution',
   },
 ];
+
+export default function PricingTablesSection() {
+  const [selectedTab, setSelectedTab] = useState(PRICING_TABS[0].index);
+
+  const handleTabChange = (tabIndex: number) => {
+    setSelectedTab(tabIndex);
+  };
+
+  return (
+    <Wrapper>
+      <SectionTitle>Pricing</SectionTitle>
+
+      <P>
+        Flexible plans to fill your needs: all of our checks are <OrangeSpan>reusable</OrangeSpan> on-chain or available via API.{' '}
+      </P>
+
+      <BtnGroup>
+        {PRICING_TABS.map((tab) => (
+          <StyledBtn selected={selectedTab === tab.index} key={tab.name} onClick={() => handleTabChange(tab.index)}>
+            {tab.name}
+          </StyledBtn>
+        ))}
+      </BtnGroup>
+      <AutofitGrid>
+        {PRICING_TABS.map((tab) => {
+          return (
+            <PricingCard key={tab.index} title={tab.name} description={tab.description} benefits={tab.features}>
+              {tab.price && '$' + tab.price.toString()}
+              <span>{tab.price ? '/check' : 'Contact us'}</span>
+            </PricingCard>
+          );
+        })}
+      </AutofitGrid>
+      <AutofitGridMobile>
+        {PRICING_TABS.map((tab) => {
+          return (
+            selectedTab === tab.index && (
+              <PricingCard key={tab.index} title={tab.name} description={tab.description} benefits={tab.features}>
+                {tab.price && '$' + tab.price.toString()}
+                <span>{tab.price ? '/check' : 'Contact us'}</span>
+              </PricingCard>
+            )
+          );
+        })}
+      </AutofitGridMobile>
+
+      <Info>
+        Each service comes with a free compliance consultation and we&apos;ll make sure to help you solve your duplicate account (via our
+        Proof of Uniqueness), bot and privacy problems. Contact our sales team today at:{' '}
+        <Anchor href="mailto:support@0xkyc.id">support@0xkyc.id</Anchor> and help us save your privacy.
+      </Info>
+    </Wrapper>
+  );
+}
+
+const Wrapper = styled.div`
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 3.5rem;
+  }
+`;
+
+const Info = styled.p`
+  font-size: 1.5rem;
+`;
 
 const P = styled.p`
   font-size: 1.5rem;
@@ -69,66 +138,7 @@ const StyledBtn = styled.button<{ selected: boolean }>`
     font-size: 1.2rem;
   }
 `;
-export default function PricingTablesSection() {
-  const [selectedTab, setSelectedTab] = useState(PRICING_TABS[0].index);
 
-  const handleTabChange = (tabIndex: number) => {
-    setSelectedTab(tabIndex);
-  };
-
-  return (
-    <Wrapper>
-      <SectionTitle>Pricing</SectionTitle>
-
-      <P>Flexible plans suited to your enterprise needs. Extendable features. </P>
-
-      <BtnGroup>
-        {PRICING_TABS.map((tab) => (
-          <StyledBtn selected={selectedTab === tab.index} key={tab.name} onClick={() => handleTabChange(tab.index)}>
-            {tab.name}
-          </StyledBtn>
-        ))}
-      </BtnGroup>
-      <AutofitGrid>
-        {PRICING_TABS.map((tab) => {
-          return (
-            <PricingCard key={tab.index} title={tab.name} description={tab.description} benefits={tab.features}>
-              ${tab.price && tab.price.toString()}
-              <span>{tab.price ? '/check' : "/let's chat"}</span>
-            </PricingCard>
-          );
-        })}
-      </AutofitGrid>
-      <AutofitGridMobile>
-        {PRICING_TABS.map((tab) => {
-          return (
-            selectedTab === tab.index && (
-              <PricingCard key={tab.index} title={tab.name} description={tab.description} benefits={tab.features}>
-                ${tab.price && tab.price.toString()}
-                <span>{tab.price ? '/check' : "/let's chat"}</span>
-              </PricingCard>
-            )
-          );
-        })}
-      </AutofitGridMobile>
-
-      <Info>
-        There is a minimum monthly subscription fee of $100. Fully expandable on any of the above services, 0xKYC or Sunscreen check.
-      </Info>
-    </Wrapper>
-  );
-}
-
-const Wrapper = styled.div`
-  text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-
-  @media screen and (max-width: 1024px) {
-    margin-top: 3.5rem;
-  }
-`;
-
-const Info = styled.p`
-  font-size: 1.5rem;
+const OrangeSpan = styled.span`
+  color: rgb(var(--primary));
 `;

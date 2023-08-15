@@ -11,8 +11,6 @@ export const Pricing = () => {
         Discover our <Link href="/pricing">competitive pricing</Link> and get in touch with our{' '}
         <Anchor href="mailto:support@0xkyc.id">sales team</Anchor>
       </StyledText>
-
-      <Image src="/0xkyc-logo-black.png" width={270} height={90} alt="0xKYC logo" objectFit="contain" />
     </Wrapper>
   );
 };
@@ -20,10 +18,11 @@ export const Pricing = () => {
 const Wrapper = styled('section')`
   text-align: center;
   padding: 0 2rem;
+  margin-top: 6rem;
 `;
 const StyledText = styled('p')`
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 4.5rem;
-  margin-top: 5rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 `;

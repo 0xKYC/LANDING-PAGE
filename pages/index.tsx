@@ -109,6 +109,9 @@ export default function Homepage() {
           <FeaturesGallery />
           <Separator />
           <Blog />
+          <Separator />
+          <Pricing />
+          <Separator />
           <FaqSection />
         </WhiteBackgroundContainer>
         {/* <DarkerBackgroundContainer> */}

@@ -88,8 +88,6 @@ const Price = styled.div`
 
 const CustomRichText = styled(RichText)`
   li {
-    /* margin: auto; */
-    /* width: fit-content; */
   }
 `;
 
