@@ -11,6 +11,7 @@ import { EnvVars } from 'env';
 import BackedBy from 'views/HomePage/BackedBy';
 import Partners from 'views/HomePage/BlockchainsBanner';
 import Blog from 'views/HomePage/BlogSection';
+import FaqSection from 'views/HomePage/FaqSection';
 import Features from 'views/HomePage/Features';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Hero from 'views/HomePage/Hero';
@@ -108,8 +109,7 @@ export default function Homepage() {
           <FeaturesGallery />
           <Separator />
           <Blog />
-          <Separator />
-          <Pricing />
+          <FaqSection />
         </WhiteBackgroundContainer>
         {/* <DarkerBackgroundContainer> */}
         {/* <Cta /> */}

@@ -1,0 +1,51 @@
+import styled from 'styled-components';
+import Accordion from 'components/Accordion';
+import Container from 'components/Container';
+import SectionTitle from 'components/SectionTitle';
+
+const kycData = [
+  {
+    title: 'What is Sunscreen?',
+    description: `Sunscreen is a tool developed by 0xKYC that utilizes facial recognition technology to verify the uniqueness of each user. It's like a virtual ID card that is unique to each person and helps prevent one person from creating multiple accounts. The best part? It is available permissionlessly on-chain or via API and respects your privacy.`,
+  },
+  {
+    title: 'What is 0xKYC?',
+    description: `0xKYC is our flagship tool, which acts on data from your ID and facial biometrics. Not only does it confirm that you're a unique individual (like Sunscreen does), but it also checks if you're over 18 years old and if you're on any sanctioned lists as well as if your wallet isn't. It allows platforms to ensure they're not letting in underage or sanctioned individuals through, while keeping your personal data private.`,
+  },
+  {
+    title: 'How do Sunscreen and 0xKYC benefit platforms like Insert Stonks or Hinkal Protocol?',
+    description: `For platforms like Insert Stonks, which might worry about users creating duplicate accounts, Sunscreen can help ensure each user is unique. Meanwhile, for platforms like Hinkal Protocol, 0xKYC helps verify users' sanction status, contributing to a safer, more regulated environment.`,
+  },
+  {
+    title: 'How do I use these services?',
+    description: `Simply click "Launch App" in the top right corner and connect your wallet. Follow the easy instructions to complete the verification process. Alternatively, for Insert Stonks go to their site to get verified or any other of our partners. Our system works on-chain as well as via API (for custodial wallets, for example).`,
+  },
+  {
+    title: 'What does it cost to use these services?',
+    description: `The pricing details for Sunscreen and 0xKYC are listed on our site, just look for the Pricing section!`,
+  },
+];
+
+//
+
+export default function FaqSection() {
+  return (
+    <Container id="faq">
+      <Wrapper>
+        <SectionTitle>Frequently asked question</SectionTitle>
+        {kycData.map((item, i) => (
+          <Accordion key={i} title={item.title}>
+            {item.description}
+          </Accordion>
+        ))}
+      </Wrapper>
+    </Container>
+  );
+}
+
+const Wrapper = styled.div`
+  margin-top: 15rem;
+  & > *:not(:first-child) {
+    margin-top: 3rem;
+  }
+`;
