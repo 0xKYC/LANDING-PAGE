@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AutofitGrid from 'components/AutofitGrid';
+
 import BasicCard from 'components/BasicCard';
 import Container from 'components/Container';
 import { media } from 'utils/media';
@@ -35,7 +35,11 @@ export default function Features() {
   );
 }
 
-const CustomAutofitGrid = styled(AutofitGrid)`
+const CustomAutofitGrid = styled('div')`
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--autofit-grid-item-size), 1fr));
+  margin: 0 auto;
   --autofit-grid-item-size: 30rem;
 
   ${media('<=tablet')} {
@@ -45,4 +49,5 @@ const CustomAutofitGrid = styled(AutofitGrid)`
   ${media('<=phone')} {
     --autofit-grid-item-size: 100%;
   }
+  margin-top: 5rem;
 `;
