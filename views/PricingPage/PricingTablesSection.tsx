@@ -55,7 +55,7 @@ export default function PricingTablesSection() {
           return (
             <PricingCard key={tab.index} title={tab.name} description={tab.description} benefits={tab.features}>
               {tab.price && '$' + tab.price.toString()}
-              <span>{tab.price ? '/check' : 'Contact us'}</span>
+              <Text isBold={Boolean(!tab.price)}>{tab.price ? '/check' : 'Contact us'}</Text>
             </PricingCard>
           );
         })}
@@ -66,7 +66,7 @@ export default function PricingTablesSection() {
             selectedTab === tab.index && (
               <PricingCard key={tab.index} title={tab.name} description={tab.description} benefits={tab.features}>
                 {tab.price && '$' + tab.price.toString()}
-                <span>{tab.price ? '/check' : 'Contact us'}</span>
+                <Text isBold={Boolean(!tab.price)}>{tab.price ? '/check' : 'Contact us'}</Text>
               </PricingCard>
             )
           );
@@ -82,6 +82,9 @@ export default function PricingTablesSection() {
   );
 }
 
+const Text = styled.span<{ isBold: boolean }>`
+  font-weight: ${(p) => (p.isBold ? 'bolder !important' : '200')};
+`;
 const Wrapper = styled.div`
   text-align: center;
   margin-top: 5rem;
