@@ -24,8 +24,8 @@ const footerItems: FooterItems = [
   {
     title: 'Knowledge',
     items: [
-      { title: 'Documentation', href: 'https://docs.0xkyc.id/', link: true },
       { title: 'Contact', href: 'mailto:support@0xkyc.id', link: true },
+      { title: 'Documentation', href: 'https://docs.0xkyc.id/', link: true },
     ],
   },
 ];
