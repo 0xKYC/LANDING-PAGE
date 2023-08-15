@@ -11,12 +11,15 @@ import Drawer from './Drawer';
 
 import { HamburgerIcon } from './HamburgerIcon';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 type NavbarProps = { items: NavItems };
 
 export default function Navbar({ items }: NavbarProps) {
   const { toggle } = Drawer.useDrawer();
+  const { asPath } = useRouter();
 
+  const shouldRedirectHome = asPath === '/pricing' || asPath === '/news';
   return (
     <NavbarContainer>
       <Content>
@@ -33,7 +36,9 @@ export default function Navbar({ items }: NavbarProps) {
 
         <NavItemList>
           {items.map((item) => {
-            return <NavLink key={item.title} href={item.href} title={item.title} />;
+            return (
+              <NavLink redirect={item.redirect} key={item.title} href={item.href} title={item.title} redirectHome={shouldRedirectHome} />
+            );
           })}
           <NavItem title="LAUNCH APP" href="https://app.0xkyc.id/" />
         </NavItemList>
@@ -58,10 +63,10 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
     </NavItemWrapper>
   );
 }
-export function NavLink({ href, title, outlined, redirect }: SingleNavItem) {
+export function NavLink({ href, title, outlined, redirect, redirectHome }: SingleNavItem) {
   return (
     <CustomNavItemWrapper outlined={outlined}>
-      {redirect ? <Link href={href}>{title}</Link> : <a href={href}>{title}</a>}
+      {redirect ? <Link href={href}>{title}</Link> : <a href={redirectHome ? '/' : href}>{title}</a>}
     </CustomNavItemWrapper>
   );
 }
