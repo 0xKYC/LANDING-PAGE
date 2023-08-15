@@ -10,6 +10,7 @@ import Container from './Container';
 import Drawer from './Drawer';
 
 import { HamburgerIcon } from './HamburgerIcon';
+import Link from 'next/link';
 
 type NavbarProps = { items: NavItems };
 
@@ -57,10 +58,10 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
     </NavItemWrapper>
   );
 }
-export function NavLink({ href, title, outlined }: SingleNavItem) {
+export function NavLink({ href, title, outlined, redirect }: SingleNavItem) {
   return (
     <CustomNavItemWrapper outlined={outlined}>
-      <a href={href}>{title}</a>
+      {redirect ? <Link href={href}>{title}</Link> : <a href={href}>{title}</a>}
     </CustomNavItemWrapper>
   );
 }
