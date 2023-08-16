@@ -23,7 +23,7 @@ const PRICING_TABS = [
   {
     name: 'Enterprise',
     index: 2,
-    features: ['Combine Any Features', 'Exclude Countries (e.g. the USA)', 'AML Monitoring', 'Customizations and Branding'],
+    features: ['Combine Any Features', 'Exclude Countries (e.g. USA)', 'AML Monitoring', 'Customizations and Branding'],
     description: 'Customisable Solution',
   },
 ];
@@ -55,7 +55,11 @@ export default function PricingTablesSection() {
           return (
             <PricingCard key={tab.index} title={tab.name} description={tab.description} benefits={tab.features}>
               {tab.price && '$' + tab.price.toString()}
-              <Text isBold={Boolean(!tab.price)}>{tab.price ? '/check' : 'Contact us'}</Text>
+              <Text isBold={Boolean(!tab.price)} style={{ margin: !tab.price ? '.4rem' : '', marginTop: !tab.price ? '1rem' : '' }}>
+                {tab.price ? '/check' : 'Contact us'}
+              </Text>
+
+              {/* {!tab.price && <span style={{ marginBottom: '.5rem' }}></span>} */}
             </PricingCard>
           );
         })}

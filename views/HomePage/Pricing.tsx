@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import styled from 'styled-components';
+import Button from 'components/Button';
 import Link, { Anchor } from 'components/Link';
 import SectionTitle from 'components/SectionTitle';
 
@@ -11,6 +11,11 @@ export const Pricing = () => {
         Discover our <Link href="/pricing">competitive pricing</Link> and get in touch with our{' '}
         <Anchor href="mailto:support@0xkyc.id">sales team</Anchor>
       </StyledText>
+
+      <Button href="/pricing" style={{ fontSize: '1.5rem' }}>
+        {' '}
+        Discover Our Pricing <span>&rarr;</span>
+      </Button>
     </Wrapper>
   );
 };
