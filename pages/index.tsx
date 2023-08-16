@@ -18,8 +18,8 @@ import Hero from 'views/HomePage/Hero';
 import News from 'views/HomePage/News';
 import Newsletter from 'views/HomePage/Newsletter';
 // import Partners from 'views/HomePage/Partners';
-import Testimonials from 'views/HomePage/Testimonials';
 import { Pricing } from 'views/HomePage/Pricing';
+import Testimonials from 'views/HomePage/Testimonials';
 
 export default function Homepage() {
   return (
