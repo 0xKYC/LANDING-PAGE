@@ -45,6 +45,13 @@ const Title = styled.h3`
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+
+  ${media('<=desktop')} {
+    font-size: 1.4rem;
+    text-overflow: initial;
+    overflow: visible;
+    display: block;
+  }
 `;
 
 const TitleWrapper = styled.div`
