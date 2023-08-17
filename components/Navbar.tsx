@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
 
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 import { NavItems, SingleNavItem } from 'types';
@@ -10,8 +12,6 @@ import Container from './Container';
 import Drawer from './Drawer';
 
 import { HamburgerIcon } from './HamburgerIcon';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 type NavbarProps = { items: NavItems };
 
@@ -19,7 +19,6 @@ export default function Navbar({ items }: NavbarProps) {
   const { toggle } = Drawer.useDrawer();
   const { asPath } = useRouter();
 
-  const shouldRedirectHome = asPath === '/pricing' || asPath === '/news';
   return (
     <NavbarContainer>
       <Content>
@@ -37,7 +36,7 @@ export default function Navbar({ items }: NavbarProps) {
         <NavItemList>
           {items.map((item) => {
             return (
-              <NavLink redirect={item.redirect} key={item.title} href={item.href} title={item.title} redirectHome={shouldRedirectHome} />
+              <NavLink redirect={item.redirect} outlined={asPath === item.href} key={item.title} href={item.href} title={item.title} />
             );
           })}
           <NavItem title="LAUNCH APP" href="https://app.0xkyc.id/" />
@@ -63,10 +62,16 @@ function NavItem({ href, title, outlined }: SingleNavItem) {
     </NavItemWrapper>
   );
 }
-export function NavLink({ href, title, outlined, redirect, redirectHome }: SingleNavItem) {
+export function NavLink({ href, title, outlined, redirect }: SingleNavItem) {
   return (
     <CustomNavItemWrapper outlined={outlined}>
-      {redirect ? <Link href={href}>{title}</Link> : <a href={redirectHome ? '/' : href}>{title}</a>}
+      {redirect ? (
+        <Link href={href}>{title}</Link>
+      ) : (
+        <a target="_blank" rel="noreferrer" href={href}>
+          {title}
+        </a>
+      )}
     </CustomNavItemWrapper>
   );
 }
@@ -103,21 +108,46 @@ const MobileLogoWrapper = styled(LogoWrapper)`
 `;
 
 const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
-  background-color: ${(p) => (p.outlined ? 'rgb(var(--primary))' : 'transparent')};
   border-radius: 0.5rem;
   font-size: 1.3rem;
   text-transform: uppercase;
   line-height: 2;
 
-  &:hover {
-    background-color: ${(p) => (p.outlined ? 'rgb(var(--primary), 0.8)' : 'transparent')};
-    transition: background-color 0.2s;
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
   }
 
+  a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(var(--primary));
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s, transform 0.2s ease-out;
+  }
+  a:active::before {
+    background-color: rgb(var(--primary));
+  }
+  a:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+  a::before {
+    transform-origin: ${(p) => (p.outlined ? 'left top' : '')};
+    transform: ${(p) => (p.outlined ? 'scale(1, 1)' : '')};
+  }
   a {
+    position: relative;
+    transition: color 0.1s, background-color 0.1s, padding 0.2s ease-in;
     display: flex;
-    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'white')};
-    /* color: white; */
+
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
