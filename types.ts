@@ -1,4 +1,4 @@
-export type SingleNavItem = { title: string; href: string; outlined?: boolean; redirect?: boolean; redirectHome?: boolean };
+export type SingleNavItem = { title: string; href: string; outlined?: boolean; redirect?: boolean };
 
 export type NavItems = SingleNavItem[];
 

@@ -9,6 +9,7 @@ import ClientOnly from './ClientOnly';
 import CloseIcon from './CloseIcon';
 import OriginalDrawer from './Drawer';
 import { NavLink } from './Navbar';
+import Link from 'next/link';
 type NavigationDrawerProps = PropsWithChildren<{ items: NavItems }>;
 
 export default function NavigationDrawer({ children, items }: NavigationDrawerProps) {
@@ -52,9 +53,16 @@ function NavItemsList({ items }: NavigationDrawerProps) {
       {items.map((singleItem, idx) => {
         return (
           <NavItem key={idx}>
-            <a href={singleItem.href} onClick={handleClick}>
+            {singleItem.redirect ? (
+              <Link href={singleItem.href}>{singleItem.title}</Link>
+            ) : (
+              <a onClick={handleClick} target="_blank" rel="noreferrer" href={singleItem.href}>
+                {singleItem.title}
+              </a>
+            )}
+            {/* <a href={singleItem.href} onClick={handleClick} target="_blank" rel="noreferrer">
               {singleItem.title}
-            </a>
+            </a> */}
           </NavItem>
         );
       })}
