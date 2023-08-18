@@ -20,7 +20,7 @@ export const BlogPost = ({ title, description, imgUrl, order, href }: Props) => 
       </ImgWrapper>
 
       <TextWrapper>
-        <Title>{title}</Title>
+        <Title dangerouslySetInnerHTML={{ __html: title }} />
         <P dangerouslySetInnerHTML={{ __html: `${description.slice(0, 200)}` }} />
 
         <LinkWrapper>
