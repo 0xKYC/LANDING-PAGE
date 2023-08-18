@@ -25,7 +25,9 @@ export default function BlogSection() {
 
   useEffect(() => {
     async function startFetching() {
-      const result = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/0xkyc')
+      const result = await fetch(
+        'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F0xkyc&api_key=4szkp25tqcvpjpjvpo9ty1i0w3jcvxhyjc1oogum&count=3',
+      )
         .then((res) => res.json())
         .then((data) => {
           // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
