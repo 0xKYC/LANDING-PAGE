@@ -6,7 +6,7 @@ import SectionTitle from 'components/SectionTitle';
 const kycData = [
   {
     title: 'What is Sunscreen?',
-    description: `Sunscreen is a tool developed by 0xKYC that utilizes facial recognition technology to verify the uniqueness of each user. It's like a virtual ID card that is unique to each person and helps prevent one person from creating multiple accounts. The best part? It is available permissionlessly on-chain or via API and respects your privacy.`,
+    description: `Sunscreen is a tool developed by 0xKYC that utilizes facial recognition technology to verify the uniqueness of each user. It's like a virtual ID card that is unique to each person and helps prevent one person from creating multiple accounts. The best part? It is available permissionlessly onchain or via API and respects your privacy.`,
   },
   {
     title: 'What is 0xKYC?',
@@ -18,7 +18,7 @@ const kycData = [
   },
   {
     title: 'How do I use these services?',
-    description: `Simply click "Launch App" in the top right corner and connect your wallet. Follow the easy instructions to complete the verification process. Alternatively, for Insert Stonks go to their site to get verified or any other of our partners. Our system works on-chain as well as via API (for custodial wallets, for example).`,
+    description: `Simply click "Launch App" in the top right corner and connect your wallet. Follow the easy instructions to complete the verification process. Alternatively, for Insert Stonks go to their site to get verified or any other of our partners. Our system works onchain as well as via API (for custodial wallets, for example).`,
   },
   {
     title: 'What does it cost to use these services?',

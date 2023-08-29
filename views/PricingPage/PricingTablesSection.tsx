@@ -40,7 +40,7 @@ export default function PricingTablesSection() {
       <SectionTitle>Pricing</SectionTitle>
 
       <P>
-        Flexible plans to fill your needs: all of our checks are <OrangeSpan>reusable</OrangeSpan> on-chain or available via API.{' '}
+        Flexible plans to fill your needs: all of our checks are <OrangeSpan>reusable</OrangeSpan> onchain or available via API.{' '}
       </P>
 
       <BtnGroup>

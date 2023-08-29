@@ -60,7 +60,7 @@ export default function Homepage() {
               </li>
               <li>Biometrics and/or Documents ✅</li>
               <li>Web3 fraud wallet lists ✅</li>
-              <li>Sanctions checks on-chain ✅</li>
+              <li>Sanctions checks onchain ✅</li>
               <li>Unique across different wallets and cross-chain 🌐</li>
             </ul>
             <p>
@@ -90,7 +90,7 @@ export default function Homepage() {
             <Box>
               <p>
                 Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of bots
-                ruining your game. Verify uniqueness on-chain, get a sanctions-free verification and integrate 0xKYC into your decentralized
+                ruining your game. Verify uniqueness onchain, get a sanctions-free verification and integrate 0xKYC into your decentralized
                 app today. Contact us:{' '}
                 <Anchor rel="noreferrer" target="_blank" href="https://calendly.com/adamzasada">
                   Calendly
