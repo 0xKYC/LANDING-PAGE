@@ -1,7 +1,6 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-import Image from 'next/image';
 
 import styled from 'styled-components';
 
@@ -27,17 +26,23 @@ const BLOCKCHAINS = [
     href: 'https://ethereum.org/en/',
   },
   {
-    name: 'Scroll Alpha',
+    name: 'Scroll Sepolia',
     img: 'scroll.png',
     alt: 'Scroll Alpha',
     href: 'https://scroll.io/ecosystem',
   },
-  // {
-  //   name: 'BNB (coming soon)',
-  //   img: 'bnb.png',
-  //   alt: 'polygon',
-  //   href: 'www.polygon.com',
-  // },
+  {
+    name: 'BNB Smart Chain',
+    img: 'bnb.png',
+    alt: 'bnb',
+    href: 'https://www.bnbchain.org/en/smartChain',
+  },
+  {
+    name: 'BNB Testnet',
+    img: 'bnb.png',
+    alt: 'bnb',
+    href: 'https://www.bnbchain.org/en/smartChain',
+  },
   // {
   //   name: '5ire (coming soon)',
   //   img: '5ire.png',
@@ -81,20 +86,20 @@ export default function BlockchainsBanner() {
           <SplideSlide key={idx}>
             <StyledLink href={logo.href} target="_blank" rel="noreferrer">
               <img src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
-              {logo.name === 'Scroll Alpha' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
+              {logo.name === 'Scroll Sepolia' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
             </StyledLink>
           </SplideSlide>
         ))}
       </StyledSplide>
-      <LogosWrapper>
+      {/* <LogosWrapper>
         {BLOCKCHAINS.map((logo, idx) => (
           <StyledLink key={idx} href={logo.href} target="_blank" rel="noreferrer">
             <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" />
             {logo.name}
-            {logo.name === 'Scroll Alpha' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
+            {logo.name === 'Scroll Sepolia' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
           </StyledLink>
         ))}
-      </LogosWrapper>
+      </LogosWrapper> */}
     </Wrapper>
   );
 }
@@ -104,10 +109,10 @@ const OrangeSpan = styled.span`
   margin-left: -7px;
 `;
 const StyledSplide = styled(Splide)`
-  display: block;
+  /* display: block;
   @media screen and (min-width: 900px) {
     display: none;
-  }
+  } */
 `;
 const LogosWrapper = styled.div`
   display: flex;

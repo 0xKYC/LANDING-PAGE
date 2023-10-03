@@ -6,6 +6,7 @@ import Container from 'components/Container';
 
 import { Anchor } from 'components/Link';
 import { media } from 'utils/media';
+import YoutubeVideo from 'components/YoutubeVideo';
 
 export default function Hero() {
   return (
@@ -27,27 +28,13 @@ export default function Hero() {
       </Contents>
 
       <ImageContainer>
-        <StyledLink
+        {/* <StyledLink
           rel="noreferrer"
           target="_blank"
           href="https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/"
-        >
-          <Image src="/onfido-0xkyc.webp" width={800} height={300} objectFit="cover" alt="Onfido partnership with 0xkyc" />
-        </StyledLink>
-
-        <P>
-          “The solution that 0xKYC has created using Onfido’s technology is hugely innovative, by creating a token for cleared users, 0xKYC
-          has established a level of privacy that will boost security on Web3 and the Metaverse.” - Onfido’s CPO Yuelin Li.{' '}
-          <Anchor
-            rel="noreferrer"
-            target="_blank"
-            href="https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/"
-            style={{ marginRight: '0.4rem' }}
-          >
-            Read more{' '}
-          </Anchor>
-          <Image src="/external-link.svg" width={10} height={10} alt="" />
-        </P>
+        > */}
+        <YoutubeVideo url="https://www.youtube.com/watch?v=QHm8tHxXlN4&t" title="0xKYC video" />
+        {/* </StyledLink> */}
       </ImageContainer>
     </HeroWrapper>
   );
@@ -70,11 +57,20 @@ const StyledLink = styled.a`
   text-decoration: none;
 `;
 
+// const ImageContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   min-height: 320px;
+// `;
 const ImageContainer = styled.div`
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-start;
   width: 100%;
   min-height: 320px;
 `;
@@ -91,7 +87,7 @@ const HeroWrapper = styled(Container)`
 `;
 
 const Contents = styled.div`
-  max-width: 70rem;
+  max-width: 55rem;
   margin-right: 4.5rem;
   ${media('<=desktop')} {
     max-width: 100%;
