@@ -1,12 +1,10 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 
-import { Anchor } from 'components/Link';
-import { media } from 'utils/media';
 import YoutubeVideo from 'components/YoutubeVideo';
+import { media } from 'utils/media';
 
 export default function Hero() {
   return (
@@ -28,43 +26,12 @@ export default function Hero() {
       </Contents>
 
       <ImageContainer>
-        {/* <StyledLink
-          rel="noreferrer"
-          target="_blank"
-          href="https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/"
-        > */}
         <YoutubeVideo url="https://www.youtube.com/watch?v=QHm8tHxXlN4&t" title="0xKYC video" />
-        {/* </StyledLink> */}
       </ImageContainer>
     </HeroWrapper>
   );
 }
 
-const P = styled.p`
-  font-size: 1.3rem;
-  text-align: center;
-  margin: 0.5rem;
-
-  @media screen and (min-width: 975px) {
-    margin: 1rem 10rem;
-  }
-  @media screen and (min-width: 1025px) {
-    margin: 0.5rem 0;
-  }
-`;
-const StyledLink = styled.a`
-  color: black;
-  text-decoration: none;
-`;
-
-// const ImageContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   min-height: 320px;
-// `;
 const ImageContainer = styled.div`
   position: relative;
   display: flex;

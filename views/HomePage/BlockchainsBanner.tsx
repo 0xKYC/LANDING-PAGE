@@ -14,6 +14,12 @@ const BLOCKCHAINS = [
     href: 'https://polygon.technology/',
   },
   {
+    name: 'BNB Smart Chain',
+    img: 'bnb.png',
+    alt: 'bnb',
+    href: 'https://www.bnbchain.org/en/smartChain',
+  },
+  {
     name: 'Polygon Mumbai',
     img: 'polygon.png',
     alt: 'polygon',
@@ -31,12 +37,7 @@ const BLOCKCHAINS = [
     alt: 'Scroll Alpha',
     href: 'https://scroll.io/ecosystem',
   },
-  {
-    name: 'BNB Smart Chain',
-    img: 'bnb.png',
-    alt: 'bnb',
-    href: 'https://www.bnbchain.org/en/smartChain',
-  },
+
   {
     name: 'BNB Testnet',
     img: 'bnb.png',
