@@ -5,10 +5,16 @@ import { News } from 'components/News';
 import SectionTitle from 'components/SectionTitle';
 export const NEWS = [
   {
+    title: '0xKYC x Mava Integration',
+    description: 'Our Discord Bot strengthens its user support capabilities through integration with Mava.',
+    imgUrl: '/mava.jpg',
+    href: 'https://www.mava.app/blog/community-spotlight-0xkyc',
+    ariaLabel: 'Mava integration',
+  },
+  {
     title: 'Onfido and 0xKYC Partnership',
     description: '0xKYC partners with Onfido to provide fraud protection protocols on blockchain and in the Metaverse.',
     imgUrl: '/onfido-0xkyc.webp',
-
     href: 'https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/',
     ariaLabel: 'Onfido and 0xKYC Partnership',
   },
