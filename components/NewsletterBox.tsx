@@ -25,9 +25,13 @@ export const NewsletterBox = () => {
     }
     try {
       setIsLoading(true);
-      await axios.post(`${process.env.NEXT_PUBLIC_API_URL!}/user/newsletter/signup`, {
-        email,
-      });
+      await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL!}/user/newsletter/signup`,
+        {
+          email,
+        },
+        { withCredentials: true },
+      );
       setIsLoading(false);
     } catch (err) {
       console.error(err);
