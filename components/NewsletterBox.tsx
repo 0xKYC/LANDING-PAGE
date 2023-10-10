@@ -36,7 +36,7 @@ export const NewsletterBox = () => {
     } catch (err) {
       console.error(err);
       setIsLoading(false);
-      setError('email', { message: 'Error has occured. Try again' });
+      setError('email', { message: 'Error has occurred. Try again' });
     }
   };
 
