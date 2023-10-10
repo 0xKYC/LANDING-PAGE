@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const Separator = styled.div`
   margin: 7rem 0;
   margin-bottom: 4rem;

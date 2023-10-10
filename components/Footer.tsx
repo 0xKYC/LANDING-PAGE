@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
+import Link from 'next/link';
 import { LinkedinIcon, TwitterIcon } from 'react-share';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
-import Link from 'next/link';
 
 type SingleFooterListItem = { title: string; href: string; link?: boolean };
 type FooterListItems = SingleFooterListItem[];

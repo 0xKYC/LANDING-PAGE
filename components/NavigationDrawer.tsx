@@ -1,15 +1,13 @@
 import { useRouter } from 'next/router';
 import { PropsWithChildren, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { SmallBtn } from 'components/Button';
-import { useModalContext } from 'contexts/modal.context';
 import { NavItems } from 'types';
 
 import ClientOnly from './ClientOnly';
 import CloseIcon from './CloseIcon';
 import OriginalDrawer from './Drawer';
-import { NavLink } from './Navbar';
 import Link from 'next/link';
+
 type NavigationDrawerProps = PropsWithChildren<{ items: NavItems }>;
 
 export default function NavigationDrawer({ children, items }: NavigationDrawerProps) {

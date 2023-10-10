@@ -1,4 +1,4 @@
-import { ColorModeStyles, useColorModeValue, useColorSwitcher } from 'nextjs-color-mode';
+import { useColorSwitcher } from 'nextjs-color-mode';
 import { useEffect } from 'react';
 import styled from 'styled-components';
 

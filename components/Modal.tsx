@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-
-import { SmallBtn } from 'components/Button';
 import useEscClose from 'hooks/useEscKey';
 import { media } from 'utils/media';
 

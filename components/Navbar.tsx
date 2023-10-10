@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
-
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
