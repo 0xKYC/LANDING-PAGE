@@ -9,7 +9,7 @@ type Props = {
   href?: string;
 };
 
-export const Baner = ({ title, subtitle, imgUrl, order, href }: Props) => {
+export const Banner = ({ title, subtitle, imgUrl, order, href }: Props) => {
   return (
     <>
       {title && (
