@@ -30,7 +30,7 @@ export const NewsletterBox = () => {
         {
           email,
         },
-        // { withCredentials: true },
+        { withCredentials: true },
       );
       setIsLoading(false);
     } catch (err) {
