@@ -87,7 +87,7 @@ export default function Footer() {
               <Image src="/discord.png" alt="discord" width={45} height={45} />
             </a>
           </ShareBar>
-          <Copyright>&copy; 2023 0xKYC, Inc. All rights reserved.</Copyright>
+          <Copyright>2023 0xKYC, Inc.</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
