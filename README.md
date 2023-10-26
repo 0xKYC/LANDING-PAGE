@@ -69,6 +69,7 @@
   - For more details [see the docs](https://tina.io/docs/tina-cloud/)
 
 ```
+before you do the below, just go to the right directory and use npm install :D and later npm run dev
 # run the dev mode
 $ yarn dev
 
