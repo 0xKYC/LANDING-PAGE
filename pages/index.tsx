@@ -32,9 +32,9 @@ export default function Homepage() {
           <Hero />
           <Partners />
           <BackedBy />
-          <Newsletter title="The future of digital identification is here">
+          <Newsletter title="Join our regular updates!">
             <p>
-              We can scan IDs or do an award-winning{' '}
+              We are building the most advanced Proof of Personhood and created a 1 user{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://github.com/0xKYC/0xkyc-1vote-aragon-plugin">
                 1Vote
               </Anchor>{' '}

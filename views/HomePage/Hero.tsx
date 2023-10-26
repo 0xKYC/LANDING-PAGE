@@ -26,7 +26,7 @@ export default function Hero() {
       </Contents>
 
       <ImageContainer>
-        <YoutubeVideo url="https://www.youtube.com/watch?v=QHm8tHxXlN4&t" title="0xKYC video" />
+        <YoutubeVideo url="https://www.youtube.com/watch?v=QHm8tHxXlN4&t" title="0xKYC Video" />
       </ImageContainer>
     </HeroWrapper>
   );
