@@ -26,12 +26,26 @@ export default function Hero() {
       </Contents>
 
       <ImageContainer>
-        <YoutubeVideo url="https://www.youtube.com/watch?v=QHm8tHxXlN4&t" title="0xKYC video" />
+        <VideoFrame
+          src="https://www.loom.com/embed/5f260f8fcdd44461a1f61117f7ea1e8e?sid=0a148de9-78e3-4a5d-957d-73e3289cf418"
+          title="Sunscreen video"
+          allowFullScreen
+        />
+        {/* <YoutubeVideo url="https://www.youtube.com/watch?v=QHm8tHxXlN4&t" title="0xKYC video" /> */}
       </ImageContainer>
     </HeroWrapper>
   );
 }
-
+const VideoFrame = styled.iframe`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+`;
 const ImageContainer = styled.div`
   position: relative;
   display: flex;
