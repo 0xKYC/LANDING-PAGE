@@ -13,13 +13,13 @@ const FEATURES = [
   },
   {
     imageUrl: '/grid-icons/vote.svg',
-    title: 'DAO Governance',
-    description: 'Safeguard your DAO voting and transactions with our user verification and abuse prevention system.',
+    title: 'Onchain KYC',
+    description: 'See that a user is verified and streamline the process.',
   },
   {
     imageUrl: '/grid-icons/terms.svg',
-    title: 'NFT Airdrops',
-    description: "Eliminate abuse of free mints and other minting mechanisms by verifying each user's unique decentralized identifier.",
+    title: 'Fairdrops and DAOs',
+    description: "Eliminate abuse of free mints, other minting mechanisms and illegitimate votes by verifying each user's identifier.",
   },
 ];
 

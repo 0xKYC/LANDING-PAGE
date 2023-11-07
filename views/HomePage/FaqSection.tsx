@@ -6,7 +6,7 @@ import SectionTitle from 'components/SectionTitle';
 const kycData = [
   {
     title: 'What is Sunscreen?',
-    description: `Sunscreen is a tool developed by 0xKYC that utilizes facial recognition technology to verify the uniqueness of each user. It's like a virtual ID card that is unique to each person and helps prevent one person from creating multiple accounts. The best part? It is available permissionlessly onchain or via API and respects your privacy.`,
+    description: `Sunscreen is a tool developed by 0xKYC that utilizes facial recognition technology to verify the uniqueness of each user. It's like a digital facial-biometrics passport (except that your identity isn't shared) that is unique to each person and helps prevent one person from creating multiple accounts. The best part? It is available permissionlessly onchain or via API and respects your privacy.`,
   },
   {
     title: 'What is 0xKYC?',

@@ -18,7 +18,7 @@ export default function NewsPage() {
   return (
     <>
       <Head>
-        <title>News - 0xKYC ☀️ </title>
+        <title>News - 0xKYC (Sunscreen) ☀️ </title>
       </Head>
       <Container>
         <SectionTitle>All news</SectionTitle>
