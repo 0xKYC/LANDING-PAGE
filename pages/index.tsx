@@ -36,7 +36,7 @@ export default function Homepage() {
             <p>
               We offer the most private Proof of Personhood in the world. We're the winners of the DAO Global hackathon by{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://blog.aragon.org/dao-global-hackathon-bounty-winners/">
-                Aragon OSx
+                Aragon OSx 
               </Anchor>
               and are officially partnered with Onfido, read more about it in the news section.
             </p>
