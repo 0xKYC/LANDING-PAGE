@@ -10,7 +10,7 @@ const PRICING_TABS = [
     name: 'Sunscreen',
     index: 0,
     features: ['Liveness Check', 'iBeta Level 2 Compliance', 'Proof of Uniqueness', 'Verification for Web3 and Discord'],
-    price: 1,
+    price: 0.2,
     description: 'Uniqueness Verification',
   },
   {

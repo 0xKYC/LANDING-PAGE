@@ -16,6 +16,7 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
 
   return (
     <Wrapper isOutlined={isOutlined}>
+      {title === 'Sunscreen' && <Badge>-80%</Badge>}
       <Title>{title}</Title>
       <Description>{description}</Description>
       <PriceContainer>
@@ -36,10 +37,33 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
   );
 }
 
+const Badge = styled.div`
+  position: absolute;
+  background-color: #ed1b24;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+  right: -8%;
+  top: -3%;
+  width: 50px;
+  transform: rotate(25deg);
+
+  @media screen and (min-width: 375px) {
+    right: -5%;
+    top: -3%;
+    width: 60px;
+    font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 1080px) {
+    right: 0;
+    width: 65px;
+  }
+`;
 const Wrapper = styled.div<{ isOutlined?: boolean }>`
   display: flex;
   flex-direction: column;
-
+  position: relative;
   /* box-shadow: ${(p) => (p.isOutlined ? 'var(--shadow-lg)' : 'var(--shadow-md)')}; */
   transform: ${(p) => (p.isOutlined ? 'scale(1.1)' : 'scale(1.0)')};
   text-align: center;

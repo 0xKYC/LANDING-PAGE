@@ -54,8 +54,10 @@ export default function BlogSection() {
     <Container id="blog">
       <SectionTitle style={{ marginTop: '8rem', marginBottom: '8rem' }}>Blog</SectionTitle>
 
-      {blogposts?.slice(0, 3).map((news) => {
-        return <BlogPost description={news.content} imgUrl={news.thumbnail} title={news.title} key={news.guid} href={news.link} />;
+      {blogposts?.slice(0, 3).map((news, idx) => {
+        return (
+          <BlogPost description={news.content} imgUrl={news.thumbnail} index={idx} title={news.title} key={news.guid} href={news.link} />
+        );
       })}
       <LinkWrapper>
         <Anchor rel="noreferrer" target="_blank" href="https://medium.com/0xkyc">

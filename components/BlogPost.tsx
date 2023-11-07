@@ -6,11 +6,15 @@ import { Anchor } from './Link';
 type Props = {
   title: string;
   description: string;
+  index: number;
   imgUrl: string;
   order?: number;
   href: string;
 };
-export const BlogPost = ({ title, description, imgUrl, order, href }: Props) => {
+export const BlogPost = ({ title, description, imgUrl, order, href, index }: Props) => {
+  const isLongerDescription = index === 0;
+  const numberToSlice = isLongerDescription ? 222 : 200;
+
   return (
     <Wrapper>
       <ImgWrapper order={order}>
@@ -21,7 +25,7 @@ export const BlogPost = ({ title, description, imgUrl, order, href }: Props) => 
 
       <TextWrapper>
         <Title dangerouslySetInnerHTML={{ __html: title }} />
-        <P dangerouslySetInnerHTML={{ __html: `${description.slice(0, 200)}` }} />
+        <P dangerouslySetInnerHTML={{ __html: `${description.slice(0, numberToSlice)}` }} />
 
         <LinkWrapper>
           <Anchor rel="noreferrer" target="_blank" href={href} aria-labelledby={title}>
