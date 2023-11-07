@@ -87,7 +87,7 @@ export default function Homepage() {
               <p>
                 We are building the most decentralized system for a Proof of Personhood. Our Discord bot, available via https://app.0xkyc.id is currently in it's alpha 
                 phase with uniqueness verification as well as verification if you are a real person. 
-                Get rid of users with duplicate accounts and enable fair giveaways, airdrops and other use cases.
+                Get rid of users with duplicate accounts and enable fair giveaways, airdrops etc.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
                 We can enable your organizations 10x in user onboarding, enable new experiences via fair distribution of rewards, enhance game experience 
