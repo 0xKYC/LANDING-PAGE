@@ -34,9 +34,9 @@ export default function Homepage() {
           <BackedBy />
           <Newsletter title="Join our newsletter to learn about our exciting updates">
             <p>
-              We offer the most private Proof of Personhood in the world. We're the winners of the DAO Global hackathon by{' '}
+              We offer the most private Proof of Personhood in the world. We&apos;re the winners of the DAO Global hackathon by{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://blog.aragon.org/dao-global-hackathon-bounty-winners/">
-                Aragon OSx 
+                Aragon OSx
               </Anchor>
               and are officially partnered with Onfido, read more about it in the news section.
             </p>
@@ -57,7 +57,7 @@ export default function Homepage() {
               <li>Web3 fraud wallet lists check ✅</li>
               <li>Real world sanctions verification ✅</li>
               <li>Unique across different wallets and cross-chain 🌐</li>
-              <li>We also enable reusable solutions on the edge of what's possible.</li>
+              <li>We also enable reusable solutions on the edge of what&apos;s possible.</li>
             </ul>
             <p>
               All of our checks can be permissionless and are interoperable 🗻⛺ Backed by{' '}
@@ -71,7 +71,7 @@ export default function Homepage() {
               and{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://bufficorn.ventures/">
                 Bufficorn Ventures
-              </Anchor>
+              </Anchor>{' '}
               as well as angels. We are officially a part of the{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://scroll.io/ecosystem">
                 Scroll ecosystem 📜
@@ -85,13 +85,17 @@ export default function Homepage() {
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
-                We are building the most decentralized system for a Proof of Personhood. Our Discord bot, available via https://app.0xkyc.id is currently in it's alpha 
-                phase with uniqueness verification as well as verification if you are a real person. 
-                Get rid of users with duplicate accounts and enable fair giveaways, airdrops etc.
+                We are building the most decentralized system for a Proof of Personhood. Our Discord bot, available via{' '}
+                <Anchor rel="noreferrer" target="_blank" href="https://app.0xkyc.id">
+                  https://app.0xkyc.id
+                </Anchor>{' '}
+                is currently in it&apos;s alpha phase with uniqueness verification as well as verification if you are a real person. Get rid
+                of users with duplicate accounts and enable fair giveaways, airdrops etc.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
-                We can enable your organizations 10x in user onboarding, enable new experiences via fair distribution of rewards, enhance game experience 
-                (like in the example of Insert Stonks integration) and much more. We are a part of multiple working groups and can assure you of our in-depth knowledge.
+                We can enable your organizations 10x in user onboarding, enable new experiences via fair distribution of rewards, enhance
+                game experience (like in the example of Insert Stonks integration) and much more. We are a part of multiple working groups
+                and can assure you of our in-depth knowledge.
               </p>
             </Box>
             <Features />
