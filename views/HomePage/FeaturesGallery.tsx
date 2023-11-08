@@ -24,7 +24,7 @@ const TABS = [
     secondColor: '99,172,232',
   },
   {
-    title: 'API (Live already!)',
+    title: 'API and Custom Integrations',
     description: "Get an identifier without reveling user's name or biometric information",
     imageUrl: '/api-callback.png',
     baseColor: '88,193,132',

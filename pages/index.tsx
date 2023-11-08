@@ -25,46 +25,42 @@ export default function Homepage() {
   return (
     <>
       <Head>
-        <title>{EnvVars.SITE_NAME} - Private ☀️ Zero Knowledge ID</title>
+        <title>{EnvVars.SITE_NAME} - Private Uniqueness Verification, Onchain Sanctions Attestation and a Discord bot</title>
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
           <Hero />
           <Partners />
           <BackedBy />
-          <Newsletter title="The future of digital identification is here">
+          <Newsletter title="Join our newsletter to learn about our exciting updates">
             <p>
-              We can scan IDs or do an award-winning{' '}
-              <Anchor rel="noreferrer" target="_blank" href="https://github.com/0xKYC/0xkyc-1vote-aragon-plugin">
-                1Vote
-              </Anchor>{' '}
-              check to verify if you are unique on the blockchain <span style={{ color: 'rgb(var(--primary))' }}>☀</span> With our simple
-              process you generate a unique, soulbound token that confirms you are not a bot and an unique inidividual available on{' '}
+              We offer the most private Proof of Personhood in the world. We&apos;re the winners of the DAO Global hackathon by{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://blog.aragon.org/dao-global-hackathon-bounty-winners/">
                 Aragon OSx
               </Anchor>
-              , as a soulbound token or via our unique minting mechanism.
+              and are officially partnered with Onfido, read more about it in the news section.
             </p>
           </Newsletter>
           <BasicSection
             imageUrl="/github.gif"
-            href="https://github.com/0xKYC/.docs/blob/main/IMPLEMENTATION.md"
+            href="https://docs.0xkyc.id/"
             title="Elevate your user verification game"
             overTitle=""
             reversed
           >
-            <p>Verify if users have double accounts with just a token gate!</p>
+            <p>We are industry specialists building custom solutions for the most sophisticated clients.</p>
             <ul>
               <li>
-                <b>Stand-Alone Web3 Game ID</b>
+                <b>Onchain attestations for your Proof of Personhood</b>
               </li>
-              <li>Biometrics and/or Documents ✅</li>
-              <li>Web3 fraud wallet lists ✅</li>
-              <li>Sanctions checks onchain ✅</li>
+              <li>Uniqueness Verification ✅</li>
+              <li>Web3 fraud wallet lists check ✅</li>
+              <li>Real world sanctions verification ✅</li>
               <li>Unique across different wallets and cross-chain 🌐</li>
+              <li>We also enable reusable solutions on the edge of what&apos;s possible.</li>
             </ul>
             <p>
-              All of our checks are permissionless and interoperable 🗻⛺ Backed by{' '}
+              All of our checks can be permissionless and are interoperable 🗻⛺ Backed by{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://www.neworder.network/">
                 New Order DAO
               </Anchor>
@@ -75,8 +71,8 @@ export default function Homepage() {
               and{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://bufficorn.ventures/">
                 Bufficorn Ventures
-              </Anchor>
-              . We are officially a part of the{' '}
+              </Anchor>{' '}
+              as well as angels. We are officially a part of the{' '}
               <Anchor rel="noreferrer" target="_blank" href="https://scroll.io/ecosystem">
                 Scroll ecosystem 📜
               </Anchor>
@@ -89,17 +85,17 @@ export default function Homepage() {
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
-                Check if a user has a double-account, verify it and avoid doing airdrops to bots. Avoid Airdrop Hunters, get rid of bots
-                ruining your game. Verify uniqueness onchain, get a sanctions-free verification and integrate 0xKYC into your decentralized
-                app today. Contact us:{' '}
-                <Anchor rel="noreferrer" target="_blank" href="https://calendly.com/adamzasada">
-                  Calendly
-                </Anchor>
+                We are building the most decentralized system for a Proof of Personhood. Our Discord bot, available via{' '}
+                <Anchor rel="noreferrer" target="_blank" href="https://app.0xkyc.id">
+                  https://app.0xkyc.id
+                </Anchor>{' '}
+                is currently in it&apos;s alpha phase with uniqueness verification as well as verification if you are a real person. Get rid
+                of users with duplicate accounts and enable fair giveaways, airdrops etc.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
-                No more destruction of Web3 and airdrop economics, tokenomics and inefficient give-aways. No more abuse of DAO governance
-                power, no more paying out to sanctioned individuals, say goodbye to users opening new accounts as if they were a different
-                person! <strong>#1User1Vote</strong>
+                We can enable your organizations 10x in user onboarding, enable new experiences via fair distribution of rewards, enhance
+                game experience (like in the example of Insert Stonks integration) and much more. We are a part of multiple working groups
+                and can assure you of our in-depth knowledge.
               </p>
             </Box>
             <Features />

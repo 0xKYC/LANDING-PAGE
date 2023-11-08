@@ -35,25 +35,19 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <meta name="keywords" content="Private, Zero Knowledge ID" />
-        <meta
-          name="description"
-          content="0xKYC is a Zero Knowledge solution to create a verified record onchain without showing user's name and surname"
-        />
+        <meta name="keywords" content="Proof of Personhood, Onchain Identity" />
+        <meta name="description" content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification" />
         <meta name="image" property="og:image" content="https://0xkyc.id/product-launch.svg" />
-        <meta name="title" property="og:title" content="0xKYC - Private ☀️ Zero Knowledge ID" />
+        <meta name="title" property="og:title" content="Private ☀️ Proof of Personhood & Decentralized Identity" />
         <meta name="type" property="og:type" content="website" />
         <meta name="url" property="og:url" content="https://0xkyc.id" />
-        <meta
-          property="og:description"
-          content="0xKYC is a Zero Knowledge solution to create a verified record onchain without showing user's name and surname"
-        />
+        <meta property="og:description" content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification" />
 
         <meta property="og:locale" content="en_EN" />
         <meta property="og:site_name" content="0xKYC" />
 
         <meta property="twitter:title" content="0xKYC" />
-        <meta property="twitter:description" content="Private, Zero Knowledge ID" />
+        <meta property="twitter:description" content="Private ☀️ Proof of Personhood & Decentralized Identity" />
         <meta property="twitter:site" content="https://0xkyc.id" />
         <meta property="twitter:image" content="https://0xkyc.id/product-launch.svg" />
 
@@ -79,7 +73,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Banner title={'Live on Polygon Mainnet'} imgUrl="/blockchains/polygon.png" />
         </div>
         <Banner
-          subtitle="Simplifying Web3 user verification, securely"
+          subtitle="Learn how we secure digital identity form our blog."
           imgUrl="/blockchains/polygon.png"
           href={'https://medium.com/0xkyc'}
         />

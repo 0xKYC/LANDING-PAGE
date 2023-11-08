@@ -13,7 +13,7 @@ export default function Hero() {
         <Heading>Block bots and duplicate-account users</Heading>
 
         <Description>
-          Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check.
+          Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check and Discord bot.
         </Description>
         <CustomButtonGroup>
           <Button href="https://docsend.com/view/fu6m2ntk2qiivi4g" target="_blank" rel="noreferrer">
