@@ -35,19 +35,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <meta name="keywords" content="Proof of Personhood ☀️ Onchain Identity" />
-        <meta
-          name="description"
-          content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification"
-        />
+        <meta name="keywords" content="Proof of Personhood, Onchain Identity" />
+        <meta name="description" content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification" />
         <meta name="image" property="og:image" content="https://0xkyc.id/product-launch.svg" />
         <meta name="title" property="og:title" content="Private ☀️ Proof of Personhood & Decentralized Identity" />
         <meta name="type" property="og:type" content="website" />
         <meta name="url" property="og:url" content="https://0xkyc.id" />
-        <meta
-          property="og:description"
-          content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification"
-        />
+        <meta property="og:description" content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification" />
 
         <meta property="og:locale" content="en_EN" />
         <meta property="og:site_name" content="0xKYC" />
