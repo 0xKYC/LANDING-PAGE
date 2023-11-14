@@ -26,12 +26,7 @@ export default function Hero() {
       </Contents>
 
       <ImageContainer>
-        <VideoFrame
-          src="https://www.loom.com/embed/5f260f8fcdd44461a1f61117f7ea1e8e?sid=0a148de9-78e3-4a5d-957d-73e3289cf418"
-          title="Sunscreen video"
-          allowFullScreen
-        />
-        {/* <YoutubeVideo url="https://www.youtube.com/watch?v=QHm8tHxXlN4&t" title="0xKYC video" /> */}
+        <VideoFrame src="https://player.vimeo.com/video/884105169?h=0549e91407" title="Sunscreen video" allowFullScreen />
       </ImageContainer>
     </HeroWrapper>
   );
