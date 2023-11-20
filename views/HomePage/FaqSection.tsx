@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Accordion from 'components/Accordion';
 import Container from 'components/Container';
 import SectionTitle from 'components/SectionTitle';
+import { Anchor } from 'components/Link';
 
 const kycData = [
   {
@@ -36,6 +37,23 @@ export default function FaqSection() {
         {kycData.map((item, i) => (
           <Accordion key={i} title={item.title}>
             {item.description}
+            {i === 0 && (
+              <>
+                {' '}
+                <Anchor
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://discord.com/api/oauth2/authorize?client_id=1169753823397556294&permissions=2415930416&scope=bot"
+                >
+                  Add Our Discord Bot
+                </Anchor>{' '}
+                and{' '}
+                <Anchor rel="noreferrer" target="_blank" href="https://discord.com/invite/p58hBne2Ue">
+                  Join Our Discord Server
+                </Anchor>
+                .
+              </>
+            )}
           </Accordion>
         ))}
       </Wrapper>
