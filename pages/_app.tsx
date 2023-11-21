@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <meta name="keywords" content="Proof of Personhood, Onchain Identity" />
         <meta name="description" content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification" />
-        <meta name="image" property="og:image" content="https://0xkyc.id/product-launch.svg" />
+        <meta name="image" property="og:image" content="/og.png" />
         <meta name="title" property="og:title" content="Private ☀️ Proof of Personhood & Decentralized Identity" />
         <meta name="type" property="og:type" content="website" />
         <meta name="url" property="og:url" content="https://0xkyc.id" />
