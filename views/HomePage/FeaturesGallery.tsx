@@ -25,7 +25,7 @@ const TABS = [
   },
   {
     title: 'API and Custom Integrations',
-    description: "Get an identifier without reveling user's name or biometric information",
+    description: "Get an identifier without revealing user's name or biometric information",
     imageUrl: '/api-callback.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',

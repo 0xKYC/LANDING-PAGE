@@ -34,8 +34,8 @@ export default function Homepage() {
           <BackedBy />
           <Newsletter title="Join our newsletter to learn about our exciting updates">
             <p>
-              We offer the most private Proof of Personhood, Discord Bot in the world. We are officially partnered with Onfido, read more
-              about it in the <Link href="news">news section</Link>.
+              We offer the most private Proof of Personhood and a Discord Bot. We are partners of Onfido, and are provisional patent pending
+              for our onchain attestation technology.
             </p>
           </Newsletter>
           <BasicSection
