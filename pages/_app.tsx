@@ -47,6 +47,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:site_name" content="0xKYC" />
         <meta property="og:image" content="/og.png" />
 
+        <meta name="twitter:card" content="summary_large_image" />
+
         <meta property="twitter:title" content="0xKYC" />
         <meta property="twitter:description" content="Private ☀️ Proof of Personhood & Decentralized Identity" />
         <meta property="twitter:site" content="https://0xkyc.id" />
