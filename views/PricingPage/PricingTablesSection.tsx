@@ -83,7 +83,7 @@ export default function PricingTablesSection() {
         <Anchor href="mailto:support@0xkyc.id">support@0xkyc.id</Anchor> and help us save your privacy.
       </Info>
       <br />
-      <Info>Our Discord Bot is currently free, but it will be soon $14.9 per month.</Info>
+      <Info>Our Discord Bot is currently free, but it will soon be $14.9 per month.</Info>
     </Wrapper>
   );
 }

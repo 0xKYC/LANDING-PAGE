@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <Heading>Block bots and duplicate-account users</Heading>
+        <Heading>Block bots and duplicate-accounts</Heading>
 
         <Description>
           Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check and Discord bot.

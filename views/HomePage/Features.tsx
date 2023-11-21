@@ -19,7 +19,7 @@ const FEATURES = [
   {
     imageUrl: '/grid-icons/terms.svg',
     title: 'Fairdrops and DAOs',
-    description: "Eliminate abuse of free mints, other minting mechanisms and illegitimate votes by verifying each user's identity.",
+    description: "Eliminate abuse of minting mechanisms and illegitimate votes by verifying each user's identity",
   },
 ];
 

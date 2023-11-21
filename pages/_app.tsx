@@ -45,11 +45,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <meta property="og:locale" content="en_EN" />
         <meta property="og:site_name" content="0xKYC" />
+        <meta property="og:image" content="/og.png" />
 
         <meta property="twitter:title" content="0xKYC" />
         <meta property="twitter:description" content="Private ☀️ Proof of Personhood & Decentralized Identity" />
         <meta property="twitter:site" content="https://0xkyc.id" />
-        <meta property="twitter:image" content="https://0xkyc.id/product-launch.svg" />
+        <meta property="twitter:url" content="https://0xkyc.id" />
+        <meta name="twitter:image" content="/og.png" />
 
         <meta name="robots" content="index, follow" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -70,7 +72,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Providers>
         <Modals />
         <div style={{ background: '#8247e5' }}>
-          <Banner title={'Live on Polygon Mainnet'} imgUrl="/blockchains/polygon.png" />
+          <Banner
+            title={'We verified over 1000 unique individuals and are live on Polygon, BNB and Scroll!'}
+            imgUrl="/blockchains/polygon.png"
+          />
         </div>
         <Banner
           subtitle="Learn how we secure digital identity form our blog."
