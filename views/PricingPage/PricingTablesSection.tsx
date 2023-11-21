@@ -82,6 +82,8 @@ export default function PricingTablesSection() {
         Proof of Uniqueness), bot and privacy problems. Contact our sales team today at:{' '}
         <Anchor href="mailto:support@0xkyc.id">support@0xkyc.id</Anchor> and help us save your privacy.
       </Info>
+      <br />
+      <Info>Our Discord Bot is currently free, but it will soon be $14.9 per month.</Info>
     </Wrapper>
   );
 }

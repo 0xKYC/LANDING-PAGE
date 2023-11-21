@@ -14,12 +14,12 @@ const FEATURES = [
   {
     imageUrl: '/grid-icons/vote.svg',
     title: 'Onchain KYC',
-    description: 'See that a user is verified and streamline the process.',
+    description: 'Verify users and streamline the process to lower your compliance risk with our onchain attestations.',
   },
   {
     imageUrl: '/grid-icons/terms.svg',
     title: 'Fairdrops and DAOs',
-    description: "Eliminate abuse of free mints, other minting mechanisms and illegitimate votes by verifying each user's identifier.",
+    description: "Eliminate abuse of minting mechanisms and illegitimate votes by verifying each user's identity",
   },
 ];
 

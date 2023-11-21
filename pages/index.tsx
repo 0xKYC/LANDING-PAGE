@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import BasicSection, { Title } from 'components/BasicSection';
 
 import Container from 'components/Container';
-import { Anchor } from 'components/Link';
+import Link, { Anchor } from 'components/Link';
 import { Separator } from 'components/Separator';
 import { EnvVars } from 'env';
 
@@ -34,11 +34,8 @@ export default function Homepage() {
           <BackedBy />
           <Newsletter title="Join our newsletter to learn about our exciting updates">
             <p>
-              We offer the most private Proof of Personhood in the world. We&apos;re the winners of the DAO Global hackathon by{' '}
-              <Anchor rel="noreferrer" target="_blank" href="https://blog.aragon.org/dao-global-hackathon-bounty-winners/">
-                Aragon OSx
-              </Anchor>{' '}
-              and are officially partnered with Onfido, read more about it in the news section.
+              We offer the most private Proof of Personhood and a Discord Bot. We are partners of Onfido, and are provisional patent pending
+              for our onchain attestation technology.
             </p>
           </Newsletter>
           <BasicSection
@@ -48,7 +45,7 @@ export default function Homepage() {
             overTitle=""
             reversed
           >
-            <p>We are industry specialists building custom solutions for the most sophisticated clients.</p>
+            <p>We are industry specialists building custom solutions for the most sophisticated clients:</p>
             <ul>
               <li>
                 <b>Onchain attestations for your Proof of Personhood</b>

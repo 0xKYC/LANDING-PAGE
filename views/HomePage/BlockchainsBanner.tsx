@@ -28,9 +28,9 @@ const BLOCKCHAINS = [
     href: 'https://ethereum.org/en/',
   },
   {
-    name: 'Scroll Sepolia',
+    name: 'Scroll Mainnet',
     img: 'scroll.png',
-    alt: 'Scroll Alpha',
+    alt: 'Scroll Mainnet',
     href: 'https://scroll.io/ecosystem',
   },
 
@@ -77,7 +77,7 @@ export default function BlockchainsBanner() {
           <SplideSlide key={idx}>
             <StyledLink href={logo.href} target="_blank" rel="noreferrer">
               <img src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" /> {logo.name}
-              {logo.name === 'Scroll Sepolia' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
+              {logo.name === 'Scroll Mainnet' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
             </StyledLink>
           </SplideSlide>
         ))}
@@ -87,7 +87,7 @@ export default function BlockchainsBanner() {
           <StyledLink key={idx} href={logo.href} target="_blank" rel="noreferrer">
             <Image src={'/blockchains/' + logo.img} alt={logo.alt} height="40px" width="40px" />
             {logo.name}
-            {logo.name === 'Scroll Sepolia' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
+            {logo.name === 'Scroll Mainnet' && <OrangeSpan>(Ecosystem Partner)</OrangeSpan>}
           </StyledLink>
         ))}
       </LogosWrapper>

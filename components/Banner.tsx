@@ -34,11 +34,16 @@ export const Banner = ({ title, subtitle, imgUrl, order, href }: Props) => {
 
 const Img = styled(Image)`
   border-radius: 0.6rem;
+
+  @media screen and (max-width: 890px) {
+    visibility: hidden;
+  }
 `;
 
 const TitleWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  text-align: center;
   gap: 1rem;
   padding: 0.5rem 3rem;
   align-items: center;

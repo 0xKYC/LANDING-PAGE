@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Accordion from 'components/Accordion';
 import Container from 'components/Container';
 import SectionTitle from 'components/SectionTitle';
+import Link, { Anchor } from 'components/Link';
 
 const kycData = [
   {
@@ -18,11 +19,13 @@ const kycData = [
   },
   {
     title: 'How do I use these services?',
-    description: `Simply click "Launch App" in the top right corner and connect your wallet. Follow the easy instructions to complete the verification process. Alternatively, for Insert Stonks go to their site to get verified or any other of our partners. Our system works onchain as well as via API (for custodial wallets, for example).`,
+    description: ``,
+    custom: true,
   },
   {
     title: 'What does it cost to use these services?',
-    description: `The pricing details for Sunscreen and 0xKYC are listed on our site, just look for the Pricing section!`,
+    description: `The pricing details for Sunscreen and 0xKYC are listed on our site, see our`,
+    pricing: true,
   },
 ];
 
@@ -35,7 +38,41 @@ export default function FaqSection() {
         <SectionTitle>Frequently asked question</SectionTitle>
         {kycData.map((item, i) => (
           <Accordion key={i} title={item.title}>
-            {item.description}
+            {item.custom && (
+              <p>
+                Simply click &quot;Launch App&quot; in the top right corner and connect your wallet or{' '}
+                <Anchor rel="noreferrer" target="_blank" href="https://discord.com/invite/p58hBne2Ue">
+                  Join Our Discord
+                </Anchor>
+                . Follow the easy instructions to complete the verification process. Alternatively, for Insert Stonks go to their site to
+                get verified or any other of our partners. Our system works onchain as well as via API (for custodial wallets, for example)
+                and as a Discord Bot.
+              </p>
+            )}
+            {item.description}{' '}
+            {item.pricing && (
+              <>
+                {' '}
+                <Link href="/pricing">Pricing section</Link>.
+              </>
+            )}
+            {i === 0 && (
+              <>
+                {' '}
+                <Anchor
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://discord.com/api/oauth2/authorize?client_id=1169753823397556294&permissions=2415930416&scope=bot"
+                >
+                  Add Our Discord Bot
+                </Anchor>{' '}
+                and{' '}
+                <Anchor rel="noreferrer" target="_blank" href="https://discord.com/invite/p58hBne2Ue">
+                  Join Our Discord Server
+                </Anchor>
+                .
+              </>
+            )}
           </Accordion>
         ))}
       </Wrapper>

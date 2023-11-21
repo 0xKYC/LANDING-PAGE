@@ -3,24 +3,27 @@ import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 
-import YoutubeVideo from 'components/YoutubeVideo';
 import { media } from 'utils/media';
 
 export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <Heading>Block bots and duplicate-account users</Heading>
+        <Heading>Block bots and duplicate-accounts</Heading>
 
         <Description>
           Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check and Discord bot.
         </Description>
         <CustomButtonGroup>
-          <Button href="https://docsend.com/view/fu6m2ntk2qiivi4g" target="_blank" rel="noreferrer">
-            See our Product Offering<span>&rarr;</span>
+          <Button
+            href="https://discord.com/api/oauth2/authorize?client_id=1169753823397556294&permissions=2415930416&scope=bot"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Add our discord bot to your server<span>&rarr;</span>
           </Button>
-          <Button transparent={true} href="https://calendly.com/adamzasada" target="_blank" rel="noreferrer">
-            Book a demo<span>&rarr;</span>
+          <Button transparent={true} href="https://discord.com/invite/p58hBne2Ue" target="_blank" rel="noreferrer">
+            Join our discord<span>&rarr;</span>
           </Button>
         </CustomButtonGroup>
       </Contents>

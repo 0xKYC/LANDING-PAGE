@@ -25,7 +25,7 @@ const TABS = [
   },
   {
     title: 'API and Custom Integrations',
-    description: "Get an identifier without reveling user's name or biometric information",
+    description: "Get an identifier without revealing user's name or biometric information",
     imageUrl: '/api-callback.png',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
@@ -80,7 +80,15 @@ export default function FeaturesGallery() {
         {imagesMarkup}
       </GalleryWrapper>
       <StyledText>
-        For more details visit our{' '}
+        Add our{' '}
+        <Anchor
+          rel="noreferrer"
+          target="_blank"
+          href="https://discord.com/api/oauth2/authorize?client_id=1169753823397556294&permissions=2415930416&scope=bot"
+        >
+          Discord Bot
+        </Anchor>{' '}
+        to your server or visit our{' '}
         <Anchor rel="noreferrer" target="_blank" href="https://docs.0xkyc.id/">
           Technical Documentation
         </Anchor>
