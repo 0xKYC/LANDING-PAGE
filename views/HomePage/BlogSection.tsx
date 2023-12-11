@@ -13,7 +13,7 @@ type IBlogPost = {
   link: string;
   guid: string;
   author: string;
-  thumbnail: string;
+  // thumbnail: string; API is returning empty string
   description: string;
   content: string;
   enclosure: {};
@@ -33,7 +33,6 @@ export default function BlogSection() {
           // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
 
           const res: IBlogPost[] = data.items; //This is an array with the content. No feed, no info about author etc..
-
           const posts = res.filter((item) => item.categories.length > 0); // That's the main trick* !
 
           return posts;
@@ -49,16 +48,14 @@ export default function BlogSection() {
       ignore = true;
     };
   }, []);
-
   return (
     <Container id="blog">
       <SectionTitle style={{ marginTop: '8rem', marginBottom: '8rem' }}>Blog</SectionTitle>
-
-      {blogposts?.slice(0, 3).map((news, idx) => {
-        return (
-          <BlogPost description={news.content} imgUrl={news.thumbnail} index={idx} title={news.title} key={news.guid} href={news.link} />
-        );
-      })}
+      <Flex>
+        {blogposts?.slice(0, 3).map((news, idx) => {
+          return <BlogPost description={news.content} index={idx} title={news.title} key={news.guid} href={news.link} />;
+        })}
+      </Flex>
       <LinkWrapper>
         <Anchor rel="noreferrer" target="_blank" href="https://medium.com/0xkyc">
           Show more
@@ -76,4 +73,10 @@ const LinkWrapper = styled.div`
   gap: 1rem;
   font-size: 2rem;
   margin-top: 4rem;
+`;
+const Flex = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 `;

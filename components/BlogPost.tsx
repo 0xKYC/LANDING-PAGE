@@ -7,37 +7,41 @@ type Props = {
   title: string;
   description: string;
   index: number;
-  imgUrl: string;
+  // imgUrl: string;
   order?: number;
   href: string;
 };
-export const BlogPost = ({ title, description, imgUrl, order, href, index }: Props) => {
+export const BlogPost = ({ title, description, order, href, index }: Props) => {
   const isLongerDescription = index === 0;
   const numberToSlice = isLongerDescription ? 222 : 200;
-
   return (
-    <Wrapper>
-      <ImgWrapper order={order}>
+    <Link rel="noreferrer" target="_blank" href={href} aria-labelledby={title}>
+      <Wrapper>
+        {/* <ImgWrapper order={order}>
         <a rel="noreferrer" target="_blank" href={href}>
           <Img src={imgUrl} alt={title} width={550} height={280} objectFit="cover" />
         </a>
-      </ImgWrapper>
+      </ImgWrapper> */}
 
-      <TextWrapper>
-        <Title dangerouslySetInnerHTML={{ __html: title }} />
-        <P dangerouslySetInnerHTML={{ __html: `${description.slice(0, numberToSlice)}` }} />
+        <TextWrapper>
+          <Title dangerouslySetInnerHTML={{ __html: title }} />
+          <P dangerouslySetInnerHTML={{ __html: `${description.slice(0, numberToSlice)}` }} />
 
-        <LinkWrapper>
-          <Anchor rel="noreferrer" target="_blank" href={href} aria-labelledby={title}>
-            Read more
-          </Anchor>
-          <Image src="/external-link.svg" width={14} height={14} alt="" />
-        </LinkWrapper>
-      </TextWrapper>
-    </Wrapper>
+          <LinkWrapper>
+            <Anchor rel="noreferrer" target="_blank" href={href} aria-labelledby={title}>
+              Read more
+            </Anchor>
+            <Image src="/external-link.svg" width={14} height={14} alt="" />
+          </LinkWrapper>
+        </TextWrapper>
+      </Wrapper>
+    </Link>
   );
 };
 
+const Link = styled.a`
+  text-decoration: none;
+`;
 const LinkWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -61,7 +65,7 @@ const ImgWrapper = styled.div<{ order?: number }>`
 `;
 const TextWrapper = styled.div`
   margin: 1rem;
-  width: 50%;
+  width: 70%;
   margin: 2rem;
   @media screen and (max-width: 760px) {
     width: 100%;
@@ -85,7 +89,7 @@ const Wrapper = styled.div`
   border-radius: 0.6rem;
   color: rgb(var(--text));
   font-size: 1.6rem;
-
+  max-width: 750px;
   @media screen and (max-width: 760px) {
     flex-direction: column;
   }
