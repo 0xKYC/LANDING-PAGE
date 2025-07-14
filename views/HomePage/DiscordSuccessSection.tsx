@@ -68,7 +68,7 @@ export default function DiscordSuccessSection() {
       <Wrapper>
         <SectionTitle>Discord Bot Success Stories</SectionTitle>
         <SubTitle>
-          Over 100 Discord servers have used our Sunscreen bot to protect their communities. While the bot is currently not operational, you can learn about its implementation on GitHub.
+          Over 100 Discord servers have used our bot to protect their communities. While the bot is currently not operational, you can learn about its implementation on GitHub.
         </SubTitle>
         
         <CardsContainer>
