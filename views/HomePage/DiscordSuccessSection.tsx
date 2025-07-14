@@ -47,7 +47,7 @@ const discordData = [
     imageUrl: '/grid-icons/security.svg',
     title: 'Understanding Our System: Facial Biometrics',
     description:
-      'Our cutting-edge system previously utilized Onfido\'s facial biometrics to ensure authentic and unique user identification. We now want to build an open source alternative that analyzes facial features to verify individuality, ensuring each account is distinct and genuine.',
+      'Our cutting-edge system previously utilized Onfido\'s facial biometrics to ensure authentic and unique user identification. We work on an open source alternative that analyzes facial features to verify individuality, ensuring each account is distinct and genuine.',
   },
   {
     imageUrl: '/grid-icons/authentication.svg',

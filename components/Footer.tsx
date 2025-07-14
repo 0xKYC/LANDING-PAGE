@@ -72,7 +72,7 @@ export default function Footer() {
               <Image src="/crunchbase.png" alt="crunchbase" width={45} height={45} />
             </a>
           </ShareBar>
-          <Copyright>2024 0xKYC, Inc.</Copyright>
+          <Copyright>2025 0xKYC</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>
