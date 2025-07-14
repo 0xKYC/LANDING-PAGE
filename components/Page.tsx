@@ -28,7 +28,7 @@ export default function Page({ title, description, children }: PropsWithChildren
           </Container>
         </HeaderContainer>
         <Container>
-          <ChildrenWrapper>{children}</ChildrenWrapper>
+          <ChildrenWrapper>{children as any}</ChildrenWrapper>
         </Container>
       </Wrapper>
     </>

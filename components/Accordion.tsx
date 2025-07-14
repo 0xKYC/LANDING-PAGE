@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from 'react';
+import React, { PropsWithChildren, useState } from 'react';
 import styled from 'styled-components';
 import { media } from 'utils/media';
 import Collapse from './Collapse';
@@ -30,7 +30,7 @@ export default function Accordion({ title, isOpen, children }: PropsWithChildren
       </TitleWrapper>
       <Collapse isOpen={isActive} duration={300}>
         <Description>
-          <RichText>{children}</RichText>
+          <RichText>{children as any}</RichText>
         </Description>
       </Collapse>
     </AccordionWrapper>

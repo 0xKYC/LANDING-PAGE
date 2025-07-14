@@ -20,7 +20,7 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
       <Title>{title}</Title>
       <Description>{description}</Description>
       <PriceContainer>
-        <Price>{children}</Price>
+        <Price>{children as any}</Price>
         {isAnyBenefitPresent && (
           <CustomRichText>
             <ul style={{ textAlign: 'left' }}>

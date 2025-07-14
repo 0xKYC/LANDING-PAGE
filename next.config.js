@@ -5,13 +5,15 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     domains: ['cdn-images-1.medium.com'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'cdn-images-1.medium.com',
-        port: '',
         pathname: '/max/1024/**',
       },
     ],

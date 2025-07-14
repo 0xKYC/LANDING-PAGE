@@ -91,7 +91,7 @@ export const NewsletterBox = () => {
   return (
     <NewsletterWrapper>
       <Text>Follow us on X</Text>
-      <InfoText>Stay updated on the project's revival</InfoText>
+      <InfoText>Stay updated on the project&apos;s revival</InfoText>
       <Flex>
         <TwitterButton
           href="https://x.com/0xkycinc"

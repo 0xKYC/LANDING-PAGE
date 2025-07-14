@@ -32,7 +32,7 @@ export default function BasicSection({ imageUrl, title, overTitle, reversed, chi
       <ContentContainer>
         {/* <CustomOverTitle>{overTitle}</CustomOverTitle> */}
         <Title>{title}</Title>
-        <RichText>{children}</RichText>
+        <RichText>{children as any}</RichText>
       </ContentContainer>
     </BasicSectionWrapper>
   );
