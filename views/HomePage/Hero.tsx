@@ -9,10 +9,10 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <Heading>Block bots and duplicate-accounts</Heading>
+        <Heading>Zero-Knowledge Liveness Verification</Heading>
 
         <Description>
-          Verify if your users are real and have the amount of accounts they claim to have with our Sunscreen check and Discord bot.
+          We&apos;re building software that checks liveness, verifies if you are who you claim to be, and generates onchain attestations - all in zero knowledge so you stay completely private. Previously a for-profit company, we&apos;re now an open source project. Block bots and duplicate accounts while preserving your anonymity.
         </Description>
         <CustomButtonGroup>
           <Button

@@ -35,13 +35,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <meta name="keywords" content="Proof of Personhood, Onchain Identity" />
-        <meta name="description" content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification" />
+        <meta name="keywords" content="zero knowledge, liveness verification, privacy preserving identity, proof of personhood, onchain attestations, biometric verification, open source" />
+        <meta name="description" content="Zero-knowledge liveness verification that proves you're a real, live person while keeping your identity completely private. Open source biometric verification technology." />
         <meta name="image" property="og:image" content="/og.png" />
-        <meta name="title" property="og:title" content="Private ☀️ Proof of Personhood & Decentralized Identity" />
+        <meta name="title" property="og:title" content="0xKYC ☀️ Zero-Knowledge Liveness Verification" />
         <meta name="type" property="og:type" content="website" />
         <meta name="url" property="og:url" content="https://0xkyc.id" />
-        <meta property="og:description" content="Onchain Attestations ☀️ Proof of Personhood and Uniqueness Verification" />
+        <meta property="og:description" content="Zero-knowledge liveness verification that proves you're a real, live person while keeping your identity completely private." />
 
         <meta property="og:locale" content="en_EN" />
         <meta property="og:site_name" content="0xKYC" />
@@ -49,8 +49,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <meta name="twitter:card" content="summary_large_image" />
 
-        <meta property="twitter:title" content="0xKYC" />
-        <meta property="twitter:description" content="Private ☀️ Proof of Personhood & Decentralized Identity" />
+        <meta property="twitter:title" content="0xKYC ☀️ Zero-Knowledge Liveness Verification" />
+        <meta property="twitter:description" content="Zero-knowledge liveness verification that proves you're a real, live person while keeping your identity completely private." />
         <meta property="twitter:site" content="https://0xkyc.id" />
         <meta property="twitter:url" content="https://0xkyc.id" />
         <meta name="twitter:image" content="/og.png" />

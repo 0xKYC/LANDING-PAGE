@@ -26,7 +26,7 @@ export default function Homepage() {
   return (
     <>
       <Head>
-        <title>{EnvVars.SITE_NAME} - Private Uniqueness Verification, Onchain Sanctions Attestation and a Discord bot</title>
+        <title>{EnvVars.SITE_NAME} - Zero-Knowledge Liveness Verification | Privacy-Preserving Identity</title>
       </Head>
       <HomepageWrapper>
         <WhiteBackgroundContainer>
@@ -42,11 +42,11 @@ export default function Homepage() {
           <BasicSection
             imageUrl="/github.gif"
             href="https://docs.0xkyc.id/"
-            title="Elevate your user verification game"
+            title="Open Source Identity Verification Stack"
             overTitle=""
             reversed
           >
-            <p>We are industry specialists building custom solutions for the most sophisticated clients:</p>
+            <p>Our community-driven project provides privacy-preserving identity verification solutions:</p>
             <ul>
               <li>
                 <b>Onchain attestations for your Proof of Personhood</b>
