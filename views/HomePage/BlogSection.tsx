@@ -53,12 +53,12 @@ export default function BlogSection() {
       <SectionTitle style={{ marginTop: '8rem', marginBottom: '8rem' }}>Blog</SectionTitle>
       <Flex>
         {blogposts?.slice(0, 3).map((news, idx) => {
-          return <BlogPost description={news.content} index={idx} title={news.title} key={news.guid} href={news.link} />;
+          return <BlogPost description="" index={idx} title={news.title} key={news.guid} href={news.link} />;
         })}
       </Flex>
       <LinkWrapper>
         <Anchor rel="noreferrer" target="_blank" href="https://medium.com/0xkyc">
-          Show more
+          Read More on Medium
         </Anchor>
         <Image src="/external-link.svg" width={14} height={14} alt="" />
       </LinkWrapper>

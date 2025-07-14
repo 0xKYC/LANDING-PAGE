@@ -38,7 +38,7 @@ export default function Navbar({ items }: NavbarProps) {
               <NavLink redirect={item.redirect} outlined={asPath === item.href} key={item.title} href={item.href} title={item.title} />
             );
           })}
-          <NavItem title="LAUNCH APP" href="https://app.0xkyc.id/" />
+          <NavItem title="VIEW REPO" href="https://github.com/0xkyc" />
         </NavItemList>
         {/* Hide color switcher
         <ColorSwitcherContainer>

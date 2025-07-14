@@ -51,12 +51,7 @@ export const CookieBanner = () => {
         </svg>
       </StyledBtn>
       <p style={{ marginRight: '.5rem' }}>
-        This website uses cookies to improve your experience. Please review our
-        <StyledLink href="https://app.0xkyc.id/privacy-policy" target="_blank" rel="noreferrer">
-          {' '}
-          Cookie Policy (as a part of our Privacy Policy){' '}
-        </StyledLink>{' '}
-        for more information.
+        This website uses cookies to improve your experience.
       </p>
     </CookieConsent>
   );

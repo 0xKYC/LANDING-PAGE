@@ -15,6 +15,8 @@ interface FormValue {
   email: string;
 }
 export const NewsletterBox = () => {
+  /* 
+  // ORIGINAL NEWSLETTER FUNCTIONALITY - COMMENTED OUT FOR FUTURE USE
   const [isLoading, setIsLoading] = useState(false);
   const { register, handleSubmit, formState, setError } = useForm<FormValue>();
   const { errors, isSubmitSuccessful } = formState;
@@ -81,6 +83,25 @@ export const NewsletterBox = () => {
           </Flex>
         </>
       )}
+    </NewsletterWrapper>
+  );
+  */
+
+  // TEMPORARY X/TWITTER REDIRECT FOR PROJECT REVIVAL
+  return (
+    <NewsletterWrapper>
+      <Text>Follow us on X</Text>
+      <InfoText>Stay updated on the project's revival</InfoText>
+      <Flex>
+        <TwitterButton
+          href="https://x.com/0xkycinc"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Follow @0xkycinc
+          <Arrow>&rarr;</Arrow>
+        </TwitterButton>
+      </Flex>
     </NewsletterWrapper>
   );
 };
@@ -203,6 +224,36 @@ const StyledInput = styled(Input)<InputProps>`
 const Text = styled.p`
   font-size: 3rem;
   margin-bottom: 1rem;
+`;
+
+const TwitterButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  background: rgb(var(--primary));
+  padding: 1rem 2.2rem;
+  height: 46px;
+  font-size: 1.3rem;
+  color: rgb(var(--textSecondary));
+  text-transform: uppercase;
+  font-family: var(--font);
+  font-weight: bold;
+  border-radius: 0.4rem;
+  border: 2px solid rgb(var(--primary));
+  transition: transform 0.3s;
+  backface-visibility: hidden;
+  will-change: transform;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.025);
+  }
+
+  ${media('<=tablet')} {
+    padding: 1rem;
+  }
 `;
 
 const StyledButton = styled.button`

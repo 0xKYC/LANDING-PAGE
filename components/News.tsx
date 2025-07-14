@@ -10,8 +10,9 @@ type Props = {
   href: string;
   ariaLabel: string;
   index: number;
+  buttonText?: string;
 };
-export const News = ({ title, description, imgUrl, href, ariaLabel, index }: Props) => {
+export const News = ({ title, description, imgUrl, href, ariaLabel, index, buttonText = "Read more" }: Props) => {
   const isOddIndex = index % 2 === 1;
 
   return (
@@ -26,7 +27,7 @@ export const News = ({ title, description, imgUrl, href, ariaLabel, index }: Pro
         <Title>{title}</Title>
         <P>{description}</P>
 
-        <ExternalLink href={href} ariaLabel={ariaLabel} text="Read more" />
+        <ExternalLink href={href} ariaLabel={ariaLabel} text={buttonText} />
       </TextWrapper>
     </Wrapper>
   );

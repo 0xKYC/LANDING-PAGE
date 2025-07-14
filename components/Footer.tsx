@@ -13,15 +13,6 @@ type FooterItems = SingleFooterList[];
 
 const footerItems: FooterItems = [
   {
-    title: 'Company',
-    items: [
-      { title: 'Privacy Policy', href: 'https://app.0xkyc.id/privacy-policy', link: true },
-      { title: 'Terms Of Service', href: 'https://app.0xkyc.id/terms-of-service', link: true },
-      // { title: 'Cookies Policy', href: '/cookies-policy' },
-    ],
-  },
-
-  {
     title: 'Knowledge',
     items: [
       { title: 'Contact', href: 'mailto:support@0xkyc.id', link: true },
@@ -64,9 +55,6 @@ export default function Footer() {
 
           <ShareBar>
             <Flex>
-              <ListItem title="Privacy Policy" href="https://app.0xkyc.id/privacy-policy" link={true} />
-              <ListItem title="Terms Of Service" href="https://app.0xkyc.id/terms-of-service" link={true} />
-
               <ListItem title="Documentation" href="https://docs.0xkyc.id/" link={true} />
             </Flex>
             <a href="https://twitter.com/0xKYCinc" rel="noreferrer" target="_blank" aria-label="Twitter">
@@ -83,11 +71,8 @@ export default function Footer() {
             <a href="https://www.crunchbase.com/organization/0xkyc" rel="noreferrer" target="_blank" aria-label="Crunchbase">
               <Image src="/crunchbase.png" alt="crunchbase" width={45} height={45} />
             </a>
-            <a href="https://discord.com/invite/p58hBne2Ue" rel="noreferrer" target="_blank" aria-label="Discord">
-              <Image src="/discord.png" alt="discord" width={45} height={45} />
-            </a>
           </ShareBar>
-          <Copyright>2023 0xKYC, Inc.</Copyright>
+          <Copyright>2024 0xKYC, Inc.</Copyright>
         </BottomBar>
       </Container>
     </FooterWrapper>

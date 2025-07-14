@@ -13,10 +13,11 @@ export const NEWS = [
   },
   {
     title: 'Onfido and 0xKYC Partnership',
-    description: '0xKYC partners with Onfido to provide fraud protection protocols on blockchain and in the Metaverse.',
+    description: '0xKYC partnered with Onfido (now Entrust) to provide fraud protection protocols on blockchain and in the Metaverse.',
     imgUrl: '/onfido-0xkyc.webp',
-    href: 'https://onfido.com/press-release/0xkyc-partners-with-onfido-to-provide-fraud-protection-protocols-on-blockchain-and-in-the-metaverse/',
-    ariaLabel: 'Onfido and 0xKYC Partnership',
+    href: 'https://docs.0xkyc.id/',
+    ariaLabel: 'Read our docs',
+    buttonText: 'Read our docs',
   },
   {
     title: '0xKYC and Insert Stonks Collaboration',
@@ -61,6 +62,7 @@ export default function NewsSection() {
               key={news.title}
               index={index}
               href={news.href}
+              buttonText={news.buttonText}
             />
           );
         })}

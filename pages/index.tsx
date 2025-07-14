@@ -20,6 +20,7 @@ import Newsletter from 'views/HomePage/Newsletter';
 // import Partners from 'views/HomePage/Partners';
 import { Pricing } from 'views/HomePage/Pricing';
 import Testimonials from 'views/HomePage/Testimonials';
+import DiscordSuccessSection from 'views/HomePage/DiscordSuccessSection';
 
 export default function Homepage() {
   return (
@@ -32,10 +33,10 @@ export default function Homepage() {
           <Hero />
           <Partners />
           <BackedBy />
-          <Newsletter title="Join our newsletter to learn about our exciting updates">
+          <Newsletter title="Follow us on X for project updates">
             <p>
-              We offer the most private Proof of Personhood and a Discord Bot. We are partners of Onfido, and are provisional patent pending
-              for our onchain attestation technology.
+              This open-source privacy-preserving identity verification stack was previously partnered with Onfido and is provisional patent pending
+              for its onchain attestation technology. Follow us on X for updates about the project&apos;s revival.
             </p>
           </Newsletter>
           <BasicSection
@@ -82,17 +83,10 @@ export default function Homepage() {
             <Title style={{ textAlign: 'center' }}>0xKYC Use Cases</Title>
             <Box>
               <p>
-                We are building the most decentralized system for a Proof of Personhood. Our Discord bot, available via{' '}
-                <Anchor rel="noreferrer" target="_blank" href="https://app.0xkyc.id">
-                  https://app.0xkyc.id
-                </Anchor>{' '}
-                is currently in it&apos;s alpha phase with uniqueness verification as well as verification if you are a real person. Get rid
-                of users with duplicate accounts and enable fair giveaways, airdrops etc.
+                We built the most decentralized system for a Proof of Personhood. Our open-source Discord bot provided uniqueness verification as well as verification if you are a real person. It helped organizations get rid of users with duplicate accounts and enable fair giveaways, airdrops etc.
               </p>
               <p style={{ marginBottom: '5rem', marginTop: '1rem' }}>
-                We can enable your organizations 10x in user onboarding, enable new experiences via fair distribution of rewards, enhance
-                game experience (like in the example of Insert Stonks integration) and much more. We are a part of multiple working groups
-                and can assure you of our in-depth knowledge.
+                This open-source stack previously enabled organizations to 10x their user onboarding, create new experiences via fair distribution of rewards, and enhance game experiences (like in the example of Insert Stonks integration). The project is currently being revived by the open-source community.
               </p>
             </Box>
             <Features />
@@ -102,9 +96,11 @@ export default function Homepage() {
           <Separator />
           <Blog />
           <Separator />
-          <Pricing />
-          <Separator />
+          {/* <Pricing /> */}
+          {/* <Separator /> */}
           <FaqSection />
+          <Separator />
+          <DiscordSuccessSection />
         </WhiteBackgroundContainer>
         {/* <DarkerBackgroundContainer> */}
         {/* <Cta /> */}
@@ -149,3 +145,4 @@ const WhiteBackgroundContainer = styled.div`
       margin-top: 6rem;
     } */
 `;
+

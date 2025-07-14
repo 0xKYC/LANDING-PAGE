@@ -16,14 +16,14 @@ export default function Hero() {
         </Description>
         <CustomButtonGroup>
           <Button
-            href="https://discord.com/api/oauth2/authorize?client_id=1169753823397556294&permissions=2415930416&scope=bot"
+            href="https://github.com/0xkyc"
             target="_blank"
             rel="noreferrer"
           >
-            Add our discord bot to your server<span>&rarr;</span>
+            Check Our Repo<span>&rarr;</span>
           </Button>
-          <Button transparent={true} href="https://discord.com/invite/p58hBne2Ue" target="_blank" rel="noreferrer">
-            Join our discord<span>&rarr;</span>
+          <Button transparent={true} href="https://adamzasada.medium.com/0xkyc-open-sourcing-the-future-of-privacy-preserving-identity-verification-146922cbda94" target="_blank" rel="noreferrer">
+            Read Our Story<span>&rarr;</span>
           </Button>
         </CustomButtonGroup>
       </Contents>

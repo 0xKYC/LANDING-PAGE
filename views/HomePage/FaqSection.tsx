@@ -19,13 +19,13 @@ const kycData = [
   },
   {
     title: 'How do I use these services?',
-    description: ``,
-    custom: true,
+    description: `We are working to deploy 0xKYC as a fully live, open source solution. Visit our`,
+    documentation: true,
   },
   {
     title: 'What does it cost to use these services?',
-    description: `The pricing details for Sunscreen and 0xKYC are listed on our site, see our`,
-    pricing: true,
+    description: `Pricing information is currently unavailable as we work on reviving the 0xKYC project. Follow us on X @0xkycinc for updates.`,
+    pricing: false,
   },
 ];
 
@@ -38,15 +38,12 @@ export default function FaqSection() {
         <SectionTitle>Frequently asked question</SectionTitle>
         {kycData.map((item, i) => (
           <Accordion key={i} title={item.title}>
-            {item.custom && (
+            {item.documentation && (
               <p>
-                Simply click &quot;Launch App&quot; in the top right corner and connect your wallet or{' '}
-                <Anchor rel="noreferrer" target="_blank" href="https://discord.com/invite/p58hBne2Ue">
-                  Join Our Discord
+                <Anchor rel="noreferrer" target="_blank" href="https://docs.0xkyc.id/">
+                  Technical Documentation
                 </Anchor>
-                . Follow the easy instructions to complete the verification process. Alternatively, for Insert Stonks go to their site to
-                get verified or any other of our partners. Our system works onchain as well as via API (for custodial wallets, for example)
-                and as a Discord Bot.
+                {' '}for implementation details and follow our progress on GitHub.
               </p>
             )}
             {item.description}{' '}
@@ -54,23 +51,6 @@ export default function FaqSection() {
               <>
                 {' '}
                 <Link href="/pricing">Pricing section</Link>.
-              </>
-            )}
-            {i === 0 && (
-              <>
-                {' '}
-                <Anchor
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://discord.com/api/oauth2/authorize?client_id=1169753823397556294&permissions=2415930416&scope=bot"
-                >
-                  Add Our Discord Bot
-                </Anchor>{' '}
-                and{' '}
-                <Anchor rel="noreferrer" target="_blank" href="https://discord.com/invite/p58hBne2Ue">
-                  Join Our Discord Server
-                </Anchor>
-                .
               </>
             )}
           </Accordion>

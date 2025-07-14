@@ -80,15 +80,7 @@ export default function FeaturesGallery() {
         {imagesMarkup}
       </GalleryWrapper>
       <StyledText>
-        Add our{' '}
-        <Anchor
-          rel="noreferrer"
-          target="_blank"
-          href="https://discord.com/api/oauth2/authorize?client_id=1169753823397556294&permissions=2415930416&scope=bot"
-        >
-          Discord Bot
-        </Anchor>{' '}
-        to your server or visit our{' '}
+        Visit our{' '}
         <Anchor rel="noreferrer" target="_blank" href="https://docs.0xkyc.id/">
           Technical Documentation
         </Anchor>
