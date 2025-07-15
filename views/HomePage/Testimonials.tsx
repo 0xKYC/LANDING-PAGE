@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from 'components/Container';
+import ScrollAnimationWrapper from 'components/ScrollAnimationWrapper';
 import { Separator } from 'components/Separator';
 import { media } from 'utils/media';
 
@@ -10,7 +11,7 @@ const TESTIMONIALS = [
   {
     companyLogoUrl: '/fixed/IS-logo-nobg.png',
     content: `Thrilled to partner with 0xKYC at Insert Stonks! Their robust identity verification system is a game-changer, ensuring only genuine players get the rewards. We're stepping up our platform's security while maintaining a fair gaming environment.
-  0xKYC is unique because of their Proof of Uniqueness solution. It lets us verify user identities without sharing any personally identifiable information on-chain, truly respecting our players' privacy.
+  0xKYC is unique because of their Proof of Uniqueness solution. It lets us verify user identities without sharing any personally identifiable information onchain, truly respecting our players' privacy.
   No personal data is shared with Insert Stonks, as 0xKYC handles all verification and stores the results securely. Our partnership is a big leap towards a safer and fairer gaming future in the Web3 world. Here's to enhanced security and privacy with 0xKYC!`,
     href: 'https://www.insertstonks.io/',
     author: {
@@ -51,11 +52,13 @@ export default function Testimonials() {
   return (
     <>
       <Separator />
-      <Title style={{ margin: 0 }}>What our clients say</Title>
+      <ScrollAnimationWrapper animation="slideUp" duration={600}>
+        <Title style={{ margin: 0 }}>What our clients say</Title>
+      </ScrollAnimationWrapper>
       <TestimonialsWrapper>
         <GridContainer>
-          <First>
-            <Link href={TESTIMONIALS[0].href} target="_blank" rel="noreferrer">
+          <ScrollAnimationWrapper animation="scaleIn" duration={600} delay={200}>
+            <First>
               <NextImage
                 src={TESTIMONIALS[0].companyLogoUrl}
                 alt={`${TESTIMONIALS[0].author.name}'s company logo`}
@@ -63,19 +66,19 @@ export default function Testimonials() {
                 height={TESTIMONIALS[0].height}
                 objectFit="contain"
               />
-            </Link>
 
-            <Content>“{TESTIMONIALS[0].content}”</Content>
-            <AuthorImageContainer>
-              <StyledImage src={TESTIMONIALS[0].author.avatarUrl} alt={TESTIMONIALS[0].author.name} width={42} height={42} />{' '}
-              <AuthorContent>
-                <AuthorName>{TESTIMONIALS[0].author.name}</AuthorName>
-                <AuthorTitle>{TESTIMONIALS[0].author.title}</AuthorTitle>
-              </AuthorContent>
-            </AuthorImageContainer>
-          </First>
-          <Second>
-            <Link href={TESTIMONIALS[1].href} target="_blank" rel="noreferrer">
+              <Content>"{TESTIMONIALS[0].content}"</Content>
+              <AuthorImageContainer>
+                <StyledImage src={TESTIMONIALS[0].author.avatarUrl} alt={TESTIMONIALS[0].author.name} width={42} height={42} />{' '}
+                <AuthorContent>
+                  <AuthorName>{TESTIMONIALS[0].author.name}</AuthorName>
+                  <AuthorTitle>{TESTIMONIALS[0].author.title}</AuthorTitle>
+                </AuthorContent>
+              </AuthorImageContainer>
+            </First>
+          </ScrollAnimationWrapper>
+          <ScrollAnimationWrapper animation="scaleIn" duration={600} delay={400}>
+            <Second>
               <NextImage
                 src={TESTIMONIALS[1].companyLogoUrl}
                 alt={`${TESTIMONIALS[1].author.name}'s company logo`}
@@ -83,40 +86,42 @@ export default function Testimonials() {
                 height={TESTIMONIALS[1].height}
                 objectFit="contain"
               />
-            </Link>
 
-            <Content>“{TESTIMONIALS[1].content}”</Content>
-            <AuthorImageContainer>
-              <StyledImage src={TESTIMONIALS[1].author.avatarUrl} alt={TESTIMONIALS[1].author.name} width={42} height={42} />{' '}
-              <AuthorContent>
-                <AuthorName>{TESTIMONIALS[1].author.name}</AuthorName>
-                <AuthorTitle>{TESTIMONIALS[1].author.title}</AuthorTitle>
-              </AuthorContent>
-            </AuthorImageContainer>
-          </Second>
-          <Third>
-            <Link href={TESTIMONIALS[2].href} target="_blank" rel="noreferrer">
-              <NextImage
-                src={TESTIMONIALS[2].companyLogoUrl}
-                alt={`${TESTIMONIALS[2].author.name}'s company logo`}
-                width={TESTIMONIALS[2].width}
-                height={TESTIMONIALS[2].height}
-                objectFit="contain"
-              />
-            </Link>
+              <Content>"{TESTIMONIALS[1].content}"</Content>
+              <AuthorImageContainer>
+                <StyledImage src={TESTIMONIALS[1].author.avatarUrl} alt={TESTIMONIALS[1].author.name} width={42} height={42} />{' '}
+                <AuthorContent>
+                  <AuthorName>{TESTIMONIALS[1].author.name}</AuthorName>
+                  <AuthorTitle>{TESTIMONIALS[1].author.title}</AuthorTitle>
+                </AuthorContent>
+              </AuthorImageContainer>
+            </Second>
+          </ScrollAnimationWrapper>
+          <ScrollAnimationWrapper animation="scaleIn" duration={600} delay={600}>
+            <Third>
+              <Link href={TESTIMONIALS[2].href} target="_blank" rel="noreferrer">
+                <NextImage
+                  src={TESTIMONIALS[2].companyLogoUrl}
+                  alt={`${TESTIMONIALS[2].author.name}'s company logo`}
+                  width={TESTIMONIALS[2].width}
+                  height={TESTIMONIALS[2].height}
+                  objectFit="contain"
+                />
+              </Link>
 
-            <Content>“{TESTIMONIALS[2].content}”</Content>
-            <AuthorImageContainer>
-              <StyledImage src={TESTIMONIALS[2].author.avatarUrl} alt={TESTIMONIALS[2].author.name} width={42} height={42} />{' '}
-              <AuthorContent>
-                <AuthorName>{TESTIMONIALS[2].author.name}</AuthorName>
-                <AuthorTitle>{TESTIMONIALS[2].author.title}</AuthorTitle>
-              </AuthorContent>
-            </AuthorImageContainer>
-          </Third>
+              <Content>"{TESTIMONIALS[2].content}"</Content>
+              <AuthorImageContainer>
+                <StyledImage src={TESTIMONIALS[2].author.avatarUrl} alt={TESTIMONIALS[2].author.name} width={42} height={42} />{' '}
+                <AuthorContent>
+                  <AuthorName>{TESTIMONIALS[2].author.name}</AuthorName>
+                  <AuthorTitle>{TESTIMONIALS[2].author.title}</AuthorTitle>
+                </AuthorContent>
+              </AuthorImageContainer>
+            </Third>
+          </ScrollAnimationWrapper>
         </GridContainer>
       </TestimonialsWrapper>
-      <Separator style={{ marginBottom: 0 }} />
+      <Separator style={{ margin: '3rem 0 2rem 0' }} />
     </>
   );
 }
@@ -124,21 +129,20 @@ export default function Testimonials() {
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 20px;
   margin: 0 2rem;
   grid-template-areas:
     'first first first'
-    'second second thrid'
-    '. . .';
+    'second second third';
 
   @media (max-width: 880px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       'first'
       'second'
-      'thrid';
+      'third';
   }
 `;
 
@@ -160,9 +164,8 @@ const Second = styled.div`
 `;
 
 const Third = styled.div`
-  grid-area: thrid;
+  grid-area: third;
   background-color: #525ee140;
-
   padding: 2rem;
   border-radius: 1rem;
 `;
@@ -178,6 +181,7 @@ const TestimonialsWrapper = styled(Container)`
   text-align: center;
   padding-bottom: 0rem;
   margin-top: 4rem !important;
+  margin-bottom: 0 !important;
   padding: 0;
 `;
 

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
+import ScrollAnimationWrapper from 'components/ScrollAnimationWrapper';
 
 import { media } from 'utils/media';
 
@@ -9,23 +10,30 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <Heading>Zero-Knowledge Liveness Verification</Heading>
+        <ScrollAnimationWrapper animation="slideUp" duration={800}>
+          <Heading>Zero-Knowledge Liveness Verification</Heading>
+        </ScrollAnimationWrapper>
 
-        <Description>
-          We&apos;re building software that checks liveness, verifies if you are who you claim to be, and generates onchain attestations - all in zero knowledge so you stay completely private. Previously a for-profit company, we&apos;re now an open source project. Block bots and duplicate accounts while preserving your anonymity.
-        </Description>
-        <CustomButtonGroup>
-          <Button
-            href="https://github.com/0xkyc"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Check Our Repo<span>&rarr;</span>
-          </Button>
-          <Button transparent={true} href="https://adamzasada.medium.com/0xkyc-open-sourcing-the-future-of-privacy-preserving-identity-verification-146922cbda94" target="_blank" rel="noreferrer">
-            Read Our Story<span>&rarr;</span>
-          </Button>
-        </CustomButtonGroup>
+        <ScrollAnimationWrapper animation="slideUp" duration={800} delay={200}>
+          <Description>
+            We&apos;re building software that checks liveness, verifies if you are who you claim to be, and generates onchain attestations - all in zero knowledge so you stay completely private. Previously a for-profit company, we&apos;re now an open source project. Block bots and duplicate accounts while preserving your anonymity.
+          </Description>
+        </ScrollAnimationWrapper>
+
+        <ScrollAnimationWrapper animation="slideUp" duration={800} delay={400}>
+          <CustomButtonGroup>
+            <Button
+              href="https://github.com/0xkyc"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Check Our Repo<span>&rarr;</span>
+            </Button>
+            <Button transparent={true} href="https://adamzasada.medium.com/0xkyc-open-sourcing-the-future-of-privacy-preserving-identity-verification-146922cbda94" target="_blank" rel="noreferrer">
+              Read Our Story<span>&rarr;</span>
+            </Button>
+          </CustomButtonGroup>
+        </ScrollAnimationWrapper>
       </Contents>
 
       <ImageContainer>

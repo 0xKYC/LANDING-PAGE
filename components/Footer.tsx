@@ -11,15 +11,7 @@ type FooterListItems = SingleFooterListItem[];
 type SingleFooterList = { title: string; items: FooterListItems };
 type FooterItems = SingleFooterList[];
 
-const footerItems: FooterItems = [
-  {
-    title: 'Knowledge',
-    items: [
-      { title: 'Contact', href: 'mailto:support@0xkyc.id', link: true },
-      { title: 'Documentation', href: 'https://docs.0xkyc.id/', link: true },
-    ],
-  },
-];
+const footerItems: FooterItems = [];
 
 const LogoWrapper = styled.a`
   display: flex;
@@ -32,10 +24,6 @@ const Flex = styled.div`
   align-items: center;
   gap: 3rem;
   margin-right: 3.5rem;
-
-  @media screen and (max-width: 1199px) {
-    display: none;
-  }
 `;
 export default function Footer() {
   return (

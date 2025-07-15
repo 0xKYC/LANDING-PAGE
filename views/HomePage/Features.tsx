@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import BasicCard from 'components/BasicCard';
 import Container from 'components/Container';
+import ScrollAnimationWrapper from 'components/ScrollAnimationWrapper';
 import { media } from 'utils/media';
 
 const FEATURES = [
@@ -28,7 +29,14 @@ export default function Features() {
     <Container>
       <CustomAutofitGrid>
         {FEATURES.map((singleFeature, idx) => (
-          <BasicCard key={singleFeature.title + idx} {...singleFeature} />
+          <ScrollAnimationWrapper 
+            key={singleFeature.title + idx} 
+            animation="slideUp" 
+            duration={600} 
+            delay={idx * 150}
+          >
+            <BasicCard {...singleFeature} />
+          </ScrollAnimationWrapper>
         ))}
       </CustomAutofitGrid>
     </Container>
